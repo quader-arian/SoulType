@@ -19,7 +19,7 @@ public class AtkWordScript : MonoBehaviour
     void Update()
     {
         TMP_Text thisObject = gameObject.GetComponent<TMP_Text>();
-        transform.Translate(Vector2.down * speed * Time.smoothDeltaTime);
+        transform.Translate(Vector2.down * speed * Time.deltaTime);
         thisObject.text = word;
         if(TyperScript.isReady()){
             if(word + '~' == TyperScript.recieveWord()){
@@ -29,7 +29,7 @@ public class AtkWordScript : MonoBehaviour
             }
         }
 
-        if(transform.position.y <= 0.2){
+        if(transform.position.y <= -50){
             Destroy(gameObject);
         }
     }
