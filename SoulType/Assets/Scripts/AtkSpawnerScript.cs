@@ -6,7 +6,6 @@ using TMPro;
 public class AtkSpawnerScript : MonoBehaviour
 {
     private float timeBtwSpawns;
-    private float defaultTimeBtwSpawns;
     public float startTimeBtwSpawns;
     public float timeDecrease;
     public float minTime;
@@ -21,18 +20,16 @@ public class AtkSpawnerScript : MonoBehaviour
     private void Start()
     {
         timeBtwSpawns = startTimeBtwSpawns;
-        defaultTimeBtwSpawns = timeBtwSpawns;
-
         shuffle();
     }
 
     private void Update()
     {
         if (timeBtwSpawns <= 0){
-            Instantiate(words, transform.position, Quaternion.identity, GameObject.FindGameObjectWithTag("Canvas").transform);
             AtkWordScript thisWord = words.GetComponent<AtkWordScript>();
             thisWord.word = wordPicks[i++];
             thisWord.speed = wordSpeed;
+            Instantiate(words, transform.position, Quaternion.identity, GameObject.FindGameObjectWithTag("Canvas").transform);
 
             if(i >= wordPicks.Length){
                 i = 0;

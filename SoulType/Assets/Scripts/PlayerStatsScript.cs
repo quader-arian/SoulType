@@ -45,16 +45,7 @@ public class PlayerStatsScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(testing){
-            atkLvl = 1;
-            defLvl = 1;
-            mpLvl = 1;
-            healUnlock = true;
-            fireUnlock = true;
-            iceUnlock = true;
-            lightningUnlock = true;
-            shieldUnlock = true;
-        }
+        hp = maxHp;
     }
 
     // Update is called once per frame
