@@ -24,7 +24,7 @@ public class AtkWordScript : MonoBehaviour
         if(TyperScript.isReady()){
             if(word + '~' == TyperScript.recieveWord()){
                 TyperScript.resetReady();
-                //Enemy1Script.hp -= 50 + word.Length;
+                EnemyStatsScript.hp -= 50 + word.Length + 10*(PlayerStatsScript.atkLvl-1);
                 Destroy(gameObject);
             }
         }

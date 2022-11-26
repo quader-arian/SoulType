@@ -35,9 +35,13 @@ public class MpWordScript : MonoBehaviour
                         PlayerStatsScript.hp += 50 * PlayerStatsScript.mpLvl;
                     }
                 }else if(type == "fire"){
+                    EnemyStatsScript.isBurn = true;
                 }else if(type == "ice"){
+                    EnemyStatsScript.isSlowed = true;
                 }else if(type == "shield"){
+                    PlayerStatsScript.isImmune = true;
                 }else if(type == "lightning"){
+                    PlayerStatsScript.isPowered = true;
                 }
                 checkLocks(thisObject);
             }
