@@ -27,26 +27,19 @@ public class MpWordScript : MonoBehaviour
             if(thisObject.text + '~' == TyperScript.recieveWord()){
                 TyperScript.resetReady();
 
-                if(!PlayerStatsScript.mpRecharging){
-                    if(type == "heal"){
-                        if(PlayerStatsScript.hp + 50 * PlayerStatsScript.defLvl > PlayerStatsScript.maxHp){
-                            PlayerStatsScript.hp = PlayerStatsScript.maxHp;
-                        }
-                        else{
-                            PlayerStatsScript.hp += 50 * PlayerStatsScript.defLvl;
-                        }
-                        PlayerStatsScript.mp -= 200;
-                    }else if(type == "fire"){
-                        PlayerStatsScript.mp -= 50;
-                    }else if(type == "ice"){
-                        PlayerStatsScript.mp -= 100;
-                    }else if(type == "shield"){
-                        PlayerStatsScript.mp -= 200;
-                    }else if(type == "lightning"){
-                        PlayerStatsScript.mp -= 200;
+                if(type == "heal"){
+                    if(PlayerStatsScript.hp + 50 * PlayerStatsScript.mpLvl > PlayerStatsScript.maxHp){
+                        PlayerStatsScript.hp = PlayerStatsScript.maxHp;
                     }
-                    checkLocks(thisObject);
+                    else{
+                        PlayerStatsScript.hp += 50 * PlayerStatsScript.mpLvl;
+                    }
+                }else if(type == "fire"){
+                }else if(type == "ice"){
+                }else if(type == "shield"){
+                }else if(type == "lightning"){
                 }
+                checkLocks(thisObject);
             }
         }
     }
@@ -71,6 +64,11 @@ public class MpWordScript : MonoBehaviour
         if(type == "shield" && !PlayerStatsScript.shieldUnlock){
             thisObject.text = "~LOCKED~";
         }else if(type == "shield" && PlayerStatsScript.shieldUnlock){
+            thisObject.text = words[rnd];
+        }
+        if(type == "lightning" && !PlayerStatsScript.shieldUnlock){
+            thisObject.text = "~LOCKED~";
+        }else if(type == "lightning" && PlayerStatsScript.shieldUnlock){
             thisObject.text = words[rnd];
         }
     }
