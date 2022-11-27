@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - CinemachineTarget
+  - Canvas
+  - DefLocations
+  - AtkWord
+  - DefWord
   layers:
   - Default
   - TransparentFX
@@ -17,8 +21,8 @@ TagManager:
   - Character
   - Ground
   - 
-  - 
-  - 
+  - Target
+  - Block
   - 
   - 
   - 
