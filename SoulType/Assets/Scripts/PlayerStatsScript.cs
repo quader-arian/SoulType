@@ -39,13 +39,17 @@ public class PlayerStatsScript : MonoBehaviour
     static public float slowTime;
     static public float poweredTime;
     static public float immuneTime;
+    static public float healCooldown;
+    static public float burnCooldown;
+    static public float slowCooldown;
+    static public float poweredCooldown;
+    static public float immuneCooldown;
 
     static public int credits;
 
     // Start is called before the first frame update
     void Start()
     {
-        hp = maxHp;
     }
 
     // Update is called once per frame
@@ -59,7 +63,7 @@ public class PlayerStatsScript : MonoBehaviour
         icePrice = 50*atkLvl+50*defLvl+150*mpLvl;;
         shieldPrice = 100*defLvl+200*mpLvl;
 
-        maxHp = 450 + 50*atkLvl;
+        maxHp = 450 + 50*defLvl;
     }
 
 }

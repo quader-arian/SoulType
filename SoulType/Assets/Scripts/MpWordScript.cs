@@ -27,21 +27,26 @@ public class MpWordScript : MonoBehaviour
             if(thisObject.text + '~' == TyperScript.recieveWord()){
                 TyperScript.resetReady();
 
-                if(type == "heal"){
+                if(type == "heal" && PlayerStatsScript.healCooldown <= 0){
                     if(PlayerStatsScript.hp + 50 * PlayerStatsScript.mpLvl > PlayerStatsScript.maxHp){
                         PlayerStatsScript.hp = PlayerStatsScript.maxHp;
                     }
                     else{
                         PlayerStatsScript.hp += 50 * PlayerStatsScript.mpLvl;
                     }
-                }else if(type == "fire"){
+                    PlayerStatsScript.healCooldown = 20f;
+                }else if(type == "fire"  && PlayerStatsScript.burnCooldown <= 0){
                     EnemyStatsScript.isBurn = true;
-                }else if(type == "ice"){
+                    PlayerStatsScript.burnCooldown = 15f;
+                }else if(type == "ice" && PlayerStatsScript.slowCooldown <= 0){
                     EnemyStatsScript.isSlowed = true;
-                }else if(type == "shield"){
+                    PlayerStatsScript.slowCooldown = 15f;
+                }else if(type == "shield" && PlayerStatsScript.immuneCooldown <= 0){
                     PlayerStatsScript.isImmune = true;
-                }else if(type == "lightning"){
+                    PlayerStatsScript.immuneCooldown = 25f;
+                }else if(type == "lightning" && PlayerStatsScript.poweredCooldown <= 0){
                     PlayerStatsScript.isPowered = true;
+                    PlayerStatsScript.poweredCooldown = 25f;
                 }
                 checkLocks(thisObject);
             }

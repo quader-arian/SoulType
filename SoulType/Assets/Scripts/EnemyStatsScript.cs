@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using TMPro;
 using System;
 using Random = UnityEngine.Random;
@@ -10,6 +11,8 @@ public class EnemyStatsScript : MonoBehaviour
 {
     public TMP_Text status;
     public TMP_Text hpText;
+    public TMP_Text nameText;
+    public Image healthBarImage;
 
     public static int baseHp;
     public static int maxHp;
@@ -68,21 +71,24 @@ public class EnemyStatsScript : MonoBehaviour
     {
         status.text = "";
         if(isBurn){
-            status.text = " Burning " + (int)burnTime;
+            status.text += " Burning " + ((int)burnTime+1);
         }if(isSlowed){
-            status.text = " Stunned " + (int)slowTime;
+            status.text += " Stunned " + ((int)slowTime+1);
         }if(isImmune){
-            status.text = " Shielded " + (int)immuneTime;
+            status.text += " Shielded " + ((int)immuneTime+1);
         }if(isPowered){
-            status.text = " Powered " + (int)poweredTime;
+            status.text += " Powered " + ((int)poweredTime+1);
         }
         if(status.text != ""){
             status.text = status.text.Substring(1, status.text.Length - 1);
         }
-        hpText.text = hp+ "/" + maxHp;
+        hpText.text = (int)hp+ "/" + maxHp;
+        healthBarImage.fillAmount = Mathf.Clamp(hp / maxHp, 0, 1f);
+        nameText.text = enemyType;
 
         if(isImmune && immuneTime >= 0){
             immuneTime -= Time.deltaTime;
+            healthBarImage.color = new Color32(147,112,219,255);
         }else if(isImmune){
             isImmune = false;
             immuneTime = 10f;; 
@@ -95,6 +101,8 @@ public class EnemyStatsScript : MonoBehaviour
 
         if(isBurn && burnTime >= 0){
             burnTime -= Time.deltaTime;
+            hp -= 50*Time.deltaTime;
+            healthBarImage.color = Color.red;
         }else if(isBurn){
             isBurn = false;
             burnTime = 4f + (PlayerStatsScript.atkLvl - 1) + PlayerStatsScript.mpLvl;
@@ -102,6 +110,7 @@ public class EnemyStatsScript : MonoBehaviour
 
         if(isSlowed && slowTime >= 0){
             slowTime -= Time.deltaTime;
+            healthBarImage.color = new Color32(255,140,0,255);
         }else if(isSlowed){
             isSlowed = false;
             slowTime = 6f + (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl;
@@ -109,9 +118,14 @@ public class EnemyStatsScript : MonoBehaviour
 
         if(isPowered && poweredTime >= 0){
             poweredTime -= Time.deltaTime;
+            healthBarImage.color = Color.blue;
         }else if(isPowered){
             isPowered = false;
             poweredTime = 5f;
+        }
+
+        if(!isPowered && !isSlowed && !isImmune && !isBurn){
+            healthBarImage.color = new Color32(0,159,15,255);
         }
 
         if (timeBtwSpawns <= 0){
@@ -121,7 +135,7 @@ public class EnemyStatsScript : MonoBehaviour
                     thisWord = words.GetComponent<DefWordScript>();
                     thisWord.word = splitArray[0];
                     thisWord.type = splitArray[3];
-                    thisWord.parry = int.Parse(splitArray[1]);
+                    thisWord.parry = float.Parse(splitArray[1]);
                     thisWord.block = float.Parse(splitArray[2]);
                     thisWord.dmg = int.Parse(splitArray[4]);
                     Instantiate(words, loc.transform.position, Quaternion.identity, GameObject.FindGameObjectWithTag("Canvas").transform);

@@ -24,8 +24,24 @@ public class AtkWordScript : MonoBehaviour
         if(TyperScript.isReady()){
             if(word + '~' == TyperScript.recieveWord()){
                 TyperScript.resetReady();
-                EnemyStatsScript.hp -= 50 + word.Length + 10*(PlayerStatsScript.atkLvl-1);
+                EnemyStatsScript.hp -= 50 + word.Length + 2*(PlayerStatsScript.atkLvl);
                 Destroy(gameObject);
+                if(PlayerStatsScript.isPowered){
+                    GameObject[] defWords = GameObject.FindGameObjectsWithTag("AtkWord");
+                    if(defWords.Length > 2){
+                        EnemyStatsScript.hp -= 150 + 6*(PlayerStatsScript.atkLvl-1);
+                        Destroy(defWords[0]);
+                        Destroy(defWords[1]);
+                        Destroy(defWords[2]);
+                    }else if(defWords.Length > 2){
+                        EnemyStatsScript.hp -= 100 + 4*(PlayerStatsScript.atkLvl-1);
+                        Destroy(defWords[0]);
+                        Destroy(defWords[1]);
+                    }else{
+                        EnemyStatsScript.hp -= 50 + 2*(PlayerStatsScript.atkLvl-1);
+                        Destroy(defWords[0]);
+                    }
+                }
             }
         }
 
