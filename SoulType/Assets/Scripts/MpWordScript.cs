@@ -37,15 +37,19 @@ public class MpWordScript : MonoBehaviour
                     PlayerStatsScript.healCooldown = 20f;
                 }else if(type == "fire"  && PlayerStatsScript.burnCooldown <= 0){
                     EnemyStatsScript.isBurn = true;
+                    EnemyStatsScript.burnTime = 8f;
                     PlayerStatsScript.burnCooldown = 15f;
                 }else if(type == "ice" && PlayerStatsScript.slowCooldown <= 0){
                     EnemyStatsScript.isSlowed = true;
+                    EnemyStatsScript.slowTime = 8f;
                     PlayerStatsScript.slowCooldown = 15f;
                 }else if(type == "shield" && PlayerStatsScript.immuneCooldown <= 0){
                     PlayerStatsScript.isImmune = true;
+                    PlayerStatsScript.immuneTime = (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl + 3f; 
                     PlayerStatsScript.immuneCooldown = 25f;
                 }else if(type == "lightning" && PlayerStatsScript.poweredCooldown <= 0){
                     PlayerStatsScript.isPowered = true;
+                    PlayerStatsScript.poweredTime = (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl + 3f;
                     PlayerStatsScript.poweredCooldown = 25f;
                 }
                 checkLocks(thisObject);

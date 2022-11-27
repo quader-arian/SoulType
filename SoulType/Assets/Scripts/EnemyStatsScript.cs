@@ -59,7 +59,7 @@ public class EnemyStatsScript : MonoBehaviour
         burnTime = 4f + (PlayerStatsScript.atkLvl - 1) + PlayerStatsScript.mpLvl;
         slowTime = 6f + (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl;
         immuneTime = 10f;
-        poweredTime = 5f;
+        poweredTime = 1f;
         isBurn = false;
         isSlowed = false;
         isImmune = false;
@@ -101,7 +101,7 @@ public class EnemyStatsScript : MonoBehaviour
 
         if(isBurn && burnTime >= 0){
             burnTime -= Time.deltaTime;
-            hp -= 50*Time.deltaTime;
+            hp -= 25*Time.deltaTime;
             healthBarImage.color = Color.red;
         }else if(isBurn){
             isBurn = false;
@@ -121,7 +121,7 @@ public class EnemyStatsScript : MonoBehaviour
             healthBarImage.color = Color.blue;
         }else if(isPowered){
             isPowered = false;
-            poweredTime = 5f;
+            poweredTime = 1f;
         }
 
         if(!isPowered && !isSlowed && !isImmune && !isBurn){

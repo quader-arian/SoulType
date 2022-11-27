@@ -20,8 +20,8 @@ public class PlayerUpdatesScript : MonoBehaviour
     {
         PlayerStatsScript.burnTime = 8f;
         PlayerStatsScript.slowTime = 8f;
-        PlayerStatsScript.immuneTime = (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl + 1;
-        PlayerStatsScript.poweredTime = (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl + 1;
+        PlayerStatsScript.immuneTime = (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl + 3f;
+        PlayerStatsScript.poweredTime = (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl + 3f;
         PlayerStatsScript.isBurn = false;
         PlayerStatsScript.isSlowed = false;
         PlayerStatsScript.isImmune = false;
@@ -52,7 +52,7 @@ public class PlayerUpdatesScript : MonoBehaviour
             healthBarImage.color = new Color32(147,112,219,255);
         }else if(PlayerStatsScript.isImmune){
             PlayerStatsScript.isImmune = false;
-            PlayerStatsScript.immuneTime = PlayerStatsScript.defLvl + PlayerStatsScript.mpLvl; 
+            PlayerStatsScript.immuneTime = (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl + 3f; 
         }
 
         if(PlayerStatsScript.isImmune){
@@ -82,7 +82,7 @@ public class PlayerUpdatesScript : MonoBehaviour
             healthBarImage.color = Color.blue;
         }else if(PlayerStatsScript.isPowered){
             PlayerStatsScript.isPowered = false;
-            PlayerStatsScript.poweredTime = PlayerStatsScript.defLvl + PlayerStatsScript.mpLvl;
+            PlayerStatsScript.poweredTime = (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl + 3f;
         }
 
         if(!PlayerStatsScript.isPowered && !PlayerStatsScript.isSlowed && !PlayerStatsScript.isImmune && !PlayerStatsScript.isBurn){

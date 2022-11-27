@@ -37,9 +37,7 @@ public class DefWordScript : MonoBehaviour
         }else if(type == "lightning"){
             typeImage.sprite =  Resources.Load <Sprite>("lightning");
         }else{
-            var tempColor = typeImage.color;
-            tempColor.a = 0f;
-            typeImage.color = tempColor;
+            typeImage.sprite =  Resources.Load <Sprite>("fist");
         }
     }
 
@@ -51,7 +49,7 @@ public class DefWordScript : MonoBehaviour
         bar.fillAmount = block/initBlock;
         if(TyperScript.isReady()){
             if(word + '~' == TyperScript.recieveWord()){
-                if(parry <= 0){
+                if(parry > 0){
                     EnemyStatsScript.hp -= dmg;
                 }
                 TyperScript.resetReady();
@@ -77,11 +75,16 @@ public class DefWordScript : MonoBehaviour
             parry -= Time.deltaTime;
         }
         if(block <= 0){
-            if(EnemyStatsScript.isPowered){
+            if(type == "lightning"){
+                EnemyStatsScript.isPowered = true;
+                EnemyStatsScript.poweredTime = 1f;
                 GameObject[] defWords = GameObject.FindGameObjectsWithTag("DefWord");
+                Debug.Log(defWords.Length + "");
+                int j = 0;
                 foreach (GameObject defWord in defWords){
                     string newType = defWord.GetComponent<DefWordScript>().type;
                     int newDmg = defWord.GetComponent<DefWordScript>().dmg;
+                    Debug.Log(newType + " + " + newDmg);
                     if(newType == "heal"){
                         if(EnemyStatsScript.hp + 100 > EnemyStatsScript.maxHp){
                             EnemyStatsScript.hp = EnemyStatsScript.maxHp;
@@ -91,15 +94,23 @@ public class DefWordScript : MonoBehaviour
                         }
                     }else if(newType == "fire"){
                         PlayerStatsScript.isBurn = true;
+                        PlayerStatsScript.burnTime = 4f + (PlayerStatsScript.atkLvl - 1) + PlayerStatsScript.mpLvl;
                     }else if(newType == "ice"){
                         PlayerStatsScript.isSlowed = true;
+                        PlayerStatsScript.slowTime = 6f + (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl;
                     }else if(newType == "shield"){
                         EnemyStatsScript.isImmune = true;
+                        EnemyStatsScript.immuneTime = 10f;
                     }else if(newType == "lightning"){
-                        EnemyStatsScript.isPowered = true;
+                        continue;
                     }
                     PlayerStatsScript.hp -= newDmg;
                     Destroy(defWord);
+                    Debug.Log(j + "");
+                    j++;
+                    if(j >= 3){
+                        break;
+                    }
                 }
             }else{
                 if(type == "heal"){
@@ -111,25 +122,20 @@ public class DefWordScript : MonoBehaviour
                     }
                 }else if(type == "fire"){
                     PlayerStatsScript.isBurn = true;
+                    PlayerStatsScript.burnTime = 4f + (PlayerStatsScript.atkLvl - 1) + PlayerStatsScript.mpLvl;
                 }else if(type == "ice"){
                     PlayerStatsScript.isSlowed = true;
+                    PlayerStatsScript.slowTime = 6f + (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl;
                 }else if(type == "shield"){
                     EnemyStatsScript.isImmune = true;
-                }else if(type == "lightning"){
-                    EnemyStatsScript.isPowered = true;
+                    EnemyStatsScript.immuneTime = 10f;
                 }
                 PlayerStatsScript.hp -= dmg;
-                Destroy(gameObject);
-            }            
+            }        
+            Destroy(gameObject);    
         }
         if(parry <= 0){
             bar.color = new Color32(255,0,0,220);
-            if(EnemyStatsScript.isPowered){
-                GameObject[] defWords = GameObject.FindGameObjectsWithTag("DefWord");
-                foreach (GameObject defWord in defWords){
-                    Destroy(defWord);
-                }
-            }
         }
     }
 }
