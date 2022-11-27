@@ -9,6 +9,7 @@ TagManager:
   - DefLocations
   - AtkWord
   - DefWord
+  - AtkPanel
   layers:
   - Default
   - TransparentFX
