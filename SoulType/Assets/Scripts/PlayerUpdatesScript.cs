@@ -95,7 +95,7 @@ public class PlayerUpdatesScript : MonoBehaviour
         }
         if(PlayerStatsScript.burnCooldown > 0){
             PlayerStatsScript.burnCooldown -= Time.deltaTime;
-            fireImage.fillAmount = 1-PlayerStatsScript.burnCooldown/25f;;
+            fireImage.fillAmount = 1-PlayerStatsScript.burnCooldown/15f;;
         }
         if(PlayerStatsScript.slowCooldown > 0){
             PlayerStatsScript.slowCooldown -= Time.deltaTime;
