@@ -14,6 +14,9 @@ public class MyEnemyAI : MonoBehaviour
 
     private float distance;
 
+    float time;
+    float timeDelay;
+
     private bool canSeePlayer;
     private bool isChasing = false;
     private bool canPatrol = true;
@@ -34,6 +37,8 @@ public class MyEnemyAI : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         startingPos = transform.position;
         NewDestination();
+        time = 0f;
+        timeDelay = 2f;
 
     }
 
@@ -43,8 +48,14 @@ public class MyEnemyAI : MonoBehaviour
 
         if (Mathf.Abs(Vector3.Distance(transform.position, someTarget)) < 2)
         {
-            IterateWaypoints();
-            NewDestination();
+            time = time + 1f * Time.deltaTime;
+            agent.SetDestination(transform.position);
+            if (time >= timeDelay)
+            {
+                IterateWaypoints();
+                NewDestination();
+                time = 0f;
+            }
         }
         if (distance <= lookRadius)
         {
@@ -63,7 +74,7 @@ public class MyEnemyAI : MonoBehaviour
         }
 
         // If the player is outside the range of the enemy
-        else if (distance > lookRadius)
+        /*else if (distance > lookRadius)
         {
             agent.SetDestination(someTarget);
             if (Mathf.Abs(Vector3.Distance(transform.position, someTarget)) < 2)
@@ -71,7 +82,7 @@ public class MyEnemyAI : MonoBehaviour
                 IterateWaypoints();
                 NewDestination();
             }
-        }
+        }*/
     }
 
     // This method tracks the player and follows them

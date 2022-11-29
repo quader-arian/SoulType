@@ -20,6 +20,7 @@ public class AtkSpawnerScript : MonoBehaviour
     private void Start()
     {
         timeBtwSpawns = startTimeBtwSpawns;
+        i = 0;
         shuffle();
     }
 
@@ -29,7 +30,8 @@ public class AtkSpawnerScript : MonoBehaviour
             AtkWordScript thisWord = words.GetComponent<AtkWordScript>();
             thisWord.word = wordPicks[i++];
             thisWord.speed = wordSpeed;
-            Instantiate(words, transform.position, Quaternion.identity, GameObject.FindGameObjectWithTag("Canvas").transform);
+            GameObject currWord = Instantiate(words, transform.position, Quaternion.identity, GameObject.FindGameObjectWithTag("Canvas").transform);
+            currWord.transform.SetParent(GameObject.FindGameObjectWithTag("AtkPanel").transform);
 
             if(i >= wordPicks.Length){
                 i = 0;
