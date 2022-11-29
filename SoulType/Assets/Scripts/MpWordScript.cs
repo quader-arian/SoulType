@@ -27,26 +27,32 @@ public class MpWordScript : MonoBehaviour
             if(thisObject.text + '~' == TyperScript.recieveWord()){
                 TyperScript.resetReady();
 
-                if(!PlayerStatsScript.mpRecharging){
-                    if(type == "heal"){
-                        if(PlayerStatsScript.hp + 50 * PlayerStatsScript.defLvl > PlayerStatsScript.maxHp){
-                            PlayerStatsScript.hp = PlayerStatsScript.maxHp;
-                        }
-                        else{
-                            PlayerStatsScript.hp += 50 * PlayerStatsScript.defLvl;
-                        }
-                        PlayerStatsScript.mp -= 200;
-                    }else if(type == "fire"){
-                        PlayerStatsScript.mp -= 50;
-                    }else if(type == "ice"){
-                        PlayerStatsScript.mp -= 100;
-                    }else if(type == "shield"){
-                        PlayerStatsScript.mp -= 200;
-                    }else if(type == "lightning"){
-                        PlayerStatsScript.mp -= 200;
+                if(type == "heal" && PlayerStatsScript.healCooldown <= 0){
+                    if(PlayerStatsScript.hp + 50 * PlayerStatsScript.mpLvl > PlayerStatsScript.maxHp){
+                        PlayerStatsScript.hp = PlayerStatsScript.maxHp;
                     }
-                    checkLocks(thisObject);
+                    else{
+                        PlayerStatsScript.hp += 50 * PlayerStatsScript.mpLvl;
+                    }
+                    PlayerStatsScript.healCooldown = 20f;
+                }else if(type == "fire"  && PlayerStatsScript.burnCooldown <= 0){
+                    EnemyStatsScript.isBurn = true;
+                    EnemyStatsScript.burnTime = 8f;
+                    PlayerStatsScript.burnCooldown = 15f;
+                }else if(type == "ice" && PlayerStatsScript.slowCooldown <= 0){
+                    EnemyStatsScript.isSlowed = true;
+                    EnemyStatsScript.slowTime = 8f;
+                    PlayerStatsScript.slowCooldown = 15f;
+                }else if(type == "shield" && PlayerStatsScript.immuneCooldown <= 0){
+                    PlayerStatsScript.isImmune = true;
+                    PlayerStatsScript.immuneTime = (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl + 3f; 
+                    PlayerStatsScript.immuneCooldown = 25f;
+                }else if(type == "lightning" && PlayerStatsScript.poweredCooldown <= 0){
+                    PlayerStatsScript.isPowered = true;
+                    PlayerStatsScript.poweredTime = (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl + 3f;
+                    PlayerStatsScript.poweredCooldown = 25f;
                 }
+                checkLocks(thisObject);
             }
         }
     }
@@ -71,6 +77,11 @@ public class MpWordScript : MonoBehaviour
         if(type == "shield" && !PlayerStatsScript.shieldUnlock){
             thisObject.text = "~LOCKED~";
         }else if(type == "shield" && PlayerStatsScript.shieldUnlock){
+            thisObject.text = words[rnd];
+        }
+        if(type == "lightning" && !PlayerStatsScript.shieldUnlock){
+            thisObject.text = "~LOCKED~";
+        }else if(type == "lightning" && PlayerStatsScript.shieldUnlock){
             thisObject.text = words[rnd];
         }
     }
