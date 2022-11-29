@@ -9,6 +9,8 @@ TagManager:
   - DefLocations
   - AtkWord
   - DefWord
+  - BF
+  - Ceiling
   layers:
   - Default
   - TransparentFX
