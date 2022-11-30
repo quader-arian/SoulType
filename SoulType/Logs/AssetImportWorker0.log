@@ -566,3 +566,45 @@ Received Import Request.
   path: Assets/Allen/AdditonalAssets/overlay.png
   artifactKey: Guid(6ab6383dcb1d15641945eb7fe13fcd31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Allen/AdditonalAssets/overlay.png using Guid(6ab6383dcb1d15641945eb7fe13fcd31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d421442bafbde05520034ae795dd620') in 0.204460 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 662.186725 seconds.
+  path: Assets/Allen/AdditonalAssets/grunge-overlay-dust-scratch-texture-black-white_279525-11937.webp
+  artifactKey: Guid(f8fc6b4e955f3304b8694face8bd70c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Allen/AdditonalAssets/grunge-overlay-dust-scratch-texture-black-white_279525-11937.webp using Guid(f8fc6b4e955f3304b8694face8bd70c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '540d645410de019f15ae2a15ea426cfa') in 0.011569 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 22.297701 seconds.
+  path: Assets/Allen/AdditonalAssets/grunge-overlay-dust-scratch-texture-black-white_279525-11937 (1).png
+  artifactKey: Guid(8159f985f10bb3f48ae9f896d9fc6e3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Allen/AdditonalAssets/grunge-overlay-dust-scratch-texture-black-white_279525-11937 (1).png using Guid(8159f985f10bb3f48ae9f896d9fc6e3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e9b48d0e388a3aabf0f56db1560083e') in 0.055245 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 257.811407 seconds.
+  path: Assets/Allen/AdditonalAssets/computerbackground.jpg
+  artifactKey: Guid(8566a85fbb5fc0f4fa8c6582cd63637d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Allen/AdditonalAssets/computerbackground.jpg using Guid(8566a85fbb5fc0f4fa8c6582cd63637d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86582d07fb4c729e7894d08e1d3c4254') in 0.097477 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 395.085803 seconds.
+  path: Assets/Allen/AdditonalAssets/dsadaads.png
+  artifactKey: Guid(6d36e54ccc4602544bac1ed406445cbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Allen/AdditonalAssets/dsadaads.png using Guid(6d36e54ccc4602544bac1ed406445cbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b64a6ad411acdd4014baa4bd6ba4db8') in 0.118889 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 306.999290 seconds.
+  path: Assets/Allen/AdditonalAssets/screenscratched.png
+  artifactKey: Guid(fa528d21033efc041beab969fed39a33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Allen/AdditonalAssets/screenscratched.png using Guid(fa528d21033efc041beab969fed39a33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55b852ce8103824bafc500fced709fa9') in 0.112509 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 886.298706 seconds.
+  path: Assets/Allen/AdditonalAssets/screensratch (1).png
+  artifactKey: Guid(454f1dc5bc8c8864fb8588be0b7c374e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Allen/AdditonalAssets/screensratch (1).png using Guid(454f1dc5bc8c8864fb8588be0b7c374e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89ae0a5282ee46eca3bab50bf541492c') in 0.182258 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 30.564327 seconds.
+  path: Assets/Allen/AdditonalAssets/asdadsasdddddddddd.png
+  artifactKey: Guid(78451e1747b80db41bd9d10110c360e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Allen/AdditonalAssets/asdadsasdddddddddd.png using Guid(78451e1747b80db41bd9d10110c360e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f7ba2d46c541d9b02b0bba021e0cedd') in 0.119409 seconds 
