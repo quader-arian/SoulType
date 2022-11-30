@@ -16,10 +16,9 @@ public class MonsterStateController : MonoBehaviour
     void Update()
     {
         bool press2 = Input.GetKey("2");
-        /*
         bool press3 = Input.GetKey("3");
         bool press4 = Input.GetKey("4");
-        */
+        
 
         if (press2)
         {
@@ -30,7 +29,7 @@ public class MonsterStateController : MonoBehaviour
         {
             animator.SetBool("isPreparing", false);
         }
-        /*
+        
         if (press3)
         {
             animator.SetBool("isAttacking", true);
@@ -50,6 +49,6 @@ public class MonsterStateController : MonoBehaviour
         {
             animator.SetBool("isFlinching", false);
         }
-        */
+        
     }
 }
