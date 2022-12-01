@@ -56,6 +56,11 @@ public class EnemyStatsScript : MonoBehaviour
     public GameObject pinkfoot;
     public GameObject monster;
 
+    [SerializeField] private Transform statictransition;
+    public AudioSource source;
+    public AudioClip clip;
+    public bool alreadyPlayed = false;
+
     public ScreenFX Nolan;
     // Start is called before the first frame update
     void Start()
@@ -90,7 +95,12 @@ public class EnemyStatsScript : MonoBehaviour
             sol.SetActive(true);
         }else if(enemyType == "Wraith"){
             wraith.SetActive(true);
-        }else if(enemyType == "Skeehaw"){
+        }
+        else if (enemyType == "Pinkfoot")
+        {
+            pinkfoot.SetActive(true);
+        }
+        else if(enemyType == "Skeehaw"){
             skeehaw.SetActive(true);
         }else if(enemyType == "Observer"){
             observer.SetActive(true);
@@ -188,20 +198,45 @@ public class EnemyStatsScript : MonoBehaviour
         }
 
         if(hp <= 0){
-            win = true;
-            loss = false;
-            inCombat = false;   
-            //Nolan.PlayAniBlackFade();
-            attackInit();
-            sol.SetActive(false);
-            observer.SetActive(false);
-            funguy.SetActive(false);
-            et.SetActive(false);
-            emperor.SetActive(false);
-            ghoul.SetActive(false);
-            pinkfoot.SetActive(false);
-            monster.SetActive(false);
-            SceneManager.UnloadScene("Combat");
+            statictransition.gameObject.SetActive(false);
+            {
+                StartCoroutine(Delay());
+            }
+
+            IEnumerator Delay()
+            {
+                statictransition.gameObject.SetActive(true);
+                if (!alreadyPlayed)
+                {
+                    source.PlayOneShot(clip);
+                    alreadyPlayed = true;
+
+                }
+               
+
+
+                yield return new WaitForSeconds(1f);
+
+
+                win = true;
+                loss = false;
+                inCombat = false;
+                //Nolan.PlayAniBlackFade();
+                attackInit();
+                sol.SetActive(false);
+                observer.SetActive(false);
+                funguy.SetActive(false);
+                et.SetActive(false);
+                emperor.SetActive(false);
+                ghoul.SetActive(false);
+                pinkfoot.SetActive(false);
+                monster.SetActive(false);
+                SceneManager.UnloadScene("Combat");
+
+
+            }
+           
+          
         }
         if(PlayerStatsScript.hp <= 0){
             win = false;

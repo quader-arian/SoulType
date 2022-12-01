@@ -82,6 +82,8 @@ namespace StarterAssets
         [SerializeField] private Transform explorationmusic;
         [SerializeField] private Transform combatmusic;
         [SerializeField] private Transform bossmusic;
+        [SerializeField] private Transform statictransition;
+
         public GameObject enemies;
 
 
@@ -194,11 +196,14 @@ namespace StarterAssets
 
             if(!EnemyStatsScript.inCombat){
                 enemies.SetActive(true);
-                explorationmusic.gameObject.SetActive(true);
                 combatmusic.gameObject.SetActive(false);
+                explorationmusic.gameObject.SetActive(true);
+        
+
+
             }
-            
-            if(!EnemyStatsScript.win){
+
+            if (!EnemyStatsScript.win){
                 transform.position = bf.lastCheckPointPos;
                 EnemyStatsScript.win= true;
             }
@@ -438,15 +443,15 @@ namespace StarterAssets
 
 
 
-        // you gotta make it so when combat ends and exploration resumes, disable combat music object, enable exploration music object
-        //basically wherever you have combat resuming put the code below but uncomment
+    // you gotta make it so when combat ends and exploration resumes, disable combat music object, enable exploration music object
+    //basically wherever you have combat resuming put the code below but uncomment
 
-        // combatmusic.gameObject.SetActive(false);
-        // bossmusic.gameObject.SetActive(false);
-        // explorationmusic.gameObject.SetActive(true);
+    // combatmusic.gameObject.SetActive(false);
+    // bossmusic.gameObject.SetActive(false);
+    // explorationmusic.gameObject.SetActive(true);
 
 
-        void OnTriggerEnter(Collider Col)
+    void OnTriggerEnter(Collider Col)
         {
             if (Col.gameObject.tag == "Ghoul")
             {
@@ -457,7 +462,7 @@ namespace StarterAssets
 
                 //called when combat begins
                 EnemyStatsScript.attackInit();
-                EnemyStatsScript.baseHp = 500;
+                EnemyStatsScript.baseHp = 600;
                 EnemyStatsScript.enemyType = "Ghoul";
 
                 //atk1
@@ -513,7 +518,7 @@ namespace StarterAssets
 
                 //called when combat begins
         EnemyStatsScript.attackInit();
-        EnemyStatsScript.baseHp = 400;
+        EnemyStatsScript.baseHp = 600;
         EnemyStatsScript.enemyType = "ET";
 //atk1 
         EnemyStatsScript.atk[0,0] = "assimilate-2-5-ice-20";
@@ -564,7 +569,7 @@ namespace StarterAssets
                 combatmusic.gameObject.SetActive(true);
                 //Gus fight
                 EnemyStatsScript.attackInit();
-        EnemyStatsScript.baseHp = 450;
+        EnemyStatsScript.baseHp = 500;
         EnemyStatsScript.enemyType = "Gus";
 //atk1
         EnemyStatsScript.atk[0,0] = "will-2-5-ice-20";
@@ -622,7 +627,7 @@ namespace StarterAssets
                 combatmusic.gameObject.SetActive(true);
                 //Skeehaw fight
                 EnemyStatsScript.attackInit();
-        EnemyStatsScript.baseHp = 750;
+        EnemyStatsScript.baseHp = 850;
         EnemyStatsScript.enemyType = "Skeehaw";
 //atk1
         EnemyStatsScript.atk[0,0] = "every-2-5-fire-20";
@@ -678,7 +683,7 @@ EnemyStatsScript.atk[1,5] = "herd-2-10-none-20";
                 //Pinkfoot fight
 
                  EnemyStatsScript.attackInit();
-        EnemyStatsScript.baseHp = 1000;
+        EnemyStatsScript.baseHp = 1200;
         EnemyStatsScript.enemyType = "Pinkfoot";
 //atk1
         EnemyStatsScript.atk[0,0] = "I-2-5-none-20";
@@ -734,7 +739,7 @@ EnemyStatsScript.atk[1,5] = "herd-2-10-none-20";
                 combatmusic.gameObject.SetActive(true);
                 //Wraith fight
                 EnemyStatsScript.attackInit();
-        EnemyStatsScript.baseHp = 1000;
+        EnemyStatsScript.baseHp = 1300;
         EnemyStatsScript.enemyType = "Wraith";
 //atk1
         EnemyStatsScript.atk[0,0] = "humans-2-5-lightning-20";
@@ -797,7 +802,7 @@ EnemyStatsScript.atk[1,5] = "sins-2-10-shield-20";
                 combatmusic.gameObject.SetActive(true);
                 //Sol fight
                  EnemyStatsScript.attackInit();
-        EnemyStatsScript.baseHp = 900;
+        EnemyStatsScript.baseHp = 1250;
         EnemyStatsScript.enemyType = "Sol";
 //atk1
         EnemyStatsScript.atk[0,0] = "big-2-5-none-20";
@@ -860,7 +865,7 @@ EnemyStatsScript.atk[1,5] = "Jim-2-10-lighting-20";
                 combatmusic.gameObject.SetActive(true);
                 //Observer fight
                 EnemyStatsScript.attackInit();
-        EnemyStatsScript.baseHp = 1200;
+        EnemyStatsScript.baseHp = 1400;
         EnemyStatsScript.enemyType = "Observer";
 //atk1
         EnemyStatsScript.atk[0,0] = "k'yarnak-2-5-fire-20";
@@ -911,7 +916,7 @@ EnemyStatsScript.atk[1,5] = "Jim-2-10-lighting-20";
                 //Monster fight
 
                 EnemyStatsScript.attackInit();
-        EnemyStatsScript.baseHp = 1250;
+        EnemyStatsScript.baseHp = 1450;
         EnemyStatsScript.enemyType = "Monster";
 //atk1
         EnemyStatsScript.atk[0,0] = "brands-2-5-heal-20";
@@ -970,7 +975,7 @@ EnemyStatsScript.atk[1,5] = "fans-2-10-none-20";
 
                 //called when combat begins
         EnemyStatsScript.attackInit();
-        EnemyStatsScript.baseHp = 3000;
+        EnemyStatsScript.baseHp = 3500;
         EnemyStatsScript.enemyType = "Emperor";
 //atk1
         EnemyStatsScript.atk[0,0] = "Toto,-2-5-lightning-20";

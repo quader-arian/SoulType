@@ -22,14 +22,14 @@ public class PinkfootStateController : MonoBehaviour
         bool press4 = Input.GetKey("4");
 
         // if not walking and press 1
-        if (!isWalking && press1)
+        if (!isWalking)
         {
             // start walking
             animator.SetBool("isWalking", true);
         }
 
         // if walking and not pressing 1
-        if (isWalking && !press1)
+        if (isWalking)
         {
             // stop walking
             animator.SetBool("isWalking", false);
