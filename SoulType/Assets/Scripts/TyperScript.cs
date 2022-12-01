@@ -49,7 +49,7 @@ public class TyperScript : MonoBehaviour
 
         foreach (char c in keysPressed){
             if (c == '\b'){
-                  Nolan.PlayAniHit();
+                  //Nolan.PlayAniHit();
                 if (send.Length != 0){
                     send = send.Substring(0, send.Length - 1);
                 }else if(currWord.Length != 0){
@@ -58,12 +58,12 @@ public class TyperScript : MonoBehaviour
                 }
             }else if ((c == '\n') || (c == ' ') || (c == '\r')){
                 send += '~';
-                Nolan.PlayAniHit();
+                //Nolan.PlayAniHit();
                 return send;
                 
             }else{
                 send += c;
-                Nolan.PlayAniHit();
+                //Nolan.PlayAniHit();
             }
         }
         return send;

@@ -37,15 +37,15 @@ public class MpWordScript : MonoBehaviour
                     else{
                         PlayerStatsScript.hp += 50 * PlayerStatsScript.mpLvl;
                     }
-                    PlayerStatsScript.healCooldown = 20f;
+                    PlayerStatsScript.healCooldown = 25f;
                 }else if(type == "fire"  && PlayerStatsScript.burnCooldown <= 0){
                     EnemyStatsScript.isBurn = true;
                     EnemyStatsScript.burnTime = 8f;
-                    PlayerStatsScript.burnCooldown = 15f;
+                    PlayerStatsScript.burnCooldown = 25f;
                 }else if(type == "ice" && PlayerStatsScript.slowCooldown <= 0){
                     EnemyStatsScript.isSlowed = true;
                     EnemyStatsScript.slowTime = 8f;
-                    PlayerStatsScript.slowCooldown = 15f;
+                    PlayerStatsScript.slowCooldown = 25f;
                 }else if(type == "shield" && PlayerStatsScript.immuneCooldown <= 0){
                     PlayerStatsScript.isImmune = true;
                     PlayerStatsScript.immuneTime = (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl + 3f; 

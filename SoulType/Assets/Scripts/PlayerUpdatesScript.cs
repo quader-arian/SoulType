@@ -19,8 +19,8 @@ public class PlayerUpdatesScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerStatsScript.burnTime = 8f;
-        PlayerStatsScript.slowTime = 8f;
+        PlayerStatsScript.burnTime = 5f;
+        PlayerStatsScript.slowTime = 5f;
         PlayerStatsScript.immuneTime = (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl + 3f;
         PlayerStatsScript.poweredTime = (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl + 3f;
         PlayerStatsScript.isBurn = false;
@@ -79,7 +79,7 @@ public class PlayerUpdatesScript : MonoBehaviour
 
         }else if(PlayerStatsScript.isBurn){
             PlayerStatsScript.isBurn = false;
-            PlayerStatsScript.burnTime = 8f; 
+            PlayerStatsScript.burnTime = 5f; 
             NolanFX.Fire.gameObject.SetActive(false);
         }
         // slowed = freeze
@@ -89,7 +89,7 @@ public class PlayerUpdatesScript : MonoBehaviour
             NolanFX.PlayAniFrozen();
         }else if(PlayerStatsScript.isSlowed){
             PlayerStatsScript.isSlowed = false;
-            PlayerStatsScript.slowTime =  8f;
+            PlayerStatsScript.slowTime =  5f;
             NolanFX.Frozen.gameObject.SetActive(false);
         }
         // electric = powered
@@ -110,15 +110,15 @@ public class PlayerUpdatesScript : MonoBehaviour
 
         if(PlayerStatsScript.healCooldown > 0){
             PlayerStatsScript.healCooldown -= Time.deltaTime;
-            healImage.fillAmount = 1-PlayerStatsScript.healCooldown/20f;
+            healImage.fillAmount = 1-PlayerStatsScript.healCooldown/25f;
         }
         if(PlayerStatsScript.burnCooldown > 0){
             PlayerStatsScript.burnCooldown -= Time.deltaTime;
-            fireImage.fillAmount = 1-PlayerStatsScript.burnCooldown/15f;;
+            fireImage.fillAmount = 1-PlayerStatsScript.burnCooldown/25f;;
         }
         if(PlayerStatsScript.slowCooldown > 0){
             PlayerStatsScript.slowCooldown -= Time.deltaTime;
-            iceImage.fillAmount = 1-PlayerStatsScript.slowCooldown/15f;
+            iceImage.fillAmount = 1-PlayerStatsScript.slowCooldown/25f;
         }
         if(PlayerStatsScript.immuneCooldown > 0){
             PlayerStatsScript.immuneCooldown -= Time.deltaTime;

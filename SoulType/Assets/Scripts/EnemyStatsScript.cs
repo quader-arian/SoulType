@@ -23,8 +23,8 @@ public class EnemyStatsScript : MonoBehaviour
     public static bool inCombat;
     public static string enemyType;
 
-    public static string[,] atk = new string[3,30];
-    public static int[] atkTimes = new int[3];
+    public static string[,] atk = new string[10,32];
+    public static int[] atkTimes = new int[10];
     public static int currAtk;
     private int i;
 
@@ -49,10 +49,10 @@ public class EnemyStatsScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Nolan.PlayAniBlackFade();
+        //Nolan.PlayAniBlackFade();
         maxHp = baseHp;
         hp = maxHp;
-        currAtk = Random.Range(0, 3);
+        currAtk = Random.Range(0, 10);
         startTimeBtwSpawns = 8;
         timeBtwSpawns = startTimeBtwSpawns;
         locs = GameObject.FindGameObjectsWithTag("DefLocations");
@@ -147,7 +147,7 @@ public class EnemyStatsScript : MonoBehaviour
             }
             i=0;
             startTimeBtwSpawns = atkTimes[currAtk];
-            currAtk = Random.Range(0, 3);
+            currAtk = Random.Range(0, 10);
             timeBtwSpawns = startTimeBtwSpawns;
         }
         else
@@ -160,7 +160,7 @@ public class EnemyStatsScript : MonoBehaviour
             win = true;
             loss = false;
             inCombat = false;   
-            Nolan.PlayAniBlackFade();
+            //Nolan.PlayAniBlackFade();
             //attackInit();
             //SceneManager.UnloadScene("Combat");
         }
@@ -168,7 +168,7 @@ public class EnemyStatsScript : MonoBehaviour
             win = false;
             loss = true;
             inCombat = false;
-            Nolan.PlayAniBlackFade();
+            //Nolan.PlayAniBlackFade();
             //timer unload
             //attackInit();
             //SceneManager.UnloadScene("Combat");
@@ -176,8 +176,8 @@ public class EnemyStatsScript : MonoBehaviour
     }
 
     public static void attackInit(){
-        for(int i = 0; i < 3; i++){
-            for(int j = 0; j < 30; j++){
+        for(int i = 0; i < 10; i++){
+            for(int j = 0; j < 32; j++){
                 atk[i, j] = "";
             }
         }
