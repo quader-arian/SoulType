@@ -470,16 +470,18 @@ namespace StarterAssets
                 EnemyStatsScript.atk[0,1] = "want-2-6-none-20";
                 EnemyStatsScript.atk[0,2] = "eat-2-7-none-20";
                 EnemyStatsScript.atk[0,3] = "your-2-8-none-20";
-                EnemyStatsScript.atk[0,4] = "face.-2-9-heal-20";
+                EnemyStatsScript.atk[0,4] = "face-2-9-heal-20";
                 //atk2
                 EnemyStatsScript.atk[1,0] = "Feed-2-5-heal-20";
                 EnemyStatsScript.atk[1,1] = "me-2-6-none-20";
                 EnemyStatsScript.atk[1,2] = "more-2-7-none-20";
-                EnemyStatsScript.atk[1,3] = "scientist!-2-8-none-20";
+                EnemyStatsScript.atk[1,3] = "scientists!-2-8-none-20";
                 //atk3
-                EnemyStatsScript.atk[2,0] = "death-2-5-heal-20";
-                EnemyStatsScript.atk[2,1] = "and-2-6-none-0";
-                EnemyStatsScript.atk[2,2] = "decay-2-7-heal-10";
+                EnemyStatsScript.atk[2,0] = "Subject#301-2-5-heal-20";
+                EnemyStatsScript.atk[2,1] = "[Ghoul]-2-6-none-0";
+                EnemyStatsScript.atk[2,2] = "from-2-7-heal-10";
+                EnemyStatsScript.atk[2, 3] = "the-2-8-heal-10";
+                EnemyStatsScript.atk[2, 4] = "Corpselands-2-9-heal-10";
                 //atk4
                 EnemyStatsScript.atk[3,0] = "I-2-5-none-20";
                 EnemyStatsScript.atk[3,1] = "want-2-6-none-20";
@@ -494,13 +496,13 @@ namespace StarterAssets
                 EnemyStatsScript.atk[4,2] = "rotten-2-7-heal-20";
                 EnemyStatsScript.atk[4,3] = "to-2-8-none-20";
                 EnemyStatsScript.atk[4,4] = "the-2-9-none-20";
-                EnemyStatsScript.atk[4,5] = "core.-2-9-heal-20";
+                EnemyStatsScript.atk[4,5] = "core.-2-10-heal-20";
 
-                EnemyStatsScript.atkTimes[0] = 15;
-                EnemyStatsScript.atkTimes[1] = 15;
-                EnemyStatsScript.atkTimes[2] = 10;
-                EnemyStatsScript.atkTimes[3] = 15;
-                EnemyStatsScript.atkTimes[4] = 15;
+                EnemyStatsScript.atkTimes[0] = 12;
+                EnemyStatsScript.atkTimes[1] = 11;
+                EnemyStatsScript.atkTimes[2] = 12;
+                EnemyStatsScript.atkTimes[3] = 14;
+                EnemyStatsScript.atkTimes[4] = 13;
 
                 EnemyStatsScript.inCombat = true;
                 enemies.SetActive(false);
@@ -525,31 +527,37 @@ namespace StarterAssets
         EnemyStatsScript.atk[0,2] = "subjugate-2-6-none-20";
         EnemyStatsScript.atk[0,4] = "conquer-2-7-immune-20";
  //atk2
-        EnemyStatsScript.atk[1,0] = "take-2-5-ice-20";
-        EnemyStatsScript.atk[1,1] = "me-2-6-ice-20";
-        EnemyStatsScript.atk[1,2] = "to-2-7-ice-20";
-   	EnemyStatsScript.atk[1,3] = "your-2-8-ice-20";
-       EnemyStatsScript.atk[1,4] = "leader-2-9-ice-20";
+        EnemyStatsScript.atk[1,0] = "take-2-3-ice-20";
+        EnemyStatsScript.atk[1,1] = "me-2-4-ice-20";
+        EnemyStatsScript.atk[1,2] = "to-2-5-ice-20";
+   	EnemyStatsScript.atk[1,3] = "your-2-6-ice-20";
+       EnemyStatsScript.atk[1,4] = "leader-2-7-ice-20";
  //atk3
-        EnemyStatsScript.atk[2,0] = "this-2-5-none-20";
-        EnemyStatsScript.atk[2,1] = "is-2-6-none-0";
-        EnemyStatsScript.atk[2,2] = "our-2-7-none-10";
-      EnemyStatsScript.atk[2,3] = "planet-2-8-none-10";
-       EnemyStatsScript.atk[2,4] = "now-2-9-stun-10";
- //atk4
-        EnemyStatsScript.atk[3,0] = "annihilation-2-3-stun-20";
-       //atk5
-        EnemyStatsScript.atk[4,0] = "your-2-5-none-20";
-        EnemyStatsScript.atk[4,1] = "world-2-6-ice-20";
-        EnemyStatsScript.atk[4,2] = "belongs-2-7-none-20";
-        EnemyStatsScript.atk[4,3] = "to-2-8-none-20";
-        EnemyStatsScript.atk[4,4] = "us-2-9-immune-20";
+        EnemyStatsScript.atk[2,0] = "this-2-4-none-20";
+        EnemyStatsScript.atk[2,1] = "is-2-5-none-0";
+        EnemyStatsScript.atk[2,2] = "our-2-6-none-10";
+      EnemyStatsScript.atk[2,3] = "planet-2-7-none-10";
+       EnemyStatsScript.atk[2,4] = "now-2-8-stun-10";
+           //atk4
+                EnemyStatsScript.atk[3, 0] = "Subject#806-2-5-none-20";
+                EnemyStatsScript.atk[3, 1] = "[ET]-2-6-immune-20";
+                EnemyStatsScript.atk[3, 2] = "from-2-7-none-20";
+                EnemyStatsScript.atk[3, 3] = "Dimension-2-8-none-20";
+                EnemyStatsScript.atk[3, 4] = "5037-2-9-none-20";
+                EnemyStatsScript.atk[3, 5] = "Planet-2-10-ice-20";
+                EnemyStatsScript.atk[3, 6] = "Urzagool-2-11-immune-20";
+                //atk5
+                EnemyStatsScript.atk[4,0] = "we-2-3-none-20";
+        EnemyStatsScript.atk[4,1] = "will-2-4-ice-20";
+        EnemyStatsScript.atk[4,2] = "annihilate-2-6-none-20";
+        EnemyStatsScript.atk[4,3] = "your-2-7-none-20";
+        EnemyStatsScript.atk[4,4] = "cows-2-8-immune-20";
 
-        EnemyStatsScript.atkTimes[0] = 15;
+        EnemyStatsScript.atkTimes[0] = 10;
                 EnemyStatsScript.atkTimes[1] = 10;
-                EnemyStatsScript.atkTimes[2] = 15;
-                EnemyStatsScript.atkTimes[3] = 5;
-                EnemyStatsScript.atkTimes[4] = 15;
+                EnemyStatsScript.atkTimes[2] = 11;
+                EnemyStatsScript.atkTimes[3] = 15;
+                EnemyStatsScript.atkTimes[4] = 11;
 
                 EnemyStatsScript.inCombat = true;
                 enemies.SetActive(false);
@@ -560,9 +568,6 @@ namespace StarterAssets
 
 
 
-
-            //this dude's name is gus
-
             if (Col.gameObject.tag == "FunGuy")
             {
                 explorationmusic.gameObject.SetActive(false);
@@ -572,18 +577,21 @@ namespace StarterAssets
         EnemyStatsScript.baseHp = 500;
         EnemyStatsScript.enemyType = "Gus";
 //atk1
-        EnemyStatsScript.atk[0,0] = "will-2-5-ice-20";
-        EnemyStatsScript.atk[0,1] = "you-2-6-none-20";
-        EnemyStatsScript.atk[0,2] = "feed-2-7-none-20";
-        EnemyStatsScript.atk[0,3] = "me?-2-8-ice-20";
+        EnemyStatsScript.atk[0,0] = "will-2-3-ice-20";
+        EnemyStatsScript.atk[0,1] = "you-2-4-none-20";
+        EnemyStatsScript.atk[0,2] = "feed-2-5-none-20";
+        EnemyStatsScript.atk[0,3] = "me?-2-6-ice-20";
  //atk2
-        EnemyStatsScript.atk[1,0] = "please-2-5-lightning-20";
-        EnemyStatsScript.atk[1,1] = "let-2-6-none-20";
-        EnemyStatsScript.atk[1,2] = "me-2-7-none-20";
-   	EnemyStatsScript.atk[1,3] = "grow-2-8-none-20";
-       EnemyStatsScript.atk[1,4] = "leader-2-9-ice-20";
- //atk3
-        EnemyStatsScript.atk[2,0] = "do-2-5-heal-20";
+        EnemyStatsScript.atk[1,0] = "Subject#611-2-5-lightning-20";
+        EnemyStatsScript.atk[1,1] = "[Gus]-2-6-none-20";
+        EnemyStatsScript.atk[1,2] = "from-2-7-none-20";
+   	EnemyStatsScript.atk[1,3] = "Forest-2-8-ice-20";
+                EnemyStatsScript.atk[1, 4] = "of-2-9-none-20";
+                EnemyStatsScript.atk[1, 5] = "Sentience-2-10-heal-20";
+
+
+                //atk3
+                EnemyStatsScript.atk[2,0] = "do-2-5-heal-20";
         EnemyStatsScript.atk[2,1] = "not-2-6-none-0";
         EnemyStatsScript.atk[2,2] = "jump-2-7-ice-10";
         EnemyStatsScript.atk[2,3] = "on-2-8-none-10";
@@ -603,11 +611,11 @@ namespace StarterAssets
         EnemyStatsScript.atk[4,4] = "mushroom-2-9-lighting-20";
         EnemyStatsScript.atk[4,5] = "samba!-2-10-none-20";
 
-                EnemyStatsScript.atkTimes[0] = 15;
-                EnemyStatsScript.atkTimes[1] = 15;
-                EnemyStatsScript.atkTimes[2] = 15;
-                EnemyStatsScript.atkTimes[3] = 15;
-                EnemyStatsScript.atkTimes[4] = 15;
+                EnemyStatsScript.atkTimes[0] = 8;
+                EnemyStatsScript.atkTimes[1] = 12;
+                EnemyStatsScript.atkTimes[2] = 12;
+                EnemyStatsScript.atkTimes[3] = 11;
+                EnemyStatsScript.atkTimes[4] = 12;
 
                 EnemyStatsScript.inCombat = true;
                 enemies.SetActive(false);
@@ -627,46 +635,52 @@ namespace StarterAssets
                 combatmusic.gameObject.SetActive(true);
                 //Skeehaw fight
                 EnemyStatsScript.attackInit();
-        EnemyStatsScript.baseHp = 850;
+        EnemyStatsScript.baseHp = 750;
         EnemyStatsScript.enemyType = "Skeehaw";
 //atk1
-        EnemyStatsScript.atk[0,0] = "every-2-5-fire-20";
-        EnemyStatsScript.atk[0,1] = "gun-2-6-fire-20";
-        EnemyStatsScript.atk[0,2] = "makes-2-7-fire-20";
-        EnemyStatsScript.atk[0,3] = "its-2-8-fire-20";
-        EnemyStatsScript.atk[0,4] = "own-2-9-fire-20";
-EnemyStatsScript.atk[0,5] = "tune-2-10-fire-20";
+        EnemyStatsScript.atk[0,0] = "every-2-4-fire-20";
+        EnemyStatsScript.atk[0,1] = "gun-2-5-fire-20";
+        EnemyStatsScript.atk[0,2] = "makes-2-6-fire-20";
+        EnemyStatsScript.atk[0,3] = "its-2-7-fire-20";
+        EnemyStatsScript.atk[0,4] = "own-2-8-fire-20";
+EnemyStatsScript.atk[0,5] = "tune-2-9-fire-20";
  //atk2
-        EnemyStatsScript.atk[1,0] = "always-2-5-ice-20";
-        EnemyStatsScript.atk[1,1] = "drink-2-6-fire-20";
-        EnemyStatsScript.atk[1,2] = "upstream-2-7-none-20";
-   	EnemyStatsScript.atk[1,3] = "from-2-8-ice-20";
-EnemyStatsScript.atk[1,4] = "the-2-9-fire-20";
-EnemyStatsScript.atk[1,5] = "herd-2-10-none-20";
+        EnemyStatsScript.atk[1,0] = "always-2-4-ice-20";
+        EnemyStatsScript.atk[1,1] = "drink-2-5-fire-20";
+        EnemyStatsScript.atk[1,2] = "upstream-2-6-none-20";
+   	EnemyStatsScript.atk[1,3] = "from-2-7-ice-20";
+EnemyStatsScript.atk[1,4] = "the-2-8-fire-20";
+EnemyStatsScript.atk[1,5] = "herd-2-9-none-20";
  //atk3
-        EnemyStatsScript.atk[2,0] = "don’t-2-5-ice-20";
-        EnemyStatsScript.atk[2,1] = "dig-2-6-fire-0";
-        EnemyStatsScript.atk[2,2] = "for-2-7-fire-10";
-        EnemyStatsScript.atk[2,3] = "water-2-8-none-10";
-       EnemyStatsScript.atk[2,4] = "under-2-9-none-10";
-       EnemyStatsScript.atk[2,5] = "the-2-10-ice-10";
-       EnemyStatsScript.atk[2,6] = "outhouse-2-11-fire-10";
+        EnemyStatsScript.atk[2,0] = "don’t-2-3-ice-20";
+        EnemyStatsScript.atk[2,1] = "dig-2-4-fire-0";
+        EnemyStatsScript.atk[2,2] = "for-2-5-fire-10";
+        EnemyStatsScript.atk[2,3] = "water-2-6-none-10";
+       EnemyStatsScript.atk[2,4] = "under-2-7-none-10";
+       EnemyStatsScript.atk[2,5] = "the-2-8-ice-10";
+       EnemyStatsScript.atk[2,6] = "outhouse-2-9-fire-10";
  //atk4
-        EnemyStatsScript.atk[3,0] = "sometimes-2-5-none-20";
-        EnemyStatsScript.atk[3,1] = "you-2-6-none-20";
-        EnemyStatsScript.atk[3,2] = "get-2-7-none-20";
-        EnemyStatsScript.atk[3,3] = "and-2-8-none-20";
-        EnemyStatsScript.atk[3,4] = "sometimes-2-9-ice-20";
-	EnemyStatsScript.atk[3,5] = "you-2-10-fire-20";
-       EnemyStatsScript.atk[3,6] = "get-2-11-fire-20";
-        EnemyStatsScript.atk[3,7] = "got-2-12-fire-20";
+        EnemyStatsScript.atk[3,0] = "sometimes-2-4-none-20";
+        EnemyStatsScript.atk[3,1] = "you-2-5-none-20";
+        EnemyStatsScript.atk[3,2] = "get-2-6-none-20";
+        EnemyStatsScript.atk[3,3] = "and-2-7-none-20";
+        EnemyStatsScript.atk[3,4] = "sometimes-2-8-ice-20";
+	EnemyStatsScript.atk[3,5] = "you-2-9-fire-20";
+       EnemyStatsScript.atk[3,6] = "get-2-10-fire-20";
+        EnemyStatsScript.atk[3,7] = "got-2-11-fire-20";
+  //atk5
+        EnemyStatsScript.atk[4,0] = "Subject#1200-2-5-fire-20";
+        EnemyStatsScript.atk[4,1] = "[Skeehaw]-2-6-none-20";
+        EnemyStatsScript.atk[4,2] = "from-2-7-ice-20";
+        EnemyStatsScript.atk[4,3] = "Bobo's-2-8-none-20";
+        EnemyStatsScript.atk[4,4] = "Bizarre-2-9-lighting-20";
+        EnemyStatsScript.atk[4,5] = "World-2-10-none-20";
 
-
-                EnemyStatsScript.atkTimes[0] = 15;
-                EnemyStatsScript.atkTimes[1] = 15;
-                EnemyStatsScript.atkTimes[2] = 15;
-                EnemyStatsScript.atkTimes[3] = 15;
-                EnemyStatsScript.atkTimes[4] = 15;
+                EnemyStatsScript.atkTimes[0] = 11;
+                EnemyStatsScript.atkTimes[1] = 11;
+                EnemyStatsScript.atkTimes[2] = 11;
+                EnemyStatsScript.atkTimes[3] = 13;
+                EnemyStatsScript.atkTimes[4] = 12;
                 EnemyStatsScript.inCombat = true;
                 enemies.SetActive(false);
                 SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
@@ -686,45 +700,44 @@ EnemyStatsScript.atk[1,5] = "herd-2-10-none-20";
         EnemyStatsScript.baseHp = 1200;
         EnemyStatsScript.enemyType = "Pinkfoot";
 //atk1
-        EnemyStatsScript.atk[0,0] = "I-2-5-none-20";
-        EnemyStatsScript.atk[0,1] = "awaken-2-6-heal-20";
-        EnemyStatsScript.atk[0,2] = "from-2-7-none-20";
-        EnemyStatsScript.atk[0,3] = "my-2-8-none-20";
-        EnemyStatsScript.atk[0,4] = "slumber-2-9-fire-20";
+        EnemyStatsScript.atk[0,0] = "I-2-2-fire-20";
+        EnemyStatsScript.atk[0,1] = "awaken-2-3-fire-20";
+        EnemyStatsScript.atk[0,2] = "from-2-4-none-20";
+        EnemyStatsScript.atk[0,3] = "my-2-5-none-20";
+        EnemyStatsScript.atk[0,4] = "slumber-2-6-fire-20";
  //atk2
-        EnemyStatsScript.atk[1,0] = "who-2-5-lightning-20";
-        EnemyStatsScript.atk[1,1] = "dares-2-6-lightning-20";
-        EnemyStatsScript.atk[1,2] = "summon-2-7-lightning-20";
-   	EnemyStatsScript.atk[1,3] = "me?-2-8-fire-20";
+        EnemyStatsScript.atk[1,0] = "who-2-3-lightning-20";
+        EnemyStatsScript.atk[1,1] = "dares-2-4-lightning-20";
+        EnemyStatsScript.atk[1,2] = "summon-2-5-lightning-20";
+   	EnemyStatsScript.atk[1,3] = "me?-2-6-fire-20";
  //atk3
-        EnemyStatsScript.atk[2,0] = "rip-2-5-fire-20";
-        EnemyStatsScript.atk[2,1] = "and-2-6-none-0";
-        EnemyStatsScript.atk[2,2] = "tear-2-7-lightning-10";
-        EnemyStatsScript.atk[2,3] = "until-2-8-none-10";
-       EnemyStatsScript.atk[2,4] = "it-2-9-none-10";
-       EnemyStatsScript.atk[2,5] = "is-2-10-heal-10";
-       EnemyStatsScript.atk[2,6] = "done-2-11-fire-10";
+        EnemyStatsScript.atk[2,0] = "rip-2-4-fire-20";
+        EnemyStatsScript.atk[2,1] = "and-2-5-none-0";
+        EnemyStatsScript.atk[2,2] = "tear-2-6-lightning-10";
+        EnemyStatsScript.atk[2,3] = "until-2-7-none-10";
+       EnemyStatsScript.atk[2,4] = "it-2-8-none-10";
+       EnemyStatsScript.atk[2,5] = "is-2-9-heal-10";
+       EnemyStatsScript.atk[2,6] = "done-2-10-fire-10";
  //atk4
-        EnemyStatsScript.atk[3,0] = "I-2-5-none-20";
-        EnemyStatsScript.atk[3,1] = "am-2-6-none-20";
-        EnemyStatsScript.atk[3,2] = "agony-2-7-lightning-20";
-        EnemyStatsScript.atk[3,3] = "incarnate,-2-8-fire-20";
-        EnemyStatsScript.atk[3,4] = "I-2-9-none-20";
-	EnemyStatsScript.atk[3,5] = "am-2-10-lightning-20";
-       EnemyStatsScript.atk[3,6] = "your-2-11-heal-20";
-        EnemyStatsScript.atk[3,7] = "suffering-2-12-fire-20";
+        EnemyStatsScript.atk[3,0] = "Subject#666-2-5-fire-20";
+        EnemyStatsScript.atk[3,1] = "[Pinkfoot]-2-6-none-20";
+        EnemyStatsScript.atk[3,2] = "from-2-7-lightning-20";
+        EnemyStatsScript.atk[3,3] = "the-2-8-fire-20";
+        EnemyStatsScript.atk[3,4] = "Realm-2-9-none-20";
+	EnemyStatsScript.atk[3,5] = "of-2-10-lightning-20";
+       EnemyStatsScript.atk[3,6] = "Agony-2-11-heal-20";
        //atk5
-        EnemyStatsScript.atk[4,0] = "rage,-2-5-fire-20";
-        EnemyStatsScript.atk[4,1] = "brutal,-2-6-fire-20";
-        EnemyStatsScript.atk[4,2] = "without-2-7-fire-20";
-        EnemyStatsScript.atk[4,3] = "mercy-2-8-fire-20";
+        EnemyStatsScript.atk[4,0] = "rage,-2-3-fire-20";
+        EnemyStatsScript.atk[4,1] = "brutal,-2-4-none-20";
+        EnemyStatsScript.atk[4,2] = "without-2-5-fire-20";
+        EnemyStatsScript.atk[4,3] = "mercy-2-6-fire-20";
 
 
-                EnemyStatsScript.atkTimes[0] = 15;
-                EnemyStatsScript.atkTimes[1] = 15;
-                EnemyStatsScript.atkTimes[2] = 15;
-                EnemyStatsScript.atkTimes[3] = 15;
-                EnemyStatsScript.atkTimes[4] = 10;
+                EnemyStatsScript.atkTimes[0] = 9;
+                EnemyStatsScript.atkTimes[1] = 9;
+                EnemyStatsScript.atkTimes[2] = 13;
+                EnemyStatsScript.atkTimes[3] = 14;
+                EnemyStatsScript.atkTimes[4] = 9;
                 EnemyStatsScript.inCombat = true;
                 enemies.SetActive(false);
                 SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
@@ -752,12 +765,12 @@ EnemyStatsScript.atk[0,6] = "not-2-11-none-20";
 EnemyStatsScript.atk[0,7] = "understand-2-12-shield-20";
  
  //atk2
-        EnemyStatsScript.atk[1,0] = "you-2-5-ice-20";
-        EnemyStatsScript.atk[1,1] = "must-2-6-ice-20";
-        EnemyStatsScript.atk[1,2] = "atone-2-7-ice-20";
-   	EnemyStatsScript.atk[1,3] = "for-2-8-lightning-20";
-EnemyStatsScript.atk[1,4] = "your-2-9-lightning-20";
-EnemyStatsScript.atk[1,5] = "sins-2-10-shield-20";
+        EnemyStatsScript.atk[1,0] = "you-2-4-ice-20";
+        EnemyStatsScript.atk[1,1] = "must-2-5-ice-20";
+        EnemyStatsScript.atk[1,2] = "atone-2-6-ice-20";
+   	EnemyStatsScript.atk[1,3] = "for-2-7-lightning-20";
+EnemyStatsScript.atk[1,4] = "your-2-8-lightning-20";
+EnemyStatsScript.atk[1,5] = "sins-2-9-shield-20";
  //atk3
         EnemyStatsScript.atk[2,0] = "lust-2-5-ice-20";
         EnemyStatsScript.atk[2,1] = "pride-2-6-ice-0";
@@ -767,27 +780,24 @@ EnemyStatsScript.atk[1,5] = "sins-2-10-shield-20";
        EnemyStatsScript.atk[2,5] = "wrath-2-10-lightning-10";
        EnemyStatsScript.atk[2,6] = "sloth-2-11-shield-10";
  //atk4
-        EnemyStatsScript.atk[3,0] = "this-2-5-none-20";
-        EnemyStatsScript.atk[3,1] = "is-2-6-none-20";
-        EnemyStatsScript.atk[3,2] = "your-2-7-none-20";
-        EnemyStatsScript.atk[3,3] = "living-2-8-ice-20";
-        EnemyStatsScript.atk[3,4] = "nightmare-2-9-lightning-20";
-	EnemyStatsScript.atk[3,5] = "you-2-10-none-20";
-       EnemyStatsScript.atk[3,6] = "won’t-2-11-ice-20";
-        EnemyStatsScript.atk[3,7] = "wake-2-12-lightning-20";
-    EnemyStatsScript.atk[3,8] = "up-2-13-shield-20";
+        EnemyStatsScript.atk[3,0] = "Subject#084-2-5-none-20";
+        EnemyStatsScript.atk[3,1] = "[Wraith]-2-6-shield-20";
+        EnemyStatsScript.atk[3,2] = "from-2-7-none-20";
+        EnemyStatsScript.atk[3,3] = "The-2-8-ice-20";
+        EnemyStatsScript.atk[3,4] = "Perpetual-2-9-lightning-20";
+	EnemyStatsScript.atk[3,5] = "Nightmare-2-10-none-20";
        //atk5
-        EnemyStatsScript.atk[4,0] = "your-2-5-none-20";
-        EnemyStatsScript.atk[4,1] = "time-2-6-none-20";
-        EnemyStatsScript.atk[4,2] = "has-2-7-ice-20";
-        EnemyStatsScript.atk[4,3] = "come-2-8-shield-20";
+        EnemyStatsScript.atk[4,0] = "your-2-2-none-20";
+        EnemyStatsScript.atk[4,1] = "time-2-3-none-20";
+        EnemyStatsScript.atk[4,2] = "has-2-4-ice-20";
+        EnemyStatsScript.atk[4,3] = "come-2-5-shield-20";
 
 
                 EnemyStatsScript.atkTimes[0] = 15;
-                EnemyStatsScript.atkTimes[1] = 15;
-                EnemyStatsScript.atkTimes[2] = 15;
-                EnemyStatsScript.atkTimes[3] = 15;
-                EnemyStatsScript.atkTimes[4] = 10;
+                EnemyStatsScript.atkTimes[1] = 12;
+                EnemyStatsScript.atkTimes[2] = 14;
+                EnemyStatsScript.atkTimes[3] = 13;
+                EnemyStatsScript.atkTimes[4] = 8;
                 EnemyStatsScript.inCombat = true;
                 enemies.SetActive(false);
                 SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
@@ -838,18 +848,20 @@ EnemyStatsScript.atk[1,5] = "Jim-2-10-lighting-20";
         EnemyStatsScript.atk[3,7] = "lazy-2-12-none-20";
     EnemyStatsScript.atk[3,8] = "dog-2-13-none-20";
        //atk5
-        EnemyStatsScript.atk[4,0] = "oh-2-5-none-20";
-        EnemyStatsScript.atk[4,1] = "god-2-6-none-20";
-        EnemyStatsScript.atk[4,2] = "my-2-7-none-20";
-        EnemyStatsScript.atk[4,3] = "nose-2-8-none-20";
-        EnemyStatsScript.atk[4,4] = "itches-2-9-heal-20";
+        EnemyStatsScript.atk[4,0] = "Subject#710-2-5-lightning-20";
+        EnemyStatsScript.atk[4,1] = "[Sol]-2-6-none-20";
+        EnemyStatsScript.atk[4,2] = "from-2-7-lightning-20";
+        EnemyStatsScript.atk[4,3] = "Haven-2-8-none-20";
+        EnemyStatsScript.atk[4,4] = "of-2-9-heal-20";
+         EnemyStatsScript.atk[4, 5] = "the-2-10-heal-20";
+        EnemyStatsScript.atk[4, 6] = "Sun-2-11-heal-20";
 
 
-                EnemyStatsScript.atkTimes[0] = 15;
-                EnemyStatsScript.atkTimes[1] = 15;
-                EnemyStatsScript.atkTimes[2] = 15;
-                EnemyStatsScript.atkTimes[3] = 15;
-                EnemyStatsScript.atkTimes[4] = 10;
+                EnemyStatsScript.atkTimes[0] = 13;
+                EnemyStatsScript.atkTimes[1] = 13;
+                EnemyStatsScript.atkTimes[2] = 14;
+                EnemyStatsScript.atkTimes[3] = 16;
+                EnemyStatsScript.atkTimes[4] = 14;
                 EnemyStatsScript.inCombat = true;
                 enemies.SetActive(false);
                 SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
@@ -883,19 +895,26 @@ EnemyStatsScript.atk[1,5] = "Jim-2-10-lighting-20";
         EnemyStatsScript.atk[2,2] = "kadishtu-2-7-heal-10";
         EnemyStatsScript.atk[2,3] = "nilgh'ri-2-8-shield-10";
  //atk4
-        EnemyStatsScript.atk[3,0] = "'geb f'ai-2-5-fire-20";
-        EnemyStatsScript.atk[3,1] = "throdog-2-6-ice-20";
-        EnemyStatsScript.atk[3,2] = "uaaah-2-7-shield-20";
-       //atk5
-        EnemyStatsScript.atk[4,0] = "ph'nglui-2-5-ice-20";
+        EnemyStatsScript.atk[3,0] = "Subject#1928 f'ai-2-5-fire-20";
+        EnemyStatsScript.atk[3,1] = "[Observer]-2-6-ice-20";
+        EnemyStatsScript.atk[3,2] = "from-2-7-shield-20";
+                EnemyStatsScript.atk[3, 3] = "the-2-8-none-20";
+                EnemyStatsScript.atk[3, 4] = "Land-2-9-fire-20";
+                EnemyStatsScript.atk[3, 5] = "of-2-10-none-20";
+                EnemyStatsScript.atk[3, 6] = "the-2-11-shield-20";
+                EnemyStatsScript.atk[3, 7] = "Dreamer-2-12-ice-20";
+
+
+                //atk5
+                EnemyStatsScript.atk[4,0] = "ph'nglui-2-5-ice-20";
         EnemyStatsScript.atk[4,1] = "mglw'nafh-2-6-shield-20";
 
 
-                EnemyStatsScript.atkTimes[0] = 15;
-                EnemyStatsScript.atkTimes[1] = 15;
-                EnemyStatsScript.atkTimes[2] = 15;
-                EnemyStatsScript.atkTimes[3] = 15;
-                EnemyStatsScript.atkTimes[4] = 15;
+                EnemyStatsScript.atkTimes[0] = 13;
+                EnemyStatsScript.atkTimes[1] = 13;
+                EnemyStatsScript.atkTimes[2] = 13;
+                EnemyStatsScript.atkTimes[3] = 16;
+                EnemyStatsScript.atkTimes[4] = 10;
                 EnemyStatsScript.inCombat = true;
                 enemies.SetActive(false);
                 SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
@@ -920,23 +939,25 @@ EnemyStatsScript.atk[1,5] = "Jim-2-10-lighting-20";
         EnemyStatsScript.enemyType = "Monster";
 //atk1
         EnemyStatsScript.atk[0,0] = "brands-2-5-heal-20";
-        EnemyStatsScript.atk[0,1] = "promotions-2-6-heal-20";
+        EnemyStatsScript.atk[0,1] = "promotions-2-6-lightning-20";
         EnemyStatsScript.atk[0,2] = "marketing-2-7-heal-20";
         EnemyStatsScript.atk[0,3] = "product-2-8-heal-20";
-        EnemyStatsScript.atk[0,4] = "placement-2-9-heal-20";
+        EnemyStatsScript.atk[0,4] = "placement-2-9-lightning-20";
 EnemyStatsScript.atk[0,5] = "we-2-10-heal-20";
 EnemyStatsScript.atk[0,6] = "are-2-11-heal-20";
-EnemyStatsScript.atk[0,7] = "everywhere-2-12-heal-20";
+EnemyStatsScript.atk[0,7] = "everywhere-2-12-lightning-20";
  
  //atk2
-        EnemyStatsScript.atk[1,0] = "fueling-2-5-lighting-20";
-        EnemyStatsScript.atk[1,1] = "our-2-6-none-20";
-        EnemyStatsScript.atk[1,2] = "athletes,-2-7-none-20";
-   	EnemyStatsScript.atk[1,3] = "musicians,-2-8-lighting-20";
-EnemyStatsScript.atk[1,4] = "and-2-9-none-20";
-EnemyStatsScript.atk[1,5] = "fans-2-10-none-20";
- //atk3
-        EnemyStatsScript.atk[2,0] = "not-2-5-ice-20";
+        EnemyStatsScript.atk[1,0] = "Unknown-2-5-lighting-20";
+        EnemyStatsScript.atk[1,1] = "Subject#-2-6-none-20";
+        EnemyStatsScript.atk[1,2] = "[null],-2-7-ice-20";
+   	EnemyStatsScript.atk[1,3] = "from-2-8-lighting-20";
+EnemyStatsScript.atk[1,4] = "Compound-2-9-none-20";
+                EnemyStatsScript.atk[1, 5] = "Nine-2-10-heal-20";
+
+
+                //atk3
+                EnemyStatsScript.atk[2,0] = "not-2-5-ice-20";
         EnemyStatsScript.atk[2,1] = "just-2-6-none-0";
         EnemyStatsScript.atk[2,2] = "any-2-7-ice-10";
         EnemyStatsScript.atk[2,3] = "regular-2-8-none-10";
@@ -944,20 +965,20 @@ EnemyStatsScript.atk[1,5] = "fans-2-10-none-20";
        EnemyStatsScript.atk[2,5] = "energy-2-10-none-10";
        EnemyStatsScript.atk[2,6] = "drink-2-11-ice-10";
  //atk4
-        EnemyStatsScript.atk[3,0] = "quench-2-5-lightning-20";
-        EnemyStatsScript.atk[3,1] = "your-2-6-none-20";
-        EnemyStatsScript.atk[3,2] = "thirst-2-7-none-20";
+        EnemyStatsScript.atk[3,0] = "quench-2-2-lightning-20";
+        EnemyStatsScript.atk[3,1] = "your-2-3-none-20";
+        EnemyStatsScript.atk[3,2] = "thirst-2-4-none-20";
        //atk5
-        EnemyStatsScript.atk[4,0] = "Unleash-2-5-fire-20";
-        EnemyStatsScript.atk[4,1] = "the-2-6-fire-20";
-        EnemyStatsScript.atk[4,2] = "Beast-2-7-fire-20";
+        EnemyStatsScript.atk[4,0] = "Unleash-2-3-fire-20";
+        EnemyStatsScript.atk[4,1] = "the-2-4-fire-20";
+        EnemyStatsScript.atk[4,2] = "Beast-2-5-fire-20";
 
 
                 EnemyStatsScript.atkTimes[0] = 15;
-                EnemyStatsScript.atkTimes[1] = 15;
-                EnemyStatsScript.atkTimes[2] = 15;
-                EnemyStatsScript.atkTimes[3] = 10;
-                EnemyStatsScript.atkTimes[4] = 10;
+                EnemyStatsScript.atkTimes[1] = 13;
+                EnemyStatsScript.atkTimes[2] = 14;
+                EnemyStatsScript.atkTimes[3] = 7;
+                EnemyStatsScript.atkTimes[4] = 8;
                 EnemyStatsScript.inCombat = true;
                 enemies.SetActive(false);
                 SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
@@ -978,59 +999,59 @@ EnemyStatsScript.atk[1,5] = "fans-2-10-none-20";
         EnemyStatsScript.baseHp = 3500;
         EnemyStatsScript.enemyType = "Emperor";
 //atk1
-        EnemyStatsScript.atk[0,0] = "Toto,-2-5-lightning-20";
-        EnemyStatsScript.atk[0,1] = "I’ve-2-6-fire-20";
-        EnemyStatsScript.atk[0,2] = "a-2-7-fire-20";
-        EnemyStatsScript.atk[0,3] = "feeling-2-8-fire-20";
-        EnemyStatsScript.atk[0,4] = "we’re-2-9-lightning-20";
-EnemyStatsScript.atk[0,5] = "not-2-10-fire-20";
-EnemyStatsScript.atk[0,6] = "in-2-11-fire-20";
-EnemyStatsScript.atk[0,7] = "Kansas-2-12-fire-20";
-EnemyStatsScript.atk[0,8] = "anymore-2-13-fire-20";
+        EnemyStatsScript.atk[0,0] = "Toto,-2-3-lightning-20";
+        EnemyStatsScript.atk[0,1] = "I’ve-2-4-fire-20";
+        EnemyStatsScript.atk[0,2] = "a-2-5-fire-20";
+        EnemyStatsScript.atk[0,3] = "feeling-2-6-fire-20";
+        EnemyStatsScript.atk[0,4] = "we’re-2-7-lightning-20";
+EnemyStatsScript.atk[0,5] = "not-2-8-fire-20";
+EnemyStatsScript.atk[0,6] = "in-2-9-fire-20";
+EnemyStatsScript.atk[0,7] = "Kansas-2-10-fire-20";
+EnemyStatsScript.atk[0,8] = "anymore-2-11-fire-20";
  
  //atk2
-        EnemyStatsScript.atk[1,0] = "I-2-5-lightning-20";
-        EnemyStatsScript.atk[1,1] = "love-2-6-fire-20";
-        EnemyStatsScript.atk[1,2] = "the-2-7-fire-20";
-   	EnemyStatsScript.atk[1,3] = "smell-2-8-fire-20";
-EnemyStatsScript.atk[1,4] = "of-2-9-ice-20";
-EnemyStatsScript.atk[1,5] = "napalm-2-10-heal-20";
-EnemyStatsScript.atk[1,6] = "in-2-11-shield-20";
-EnemyStatsScript.atk[1,7] = "the-2-12-shield-20";
-EnemyStatsScript.atk[1,8] = "morning-2-13-shield-20";
+        EnemyStatsScript.atk[1,0] = "I-2-2-lightning-20";
+        EnemyStatsScript.atk[1,1] = "love-2-3-fire-20";
+        EnemyStatsScript.atk[1,2] = "the-2-4-fire-20";
+   	EnemyStatsScript.atk[1,3] = "smell-2-5-fire-20";
+EnemyStatsScript.atk[1,4] = "of-2-6-ice-20";
+EnemyStatsScript.atk[1,5] = "napalm-2-7-heal-20";
+EnemyStatsScript.atk[1,6] = "in-2-8-shield-20";
+EnemyStatsScript.atk[1,7] = "the-2-9-shield-20";
+EnemyStatsScript.atk[1,8] = "morning-2-10-shield-20";
  
  //atk3
-        EnemyStatsScript.atk[2,0] = "I’m-2-5-heal-20";
-        EnemyStatsScript.atk[2,1] = "gonna-2-6-lightning-0";
-        EnemyStatsScript.atk[2,2] = "make-2-7-none-10";
-        EnemyStatsScript.atk[2,3] = "him-2-8-none-10";
-       EnemyStatsScript.atk[2,4] = "an-2-9-none-10";
-       EnemyStatsScript.atk[2,5] = "offer-2-10-ice-10";
-       EnemyStatsScript.atk[2,6] = "he-2-11-heal-10";
-       EnemyStatsScript.atk[2,7] = "can’t-2-12-shield-10";
-       EnemyStatsScript.atk[2,8] = "refuse-2-13-fire-10";
+        EnemyStatsScript.atk[2,0] = "I’m-2-3-heal-20";
+        EnemyStatsScript.atk[2,1] = "gonna-2-4-lightning-0";
+        EnemyStatsScript.atk[2,2] = "make-2-5-none-10";
+        EnemyStatsScript.atk[2,3] = "him-2-6-none-10";
+       EnemyStatsScript.atk[2,4] = "an-2-7-none-10";
+       EnemyStatsScript.atk[2,5] = "offer-2-8-ice-10";
+       EnemyStatsScript.atk[2,6] = "he-2-9-heal-10";
+       EnemyStatsScript.atk[2,7] = "can’t-2-10-shield-10";
+       EnemyStatsScript.atk[2,8] = "refuse-2-11-fire-10";
  
  
  //atk4
-        EnemyStatsScript.atk[3,0] = "I-2-5-lightning-20";
-        EnemyStatsScript.atk[3,1] = "ate-2-6-fire-20";
-        EnemyStatsScript.atk[3,2] = "his-2-7-fire-20";
-        EnemyStatsScript.atk[3,3] = "liver-2-8-fire-20";
-        EnemyStatsScript.atk[3,4] = "with-2-9-lightning-20";
-	EnemyStatsScript.atk[3,5] = "some-2-10-shield-20";
-       EnemyStatsScript.atk[3,6] = "fava-2-11-shield-20";
-        EnemyStatsScript.atk[3,7] = "beans-2-12-shield-20";
+        EnemyStatsScript.atk[3,0] = "I-2-2-lightning-20";
+        EnemyStatsScript.atk[3,1] = "ate-2-3-fire-20";
+        EnemyStatsScript.atk[3,2] = "his-2-4-fire-20";
+        EnemyStatsScript.atk[3,3] = "liver-2-5-fire-20";
+        EnemyStatsScript.atk[3,4] = "with-2-6-lightning-20";
+	EnemyStatsScript.atk[3,5] = "some-2-7-shield-20";
+       EnemyStatsScript.atk[3,6] = "fava-2-8-shield-20";
+        EnemyStatsScript.atk[3,7] = "beans-2-9-shield-20";
  
        //atk5
-        EnemyStatsScript.atk[4,0] = "here’s-2-5-heal-20";
-        EnemyStatsScript.atk[4,1] = "Johnny!-2-6-heal-20";
+        EnemyStatsScript.atk[4,0] = "here’s-2-3-heal-20";
+        EnemyStatsScript.atk[4,1] = "Johnny!-2-4-heal-20";
 
 
                 EnemyStatsScript.atkTimes[0] = 15;
-                EnemyStatsScript.atkTimes[1] = 15;
+                EnemyStatsScript.atkTimes[1] = 14;
                 EnemyStatsScript.atkTimes[2] = 15;
-                EnemyStatsScript.atkTimes[3] = 15;
-                EnemyStatsScript.atkTimes[4] = 15;
+                EnemyStatsScript.atkTimes[3] = 14;
+                EnemyStatsScript.atkTimes[4] = 9;
                 EnemyStatsScript.inCombat = true;
                 enemies.SetActive(false);
                 SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
