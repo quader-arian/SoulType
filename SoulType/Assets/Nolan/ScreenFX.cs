@@ -43,14 +43,12 @@ public class ScreenFX : MonoBehaviour
     }
 
     public void PlayAniBlackFade(){
-        if(blackFade.enabled == false){
 
         blackFade.gameObject.SetActive(true);
         blackFade.SetTrigger("Fade");
        
         }
-        
-    }
+    
     public void PlayAniShake(){
         
         if(blackFade.enabled == false){

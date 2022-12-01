@@ -20,6 +20,7 @@ public class DefWordScript : MonoBehaviour
     public Image typeImage;
     private Sprite spriteImage;
 
+    public ScreenFX Nolan;
     // Start is called before the first frame update
     void Start()
     {
@@ -75,7 +76,7 @@ public class DefWordScript : MonoBehaviour
             parry -= Time.deltaTime;
         }
         if(block <= 0){
-            // hit 
+            Nolan.PlayAniHit(); 
             if(type == "lightning"){
                 EnemyStatsScript.isPowered = true;
                 EnemyStatsScript.poweredTime = 1f;

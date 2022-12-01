@@ -45,9 +45,11 @@ public class EnemyStatsScript : MonoBehaviour
     public GameObject words;
     public DefWordScript thisWord;
 
+    public ScreenFX Nolan;
     // Start is called before the first frame update
     void Start()
     {
+        // black fade
         maxHp = baseHp;
         hp = maxHp;
         currAtk = Random.Range(0, 3);
@@ -129,6 +131,7 @@ public class EnemyStatsScript : MonoBehaviour
         }
 
         if (timeBtwSpawns <= 0){
+            // inc atk
             foreach (GameObject loc in locs){
                 if(atk[currAtk, i] != "" && atk[currAtk, i] != null){
                     string[] splitArray = atk[currAtk, i].Split(char.Parse("-"));
@@ -156,7 +159,8 @@ public class EnemyStatsScript : MonoBehaviour
         if(hp <= 0){
             win = true;
             loss = false;
-            inCombat = false;
+            inCombat = false;   
+            Nolan.PlayAniBlackFade();
             //attackInit();
             //SceneManager.UnloadScene("Combat");
         }
@@ -164,6 +168,8 @@ public class EnemyStatsScript : MonoBehaviour
             win = false;
             loss = true;
             inCombat = false;
+            Nolan.PlayAniBlackFade();
+            //timer unload
             //attackInit();
             //SceneManager.UnloadScene("Combat");
         }
