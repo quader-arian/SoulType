@@ -724,6 +724,8 @@ MonoBehaviour:
   FrozenGO: {fileID: 0}
   ElectricGO: {fileID: 0}
   Dying: {fileID: 0}
+  timer: 0
+  timerDelay: 0
 --- !u!1 &323001546
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,6 +973,8 @@ MonoBehaviour:
   FrozenGO: {fileID: 0}
   ElectricGO: {fileID: 0}
   Dying: {fileID: 0}
+  timer: 0
+  timerDelay: 0
 --- !u!1 &537185997
 GameObject:
   m_ObjectHideFlags: 0
@@ -1207,6 +1211,8 @@ MonoBehaviour:
   FrozenGO: {fileID: 0}
   ElectricGO: {fileID: 0}
   Dying: {fileID: 0}
+  timer: 0
+  timerDelay: 0
 --- !u!1 &617689950
 GameObject:
   m_ObjectHideFlags: 0
@@ -1336,6 +1342,8 @@ MonoBehaviour:
   FrozenGO: {fileID: 0}
   ElectricGO: {fileID: 0}
   Dying: {fileID: 0}
+  timer: 0
+  timerDelay: 0
 --- !u!1 &639879055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1541,6 +1549,8 @@ MonoBehaviour:
   FrozenGO: {fileID: 0}
   ElectricGO: {fileID: 0}
   Dying: {fileID: 0}
+  timer: 0
+  timerDelay: 0
 --- !u!1 &694396641
 GameObject:
   m_ObjectHideFlags: 0
@@ -1740,6 +1750,8 @@ MonoBehaviour:
   FrozenGO: {fileID: 0}
   ElectricGO: {fileID: 0}
   Dying: {fileID: 0}
+  timer: 0
+  timerDelay: 0
 --- !u!1 &770139487
 GameObject:
   m_ObjectHideFlags: 0
@@ -2094,6 +2106,8 @@ MonoBehaviour:
   FrozenGO: {fileID: 1433433166}
   ElectricGO: {fileID: 684855192}
   Dying: {fileID: 1762209387}
+  timer: 0
+  timerDelay: 0
 --- !u!1 &1008722547
 GameObject:
   m_ObjectHideFlags: 0
@@ -2285,6 +2299,8 @@ MonoBehaviour:
   FrozenGO: {fileID: 0}
   ElectricGO: {fileID: 0}
   Dying: {fileID: 0}
+  timer: 0
+  timerDelay: 0
 --- !u!1 &1039271622
 GameObject:
   m_ObjectHideFlags: 0
@@ -3121,6 +3137,7 @@ MonoBehaviour:
   healthBarImage: {fileID: 1114119096}
   words: {fileID: 7916969878079984011, guid: ebbb3a83417fe9140a87680e88582922, type: 3}
   thisWord: {fileID: 0}
+  Nolan: {fileID: 0}
 --- !u!4 &1171341778
 Transform:
   m_ObjectHideFlags: 0
@@ -4042,6 +4059,8 @@ MonoBehaviour:
   FrozenGO: {fileID: 0}
   ElectricGO: {fileID: 0}
   Dying: {fileID: 0}
+  timer: 0
+  timerDelay: 0
 --- !u!1 &1449340195
 GameObject:
   m_ObjectHideFlags: 0
@@ -4485,6 +4504,8 @@ MonoBehaviour:
   FrozenGO: {fileID: 1433433166}
   ElectricGO: {fileID: 684855192}
   Dying: {fileID: 1762209387}
+  timer: 0
+  timerDelay: 0
 --- !u!95 &1532597067
 Animator:
   serializedVersion: 4
@@ -5295,6 +5316,8 @@ MonoBehaviour:
   FrozenGO: {fileID: 0}
   ElectricGO: {fileID: 0}
   Dying: {fileID: 0}
+  timer: 0
+  timerDelay: 0
 --- !u!1 &1766990762
 GameObject:
   m_ObjectHideFlags: 0
@@ -5753,6 +5776,8 @@ MonoBehaviour:
   FrozenGO: {fileID: 0}
   ElectricGO: {fileID: 0}
   Dying: {fileID: 0}
+  timer: 0
+  timerDelay: 0
 --- !u!1 &1909612055
 GameObject:
   m_ObjectHideFlags: 0
@@ -6581,6 +6606,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8087365158979779298, guid: 5780b56f8feec4046b821a941cf83128,
+        type: 3}
+      propertyPath: Nolan
+      value: 
+      objectReference: {fileID: 946091192}
     - target: {fileID: 8087365158979779298, guid: 5780b56f8feec4046b821a941cf83128,
         type: 3}
       propertyPath: display
