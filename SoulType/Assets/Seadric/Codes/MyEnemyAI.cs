@@ -9,6 +9,8 @@ public class MyEnemyAI : MonoBehaviour
     public float lookRadius = 10;
     public float angle;
 
+    private Animator anims;
+
     public LayerMask walls;
     public LayerMask thePlayer;
 
@@ -36,19 +38,23 @@ public class MyEnemyAI : MonoBehaviour
         target = PlayerManager.instance.player.transform;
         agent = GetComponent<NavMeshAgent>();
         startingPos = transform.position;
+        anims = GetComponent<Animator>();
         NewDestination();
         time = 0f;
         timeDelay = 2f;
+        anims.SetBool("isWalking", true);
 
     }
 
     void Update()
     {
         distance = Mathf.Abs(Vector3.Distance(target.position, transform.position));
+        anims.SetBool("isWalking", true);
 
-        if (Mathf.Abs(Vector3.Distance(transform.position, someTarget)) < 2)
+        if (Mathf.Abs(Vector3.Distance(transform.position, someTarget)) < 1)
         {
             time = time + 1f * Time.deltaTime;
+            anims.SetBool("isWalking", false);
             agent.SetDestination(transform.position);
             if (time >= timeDelay)
             {
@@ -88,6 +94,7 @@ public class MyEnemyAI : MonoBehaviour
     // This method tracks the player and follows them
     void ChasePlayer()
     {
+        anims.SetBool("isWalking", true);
         isChasing = true;
         agent.SetDestination(target.position);
         Vector3 direction = (target.position - transform.position).normalized;
@@ -171,6 +178,7 @@ public class MyEnemyAI : MonoBehaviour
     {
         someTarget = waypoints[waypointIndex].position;
         agent.SetDestination(someTarget);
+        //anims.SetBool("isWalking", true);
     }
 
 

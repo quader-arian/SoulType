@@ -94,9 +94,10 @@ GameObject:
   - component: {fileID: 1245026309723869098}
   - component: {fileID: 1245026309723869099}
   - component: {fileID: 1245026309723869100}
+  - component: {fileID: 7209337922692668537}
   m_Layer: 0
   m_Name: Monster
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 1877130753606358288}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 2.4329042, y: 0.039, z: 0.24883223}
-  m_LocalScale: {x: 0.16031, y: 0.16031, z: 0.16031}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6827362380725080571}
@@ -149,3 +150,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ccd28ba417a4d34a94051cc1c853a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &7209337922692668537
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877130753606358288}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5862495, y: 3.922401, z: 1.5994656}
+  m_Center: {x: 0, y: 1.9557605, z: -0.007493496}

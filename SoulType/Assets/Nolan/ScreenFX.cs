@@ -26,19 +26,23 @@ public class ScreenFX : MonoBehaviour
     public GameObject ElectricGO;
     public GameObject Dying;
 
-    public ScreenFX Neon;
+    public float timer;
+    public float timerDelay;
+
     void Start() {
     
-    blackFade = GetComponent<Animator>();    
-    Healed = GetComponent<Animator>();   
-    Shield = GetComponent<Animator>();   
-    IncAtk = GetComponent<Animator>();   
-    Hit = GetComponent<Animator>();   
-    Fire = GetComponent<Animator>();   
-    Frozen = GetComponent<Animator>();   
-    Electric = GetComponent<Animator>();   
-    Shake = GetComponent<Animator>(); 
-    
+        blackFade = GetComponent<Animator>();    
+        Healed = GetComponent<Animator>();   
+        Shield = GetComponent<Animator>();   
+        IncAtk = GetComponent<Animator>();   
+        Hit = GetComponent<Animator>();   
+        Fire = GetComponent<Animator>();   
+        Frozen = GetComponent<Animator>();   
+        Electric = GetComponent<Animator>();   
+        Shake = GetComponent<Animator>();
+        PlayAniBlackFade();
+        timer = 0;
+        timerDelay = 2f;
     }
 
     public void PlayAniBlackFade(){
@@ -50,46 +54,67 @@ public class ScreenFX : MonoBehaviour
     
     public void PlayAniShake(){
         
-        if(blackFade.enabled == false){
+        if(Shake.enabled == false){
         
-            blackFade.gameObject.SetActive(true);
-            blackFade.SetTrigger("anim");
+            Shake.gameObject.SetActive(true);
+            Shake.SetTrigger("anim");
         
         }
     }
     public void PlayAniHealed(){
-
+        timer = 0;
+        HealedGO.SetActive(true);
         Healed.SetTrigger("Healed");
-        
-    }
-        public void PlayAniShield(){
+        while (timer <= timerDelay)
+        {
+            timer = timer + 1f * Time.deltaTime;
+            if (timer >= timerDelay)
+            {
+                HealedGO.SetActive(false);
+            }
+        }
 
+    }
+    public void PlayAniShield(){
+        ShieldGO.SetActive(true);
         Shield.SetTrigger("Shield");
+        if (!PlayerStatsScript.isImmune)
+            ShieldGO.SetActive(false);
+
         
     }
-        public void PlayAniIncAtk(){
-
+    public void PlayAniIncAtk(){
+        IncAtkGO.SetActive(true);
         IncAtk.SetTrigger("Inc Atk");
         
     }
-        public void PlayAniHit(){
-
+    public void PlayAniHit(){
+        HitGO.SetActive(true);
         Hit.SetTrigger("Hit");
         
     }
-        public void PlayAniFire(){
-
+    public void PlayAniFire(){
+        FireGO.SetActive(true);
         Fire.SetTrigger("Fire");
-        
-    }
-        public void PlayAniFrozen(){
+        if (!PlayerStatsScript.isBurn)
+        {
+            FireGO.SetActive(false);
+        }
 
+
+    }
+    public void PlayAniFrozen(){
+        FrozenGO.SetActive(true);
         Frozen.SetTrigger("Frozen");
+        if (!PlayerStatsScript.isSlowed)
+            FrozenGO.SetActive(false);
         
     }
-        public void PlayAniElectric(){
-
+    public void PlayAniElectric(){
+        ElectricGO.SetActive(true);
         Electric.SetTrigger("Electric");
+        if (!PlayerStatsScript.isPowered)
+            ElectricGO.SetActive(false);
         
     }
 

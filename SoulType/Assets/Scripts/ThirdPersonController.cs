@@ -150,6 +150,20 @@ namespace StarterAssets
             // reset our timeouts on start
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
+
+            //called on start
+            PlayerStatsScript.atkLvl = 1;
+            PlayerStatsScript.defLvl = 1;
+            PlayerStatsScript.mpLvl = 1;
+            PlayerStatsScript.healUnlock = false;
+            PlayerStatsScript.fireUnlock = false;
+            PlayerStatsScript.iceUnlock = false;
+            PlayerStatsScript.lightningUnlock = false;
+            PlayerStatsScript.shieldUnlock = false;
+
+            PlayerStatsScript.maxHp = 450 + 50 * PlayerStatsScript.defLvl;
+            PlayerStatsScript.hp = PlayerStatsScript.maxHp;
+
         }
 
         private void Update()

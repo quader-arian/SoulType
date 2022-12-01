@@ -18,11 +18,17 @@ public class SceneSwap : MonoBehaviour
 
     public void Level()
     {
-        SceneManager.LoadScene("SoulTypeFacility");
+        SceneManager.LoadScene("AITesting");
     }
 
     public void Back()
     {
         wholeCanvas.SetActive(false);
+    }
+
+    public void ExitGame()
+    {
+        Debug.Log("closed"); // remove comment below before building game
+        //Application.Quit();
     }
 }

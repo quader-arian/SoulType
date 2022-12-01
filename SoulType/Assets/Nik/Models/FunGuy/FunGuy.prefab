@@ -135,8 +135,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 2216818221307637340}
   m_AABB:
-    m_Center: {x: -0.5658103, y: -0.39142954, z: -0.018765926}
-    m_Extent: {x: 0.6321281, y: 0.53774357, z: 0.56620985}
+    m_Center: {x: -0.11489862, y: 0.0066648945, z: -0.0010904968}
+    m_Extent: {x: 0.12520239, y: 0.13623747, z: 0.13123083}
   m_DirtyAABB: 0
 --- !u!1 &333810282262043942
 GameObject:
@@ -249,9 +249,10 @@ GameObject:
   - component: {fileID: 1969449816038094826}
   - component: {fileID: 7155285520126066080}
   - component: {fileID: 1596772472509982634}
+  - component: {fileID: 4534316571636574319}
   m_Layer: 0
   m_Name: FunGuy
-  m_TagString: Untagged
+  m_TagString: FunGuy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -264,7 +265,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1161704956824710480}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 3.948, y: -0.008000016, z: 2.8042}
+  m_LocalPosition: {x: 3.948, y: -0.008000016, z: 5.51}
   m_LocalScale: {x: 0.070259914, y: 0.070259914, z: 0.070259914}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -305,6 +306,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f47133b8110c14aba3f5dca5780b03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &4534316571636574319
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161704956824710480}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 7.8197284
+  m_Height: 23.408384
+  m_Direction: 1
+  m_Center: {x: 0, y: 10.62552, z: -0.066269316}
 --- !u!1 &1193942906918667079
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,7 +1174,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6784059920181436449}
   m_LocalRotation: {x: 1, y: -0, z: 0, w: 6.123234e-17}
-  m_LocalPosition: {x: -0, y: -3.5527136e-17, z: 0}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
