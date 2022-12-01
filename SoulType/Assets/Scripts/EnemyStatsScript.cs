@@ -106,6 +106,8 @@ public class EnemyStatsScript : MonoBehaviour
             observer.SetActive(true);
         }else if(enemyType == "Emperor"){
             ghoul.SetActive(true);
+        }else if(enemyType == "Pinkfoot"){
+            pinkfoot.SetActive(true);
         }
     }
 
