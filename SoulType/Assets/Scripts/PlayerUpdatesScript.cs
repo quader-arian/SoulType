@@ -48,6 +48,9 @@ public class PlayerUpdatesScript : MonoBehaviour
         }
         hpText.text = (int)PlayerStatsScript.hp+ "/" +PlayerStatsScript.maxHp;
         healthBarImage.fillAmount = Mathf.Clamp(PlayerStatsScript.hp / PlayerStatsScript.maxHp, 0, 1f);
+        if ( 0.5 > (PlayerStatsScript.hp / PlayerStatsScript.maxHp)){
+            NolanFX.Dying.SetActive(true);
+        }
 
         if(PlayerStatsScript.isImmune && PlayerStatsScript.immuneTime >= 0){
             PlayerStatsScript.immuneTime -= Time.deltaTime;
@@ -67,6 +70,7 @@ public class PlayerUpdatesScript : MonoBehaviour
             PlayerStatsScript.burnTime -= Time.deltaTime;
             PlayerStatsScript.hp -= 10*Time.deltaTime;
             healthBarImage.color = Color.red;
+            Debug.Log(NolanFX);
             NolanFX.PlayAniFire();
 
         }else if(PlayerStatsScript.isBurn){

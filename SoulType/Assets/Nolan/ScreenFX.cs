@@ -25,6 +25,8 @@ public class ScreenFX : MonoBehaviour
     public GameObject FrozenGO;
     public GameObject ElectricGO;
     public GameObject Dying;
+
+    public ScreenFX Neon;
     void Start() {
     
     blackFade = GetComponent<Animator>();    
@@ -36,17 +38,16 @@ public class ScreenFX : MonoBehaviour
     Frozen = GetComponent<Animator>();   
     Electric = GetComponent<Animator>();   
     Shake = GetComponent<Animator>(); 
+    
     }
 
     public void PlayAniBlackFade(){
-        if(blackFade.enabled == false){
 
         blackFade.gameObject.SetActive(true);
         blackFade.SetTrigger("Fade");
        
         }
-        
-    }
+    
     public void PlayAniShake(){
         
         if(blackFade.enabled == false){
@@ -58,37 +59,37 @@ public class ScreenFX : MonoBehaviour
     }
     public void PlayAniHealed(){
 
-        blackFade.SetTrigger("Healed");
+        Healed.SetTrigger("Healed");
         
     }
         public void PlayAniShield(){
 
-        blackFade.SetTrigger("Shield");
+        Shield.SetTrigger("Shield");
         
     }
         public void PlayAniIncAtk(){
 
-        blackFade.SetTrigger("Inc Atk");
+        IncAtk.SetTrigger("Inc Atk");
         
     }
         public void PlayAniHit(){
 
-        blackFade.SetTrigger("Hit");
+        Hit.SetTrigger("Hit");
         
     }
         public void PlayAniFire(){
 
-        blackFade.SetTrigger("Fire");
+        Fire.SetTrigger("Fire");
         
     }
         public void PlayAniFrozen(){
 
-        blackFade.SetTrigger("Frozen");
+        Frozen.SetTrigger("Frozen");
         
     }
         public void PlayAniElectric(){
 
-        blackFade.SetTrigger("Electric");
+        Electric.SetTrigger("Electric");
         
     }
 

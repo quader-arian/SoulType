@@ -25,10 +25,11 @@ public class MpWordScript : MonoBehaviour
         TMP_Text thisObject = gameObject.GetComponent<TMP_Text>();
         if(TyperScript.isReady()){
             if(thisObject.text + '~' == TyperScript.recieveWord()){
+                
                 TyperScript.resetReady();
 
                 if(type == "heal" && PlayerStatsScript.healCooldown <= 0){
-                    // heal o
+                    
                     if(PlayerStatsScript.hp + 50 * PlayerStatsScript.mpLvl > PlayerStatsScript.maxHp){
                         PlayerStatsScript.hp = PlayerStatsScript.maxHp;
                         
