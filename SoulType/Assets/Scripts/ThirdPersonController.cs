@@ -75,6 +75,15 @@ namespace StarterAssets
         [Tooltip("For locking the camera position on all axis")]
         public bool LockCameraPosition = false;
 
+
+        [SerializeField] private Transform explorationmusic;
+        [SerializeField] private Transform combatmusic;
+        [SerializeField] private Transform bossmusic;
+
+
+
+
+
         // cinemachine
         private float _cinemachineTargetYaw;
         private float _cinemachineTargetPitch;
@@ -117,7 +126,7 @@ namespace StarterAssets
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
                 return _playerInput.currentControlScheme == "KeyboardMouse";
 #else
-				return false;
+                return false;
 #endif
             }
         }
@@ -135,14 +144,14 @@ namespace StarterAssets
         private void Start()
         {
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
-            
+
             _hasAnimator = TryGetComponent(out _animator);
             _controller = GetComponent<CharacterController>();
             _input = GetComponent<StarterAssetsInputs>();
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
             _playerInput = GetComponent<PlayerInput>();
 #else
-			Debug.LogError( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
+            Debug.LogError("Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
 #endif
 
             AssignAnimationIDs();
@@ -402,5 +411,138 @@ namespace StarterAssets
                 AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
             }
         }
+
+
+
+
+
+
+
+        // you gotta make it so when combat ends and exploration resumes, disable combat music object, enable exploration music object
+        //basically wherever you have combat resuming put the code below but uncomment
+
+        // combatmusic.gameObject.SetActive(false);
+        // bossmusic.gameObject.SetActive(false);
+        // explorationmusic.gameObject.SetActive(true);
+
+
+        void OnTriggerEnter(Collider Col)
+        {
+            if (Col.gameObject.tag == "Ghoul")
+            {
+                explorationmusic.gameObject.SetActive(false);
+                combatmusic.gameObject.SetActive(true);
+                //ghoul fight
+
+            }
+
+
+
+
+
+
+            if (Col.gameObject.tag == "ET")
+            {
+                explorationmusic.gameObject.SetActive(false);
+                combatmusic.gameObject.SetActive(true);
+                //ET fight
+
+            }
+
+
+
+
+            //this dude's name is gus
+
+            if (Col.gameObject.tag == "FunGuy")
+            {
+                explorationmusic.gameObject.SetActive(false);
+                combatmusic.gameObject.SetActive(true);
+                //Gus fight
+
+            }
+
+
+
+
+
+
+            if (Col.gameObject.tag == "Skeehaw")
+            {
+                explorationmusic.gameObject.SetActive(false);
+                combatmusic.gameObject.SetActive(true);
+                //Skeehaw fight
+
+            }
+
+
+
+            if (Col.gameObject.tag == "Pinkfoot")
+            {
+                explorationmusic.gameObject.SetActive(false);
+                combatmusic.gameObject.SetActive(true);
+                //Pinkfoot fight
+
+            }
+
+
+
+            if (Col.gameObject.tag == "Wraith")
+            {
+                explorationmusic.gameObject.SetActive(false);
+                combatmusic.gameObject.SetActive(true);
+                //Wraith fight
+
+            }
+
+
+
+            if (Col.gameObject.tag == "Sol")
+            {
+                explorationmusic.gameObject.SetActive(false);
+                combatmusic.gameObject.SetActive(true);
+                //Sol fight
+
+            }
+
+
+
+            if (Col.gameObject.tag == "Observer")
+            {
+                explorationmusic.gameObject.SetActive(false);
+                combatmusic.gameObject.SetActive(true);
+                //Observer fight
+
+            }
+
+
+
+
+
+
+
+            if (Col.gameObject.tag == "Monster")
+            {
+                explorationmusic.gameObject.SetActive(false);
+                combatmusic.gameObject.SetActive(true);
+                //Monster fight
+
+            }
+
+
+
+            if (Col.gameObject.tag == "Emperor")
+            {
+                explorationmusic.gameObject.SetActive(false);
+                bossmusic.gameObject.SetActive(true);
+                //Boss fight
+
+            }
+
+
+        }
+
+
     }
+
 }

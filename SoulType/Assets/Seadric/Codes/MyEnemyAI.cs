@@ -23,6 +23,13 @@ public class MyEnemyAI : MonoBehaviour
     private bool isChasing = false;
     private bool canPatrol = true;
 
+    public AudioSource source;
+    public AudioClip clip;
+    public bool alreadyPlayed = false;
+
+
+
+
     Transform target;
     NavMeshAgent agent;
     Vector3 startingPos;
@@ -96,6 +103,14 @@ public class MyEnemyAI : MonoBehaviour
     {
         anims.SetBool("isWalking", true);
         isChasing = true;
+
+        if (!alreadyPlayed)
+        {
+            source.PlayOneShot(clip);
+            alreadyPlayed = true;
+        }
+
+
         agent.SetDestination(target.position);
         Vector3 direction = (target.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
