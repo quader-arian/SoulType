@@ -51,6 +51,9 @@ public class PlayerUpdatesScript : MonoBehaviour
         if ( 0.5 > (PlayerStatsScript.hp / PlayerStatsScript.maxHp)){
             NolanFX.Dying.SetActive(true);
         }
+        if ( 0.5 < (PlayerStatsScript.hp / PlayerStatsScript.maxHp)){
+            NolanFX.Dying.SetActive(false);
+        }
 
         if(PlayerStatsScript.isImmune && PlayerStatsScript.immuneTime >= 0){
             PlayerStatsScript.immuneTime -= Time.deltaTime;
@@ -59,6 +62,7 @@ public class PlayerUpdatesScript : MonoBehaviour
         }else if(PlayerStatsScript.isImmune){
             PlayerStatsScript.isImmune = false;
             PlayerStatsScript.immuneTime = (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl + 3f; 
+            NolanFX.Shield.gameObject.SetActive(false);
         }
 
         if(PlayerStatsScript.isImmune){
@@ -76,7 +80,7 @@ public class PlayerUpdatesScript : MonoBehaviour
         }else if(PlayerStatsScript.isBurn){
             PlayerStatsScript.isBurn = false;
             PlayerStatsScript.burnTime = 8f; 
-            
+            NolanFX.Fire.gameObject.SetActive(false);
         }
         // slowed = freeze
         if(PlayerStatsScript.isSlowed && PlayerStatsScript.slowTime >= 0){
@@ -86,6 +90,7 @@ public class PlayerUpdatesScript : MonoBehaviour
         }else if(PlayerStatsScript.isSlowed){
             PlayerStatsScript.isSlowed = false;
             PlayerStatsScript.slowTime =  8f;
+            NolanFX.Frozen.gameObject.SetActive(false);
         }
         // electric = powered
         if(PlayerStatsScript.isPowered && PlayerStatsScript.poweredTime >= 0){
@@ -96,6 +101,7 @@ public class PlayerUpdatesScript : MonoBehaviour
         }else if(PlayerStatsScript.isPowered){
             PlayerStatsScript.isPowered = false;
             PlayerStatsScript.poweredTime = (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl + 3f;
+            NolanFX.Electric.gameObject.SetActive(false);
         }
 
         if(!PlayerStatsScript.isPowered && !PlayerStatsScript.isSlowed && !PlayerStatsScript.isImmune && !PlayerStatsScript.isBurn){

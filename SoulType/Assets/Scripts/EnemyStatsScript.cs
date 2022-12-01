@@ -49,7 +49,7 @@ public class EnemyStatsScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // black fade
+        Nolan.PlayAniBlackFade();
         maxHp = baseHp;
         hp = maxHp;
         currAtk = Random.Range(0, 3);

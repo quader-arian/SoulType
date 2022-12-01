@@ -39,7 +39,10 @@ public class ScreenFX : MonoBehaviour
         Fire = GetComponent<Animator>();   
         Frozen = GetComponent<Animator>();   
         Electric = GetComponent<Animator>();   
-        Shake = GetComponent<Animator>(); 
+        Shake = GetComponent<Animator>();
+        PlayAniBlackFade();
+        timer = 0;
+        timerDelay = 2f;
     }
 
     public void PlayAniBlackFade(){
@@ -51,7 +54,7 @@ public class ScreenFX : MonoBehaviour
     
     public void PlayAniShake(){
         
-        if(blackFade.enabled == false){
+        if(Shake.enabled == false){
         
             Shake.gameObject.SetActive(true);
             Shake.SetTrigger("anim");
@@ -59,38 +62,59 @@ public class ScreenFX : MonoBehaviour
         }
     }
     public void PlayAniHealed(){
-            HealedGO.SetActive(true);
-            Healed.SetTrigger("Healed");
+        timer = 0;
+        HealedGO.SetActive(true);
+        Healed.SetTrigger("Healed");
+        while (timer <= timerDelay)
+        {
+            timer = timer + 1f * Time.deltaTime;
+            if (timer >= timerDelay)
+            {
+                HealedGO.SetActive(false);
+            }
+        }
+
+    }
+    public void PlayAniShield(){
+        ShieldGO.SetActive(true);
+        Shield.SetTrigger("Shield");
+        if (!PlayerStatsScript.isImmune)
+            ShieldGO.SetActive(false);
+
         
     }
-        public void PlayAniShield(){
-            ShieldGO.SetActive(true);
-            Shield.SetTrigger("Shield");
+    public void PlayAniIncAtk(){
+        IncAtkGO.SetActive(true);
+        IncAtk.SetTrigger("Inc Atk");
         
     }
-        public void PlayAniIncAtk(){
-            IncAtkGO.SetActive(true);
-            IncAtk.SetTrigger("Inc Atk");
+    public void PlayAniHit(){
+        HitGO.SetActive(true);
+        Hit.SetTrigger("Hit");
         
     }
-        public void PlayAniHit(){
-            HitGO.SetActive(true);
-            Hit.SetTrigger("Hit");
+    public void PlayAniFire(){
+        FireGO.SetActive(true);
+        Fire.SetTrigger("Fire");
+        if (!PlayerStatsScript.isBurn)
+        {
+            FireGO.SetActive(false);
+        }
+
+
+    }
+    public void PlayAniFrozen(){
+        FrozenGO.SetActive(true);
+        Frozen.SetTrigger("Frozen");
+        if (!PlayerStatsScript.isSlowed)
+            FrozenGO.SetActive(false);
         
     }
-        public void PlayAniFire(){
-            FireGO.SetActive(true);
-            Fire.SetTrigger("Fire");
-        
-    }
-        public void PlayAniFrozen(){
-            FrozenGO.SetActive(true);
-            Frozen.SetTrigger("Frozen");
-        
-    }
-        public void PlayAniElectric(){
-            ElectricGO.SetActive(true);
-            Electric.SetTrigger("Electric");
+    public void PlayAniElectric(){
+        ElectricGO.SetActive(true);
+        Electric.SetTrigger("Electric");
+        if (!PlayerStatsScript.isPowered)
+            ElectricGO.SetActive(false);
         
     }
 
