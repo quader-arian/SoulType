@@ -25,17 +25,21 @@ public class ScreenFX : MonoBehaviour
     public GameObject FrozenGO;
     public GameObject ElectricGO;
     public GameObject Dying;
+
+    public float timer;
+    public float timerDelay;
+
     void Start() {
     
-    blackFade = GetComponent<Animator>();    
-    Healed = GetComponent<Animator>();   
-    Shield = GetComponent<Animator>();   
-    IncAtk = GetComponent<Animator>();   
-    Hit = GetComponent<Animator>();   
-    Fire = GetComponent<Animator>();   
-    Frozen = GetComponent<Animator>();   
-    Electric = GetComponent<Animator>();   
-    Shake = GetComponent<Animator>(); 
+        blackFade = GetComponent<Animator>();    
+        Healed = GetComponent<Animator>();   
+        Shield = GetComponent<Animator>();   
+        IncAtk = GetComponent<Animator>();   
+        Hit = GetComponent<Animator>();   
+        Fire = GetComponent<Animator>();   
+        Frozen = GetComponent<Animator>();   
+        Electric = GetComponent<Animator>();   
+        Shake = GetComponent<Animator>(); 
     }
 
     public void PlayAniBlackFade(){
@@ -51,44 +55,44 @@ public class ScreenFX : MonoBehaviour
         
         if(blackFade.enabled == false){
         
-            blackFade.gameObject.SetActive(true);
-            blackFade.SetTrigger("anim");
+            Shake.gameObject.SetActive(true);
+            Shake.SetTrigger("anim");
         
         }
     }
     public void PlayAniHealed(){
-
-        blackFade.SetTrigger("Healed");
+            HealedGO.SetActive(true);
+            Healed.SetTrigger("Healed");
         
     }
         public void PlayAniShield(){
-
-        blackFade.SetTrigger("Shield");
+            ShieldGO.SetActive(true);
+            Shield.SetTrigger("Shield");
         
     }
         public void PlayAniIncAtk(){
-
-        blackFade.SetTrigger("Inc Atk");
+            IncAtkGO.SetActive(true);
+            IncAtk.SetTrigger("Inc Atk");
         
     }
         public void PlayAniHit(){
-
-        blackFade.SetTrigger("Hit");
+            HitGO.SetActive(true);
+            Hit.SetTrigger("Hit");
         
     }
         public void PlayAniFire(){
-
-        blackFade.SetTrigger("Fire");
+            FireGO.SetActive(true);
+            Fire.SetTrigger("Fire");
         
     }
         public void PlayAniFrozen(){
-
-        blackFade.SetTrigger("Frozen");
+            FrozenGO.SetActive(true);
+            Frozen.SetTrigger("Frozen");
         
     }
         public void PlayAniElectric(){
-
-        blackFade.SetTrigger("Electric");
+            ElectricGO.SetActive(true);
+            Electric.SetTrigger("Electric");
         
     }
 

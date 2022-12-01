@@ -380,7 +380,7 @@ GameObject:
   - component: {fileID: 1322565936993755743}
   m_Layer: 0
   m_Name: Emperor
-  m_TagString: Untagged
+  m_TagString: Emperor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -394,7 +394,7 @@ Transform:
   m_GameObject: {fileID: 1806332793525582052}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 7.1998754, y: 2.1930153, z: 0.42638853}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7261506472496717775}
