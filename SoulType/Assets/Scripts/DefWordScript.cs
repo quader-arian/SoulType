@@ -75,6 +75,7 @@ public class DefWordScript : MonoBehaviour
             parry -= Time.deltaTime;
         }
         if(block <= 0){
+            // hit 
             if(type == "lightning"){
                 EnemyStatsScript.isPowered = true;
                 EnemyStatsScript.poweredTime = 1f;

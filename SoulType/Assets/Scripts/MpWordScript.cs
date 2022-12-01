@@ -28,8 +28,10 @@ public class MpWordScript : MonoBehaviour
                 TyperScript.resetReady();
 
                 if(type == "heal" && PlayerStatsScript.healCooldown <= 0){
+                    // heal o
                     if(PlayerStatsScript.hp + 50 * PlayerStatsScript.mpLvl > PlayerStatsScript.maxHp){
                         PlayerStatsScript.hp = PlayerStatsScript.maxHp;
+                        
                     }
                     else{
                         PlayerStatsScript.hp += 50 * PlayerStatsScript.mpLvl;

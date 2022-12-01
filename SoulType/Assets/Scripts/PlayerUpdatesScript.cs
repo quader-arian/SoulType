@@ -15,6 +15,7 @@ public class PlayerUpdatesScript : MonoBehaviour
     public Image healImage;
     public Image shieldImage;
 
+    public ScreenFX NolanFX;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,7 @@ public class PlayerUpdatesScript : MonoBehaviour
         PlayerStatsScript.isSlowed = false;
         PlayerStatsScript.isImmune = false;
         PlayerStatsScript.isPowered = false;
+
     }
 
     // Update is called once per frame
@@ -50,6 +52,7 @@ public class PlayerUpdatesScript : MonoBehaviour
         if(PlayerStatsScript.isImmune && PlayerStatsScript.immuneTime >= 0){
             PlayerStatsScript.immuneTime -= Time.deltaTime;
             healthBarImage.color = new Color32(147,112,219,255);
+            NolanFX.PlayAniShield();
         }else if(PlayerStatsScript.isImmune){
             PlayerStatsScript.isImmune = false;
             PlayerStatsScript.immuneTime = (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl + 3f; 
@@ -64,22 +67,28 @@ public class PlayerUpdatesScript : MonoBehaviour
             PlayerStatsScript.burnTime -= Time.deltaTime;
             PlayerStatsScript.hp -= 10*Time.deltaTime;
             healthBarImage.color = Color.red;
+            NolanFX.PlayAniFire();
+
         }else if(PlayerStatsScript.isBurn){
             PlayerStatsScript.isBurn = false;
             PlayerStatsScript.burnTime = 8f; 
+            
         }
-
+        // slowed = freeze
         if(PlayerStatsScript.isSlowed && PlayerStatsScript.slowTime >= 0){
             PlayerStatsScript.slowTime -= Time.deltaTime;
             healthBarImage.color = new Color32(255,140,0,255);
+            NolanFX.PlayAniFrozen();
         }else if(PlayerStatsScript.isSlowed){
             PlayerStatsScript.isSlowed = false;
             PlayerStatsScript.slowTime =  8f;
         }
-
+        // electric = powered
         if(PlayerStatsScript.isPowered && PlayerStatsScript.poweredTime >= 0){
+
             PlayerStatsScript.poweredTime -= Time.deltaTime;
             healthBarImage.color = Color.blue;
+            NolanFX.PlayAniElectric();
         }else if(PlayerStatsScript.isPowered){
             PlayerStatsScript.isPowered = false;
             PlayerStatsScript.poweredTime = (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl + 3f;

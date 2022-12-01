@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2021.3/staging' branch; Version is '2021.3.11f1 (0a5ca18544bf) revision 679073'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'en' Physical Memory: 16310 MB
+OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'en' Physical Memory: 32703 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
@@ -11,13 +11,13 @@ C:\Program Files\Unity\Hub\Editor\2021.3.11f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/Dango/Documents/GitHub/SoulType/SoulType
+C:/Users/nolan/OneDrive/Documents/GitHub/SoulType/SoulType
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52684
-Successfully changed project path to: C:/Users/Dango/Documents/GitHub/SoulType/SoulType
-C:/Users/Dango/Documents/GitHub/SoulType/SoulType
+60918
+Successfully changed project path to: C:/Users/nolan/OneDrive/Documents/GitHub/SoulType/SoulType
+C:/Users/nolan/OneDrive/Documents/GitHub/SoulType/SoulType
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,111 +47,112 @@ C:/Users/Dango/Documents/GitHub/SoulType/SoulType
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 126.26 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 203.67 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.11f1 (0a5ca18544bf)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/Dango/Documents/GitHub/SoulType/SoulType/Assets
+[Subsystems] Discovering subsystems at path C:/Users/nolan/OneDrive/Documents/GitHub/SoulType/SoulType/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 3060 (ID=0x2504)
+    Renderer: NVIDIA GeForce RTX 2060 (ID=0x1f08)
     Vendor:   NVIDIA
-    VRAM:     12129 MB
-    Driver:   31.0.15.2698
+    VRAM:     5980 MB
+    Driver:   30.0.15.1215
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56372
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56500
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.005816 seconds.
+Registered in 0.006569 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 143.97 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 240.67 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.619 seconds
+- Completed reload, in  1.399 seconds
 Domain Reload Profiling:
-	ReloadAssembly (619ms)
-		BeginReloadAssembly (57ms)
+	ReloadAssembly (1400ms)
+		BeginReloadAssembly (99ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (470ms)
-			LoadAssemblies (55ms)
+		EndReloadAssembly (1075ms)
+			LoadAssemblies (99ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (81ms)
+			SetupTypeCache (341ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (24ms)
-			SetupLoadedEditorAssemblies (320ms)
+			RebuildScriptCaches (69ms)
+			SetupLoadedEditorAssemblies (477ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
+				InitializePlatformSupportModulesInManaged (10ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (144ms)
+				RefreshPlugins (241ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (127ms)
-				ProcessInitializeOnLoadMethodAttributes (39ms)
+				ProcessInitializeOnLoadAttributes (166ms)
+				ProcessInitializeOnLoadMethodAttributes (59ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.008309 seconds.
+Registered in 0.015872 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Dango\Documents\GitHub\SoulType\SoulType\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Dango\Documents\GitHub\SoulType\SoulType\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\nolan\OneDrive\Documents\GitHub\SoulType\SoulType\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\nolan\OneDrive\Documents\GitHub\SoulType\SoulType\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 128.79 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 310.78 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.322 seconds
+- Completed reload, in  2.174 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1323ms)
-		BeginReloadAssembly (89ms)
+	ReloadAssembly (2175ms)
+		BeginReloadAssembly (127ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (17ms)
-		EndReloadAssembly (1134ms)
-			LoadAssemblies (87ms)
+			CreateAndSetChildDomain (23ms)
+		EndReloadAssembly (1893ms)
+			LoadAssemblies (124ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (293ms)
+			SetupTypeCache (388ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (71ms)
-			SetupLoadedEditorAssemblies (637ms)
+			RebuildScriptCaches (84ms)
+			SetupLoadedEditorAssemblies (1256ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (129ms)
-				BeforeProcessingInitializeOnLoad (119ms)
-				ProcessInitializeOnLoadAttributes (290ms)
-				ProcessInitializeOnLoadMethodAttributes (87ms)
-				AfterProcessingInitializeOnLoad (7ms)
+				RefreshPlugins (311ms)
+				BeforeProcessingInitializeOnLoad (205ms)
+				ProcessInitializeOnLoadAttributes (555ms)
+				ProcessInitializeOnLoadMethodAttributes (173ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 1.17 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 1.34 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6246 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 62 unused Assets / (0.8 MB). Loaded Objects now: 6697.
-Memory consumption went from 247.9 MB to 247.2 MB.
-Total: 3.803200 ms (FindLiveObjects: 0.469100 ms CreateObjectMapping: 0.187700 ms MarkObjects: 2.835400 ms  DeleteObjects: 0.309700 ms)
+Unloading 6249 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 62 unused Assets / (0.8 MB). Loaded Objects now: 6701.
+Memory consumption went from 248.2 MB to 247.4 MB.
+Total: 4.992700 ms (FindLiveObjects: 0.484700 ms CreateObjectMapping: 0.481400 ms MarkObjects: 3.719000 ms  DeleteObjects: 0.306400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -159,583 +160,80 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 984862.388478 seconds.
-  path: Assets/Nik/ModelTest.unity
-  artifactKey: Guid(e3c321ee48b57f64baf4d624f0d0ad31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/ModelTest.unity using Guid(e3c321ee48b57f64baf4d624f0d0ad31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4db6e776fdade8ff0d9bc8918628cd92') in 0.013391 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.095769 seconds.
-  path: Assets/Nik/Models/Emperor/EmperorClothMat.jpg
-  artifactKey: Guid(34e5807f5f70802479697bc6b0462b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/EmperorClothMat.jpg using Guid(34e5807f5f70802479697bc6b0462b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8fe4e446a8ee095badd4e898fb9d4f9') in 0.053778 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Nik/Models/Emperor/EmperorClothSpecular.png
-  artifactKey: Guid(ce45c8c9cca49464ca05ce0ffdb1b8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/EmperorClothSpecular.png using Guid(ce45c8c9cca49464ca05ce0ffdb1b8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b61eb9659fad05c8e34854a02bcd3545') in 0.019487 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 20.912273 seconds.
-  path: Assets/Nik/Models/Emperor/Emperor_v1.fbx
-  artifactKey: Guid(2a13760fc3731954b87858ec57fe28ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Emperor_v1.fbx using Guid(2a13760fc3731954b87858ec57fe28ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60e1ebce15420ec5ff0d44b9bb3ed14c') in 0.344902 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 18.444289 seconds.
-  path: Assets/Nik/Models/Emperor/lowAction.anim
-  artifactKey: Guid(e01d953d623bcc147aa3f568c9615489) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/lowAction.anim using Guid(e01d953d623bcc147aa3f568c9615489) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb2f016ec862844745b5debac8833a59') in 0.008040 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 8.668913 seconds.
-  path: Assets/Nik/Models/Emperor/Attack.anim
-  artifactKey: Guid(e01d953d623bcc147aa3f568c9615489) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Attack.anim using Guid(e01d953d623bcc147aa3f568c9615489) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4ddf7f0cc03dad108e71015a53940e9') in 0.006623 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 40.994856 seconds.
-  path: Assets/Nik/Models/Emperor/Sketchfab_model_Sketchfab_modelAction.anim
-  artifactKey: Guid(18519467f54703f4288b570ff2ac3a10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Sketchfab_model_Sketchfab_modelAction.anim using Guid(18519467f54703f4288b570ff2ac3a10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1cc03237672be4cd34794073b5f9e09') in 0.006025 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.225337 seconds.
-  path: Assets/Nik/Models/Emperor/Idle.anim
-  artifactKey: Guid(18519467f54703f4288b570ff2ac3a10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Idle.anim using Guid(18519467f54703f4288b570ff2ac3a10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f21c4003f3733d34d1f6ea900af3f32') in 0.002716 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.360557 seconds.
-  path: Assets/Nik/Models/Emperor/Texture
-  artifactKey: Guid(6bb3d5f31b3874048b0bdaf7beaa9939) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Texture using Guid(6bb3d5f31b3874048b0bdaf7beaa9939) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abcc890386ba0220b2bfdac712826364') in 0.005103 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.613832 seconds.
-  path: Assets/Nik/Models/Emperor/Textures
-  artifactKey: Guid(6bb3d5f31b3874048b0bdaf7beaa9939) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Textures using Guid(6bb3d5f31b3874048b0bdaf7beaa9939) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6daaa5bf58c784f0c17ddeb1c0b26ca0') in 0.005066 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 11.451999 seconds.
-  path: Assets/Nik/Models/Emperor/Animations
-  artifactKey: Guid(88293bc8ba2eb5e408ab84adea0973b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Animations using Guid(88293bc8ba2eb5e408ab84adea0973b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '320ff55cc2562ae308674534d39d9fdd') in 0.005055 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 14.810045 seconds.
-  path: Assets/Nik/Models/Emperor/Animations/EmperorController.controller
-  artifactKey: Guid(39aed8e3b0235df4a8a54cb0b9abc8e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Animations/EmperorController.controller using Guid(39aed8e3b0235df4a8a54cb0b9abc8e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f02f08f5b72728649a8d1ccf531af022') in 0.007403 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.216712 seconds.
-  path: Assets/Nik/Models/Emperor/Animations/Attack 1.anim
-  artifactKey: Guid(36205ae3acb77ca4a916627376d5f0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Animations/Attack 1.anim using Guid(36205ae3acb77ca4a916627376d5f0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97681393a33b5d03bdeb2e47a6994009') in 0.006865 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.648773 seconds.
-  path: Assets/Nik/Models/Emperor/Animations/PrepAttack.anim
-  artifactKey: Guid(36205ae3acb77ca4a916627376d5f0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Animations/PrepAttack.anim using Guid(36205ae3acb77ca4a916627376d5f0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a60b56a97216ebb020bcb07bd5ad8621') in 0.006790 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 13.456387 seconds.
-  path: Assets/Nik/Models/Emperor/Animations/EmperorController.controller
-  artifactKey: Guid(39aed8e3b0235df4a8a54cb0b9abc8e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Animations/EmperorController.controller using Guid(39aed8e3b0235df4a8a54cb0b9abc8e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6105bda4f7062a85fc703128ed2d4f67') in 0.002810 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 206.473052 seconds.
-  path: Assets/Nik/Models/Emperor/Emperor_v2.fbx
-  artifactKey: Guid(6292e6ff56739864e84064ab9a1fdc29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Emperor_v2.fbx using Guid(6292e6ff56739864e84064ab9a1fdc29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '432d103a6ae41fa802394489934b1b25') in 0.211977 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 18.056939 seconds.
-  path: Assets/Nik/Models/Emperor/low_lowAction.anim
-  artifactKey: Guid(439f460b08487e94283095400d02d81a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/low_lowAction.anim using Guid(439f460b08487e94283095400d02d81a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf0f79e914527295838e6de9220f8715') in 0.006118 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.415785 seconds.
-  path: Assets/Nik/Models/Emperor/Attack.anim
-  artifactKey: Guid(439f460b08487e94283095400d02d81a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Attack.anim using Guid(439f460b08487e94283095400d02d81a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c756f801c53402d750074dda64fbaa90') in 0.002597 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 636.720223 seconds.
-  path: Assets/Nik/Models/Emperor/Emperor_v3.fbx
-  artifactKey: Guid(198a4d9b2b91c6e41be18a3078aa48d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Emperor_v3.fbx using Guid(198a4d9b2b91c6e41be18a3078aa48d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c714e97ae72f0ed11336873f6cb0e107') in 0.154379 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 24.545427 seconds.
-  path: Assets/Nik/Models/Emperor/Sketchfab_model_Sketchfab_modelAction.003.anim
-  artifactKey: Guid(3ad77cf61252aea41a7980e813a5b0aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Sketchfab_model_Sketchfab_modelAction.003.anim using Guid(3ad77cf61252aea41a7980e813a5b0aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfb5d1bf58a97d21953a29c5cbe43885') in 0.006197 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.056109 seconds.
-  path: Assets/Nik/Models/Emperor/Flinch.anim
-  artifactKey: Guid(3ad77cf61252aea41a7980e813a5b0aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Flinch.anim using Guid(3ad77cf61252aea41a7980e813a5b0aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ef4b55235086e838cfa9ddac808c14b') in 0.005912 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 31.276150 seconds.
-  path: Assets/Nik/Models/Emperor/Sketchfab_model_Sketchfab_modelAction.anim
-  artifactKey: Guid(dbcd15a5352a447439775ff89411cc8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Sketchfab_model_Sketchfab_modelAction.anim using Guid(dbcd15a5352a447439775ff89411cc8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96ac7b7c7eabb1def098fdcf45555fbc') in 0.002526 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.704577 seconds.
-  path: Assets/Nik/Models/Emperor/Idle.anim
-  artifactKey: Guid(dbcd15a5352a447439775ff89411cc8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Idle.anim using Guid(dbcd15a5352a447439775ff89411cc8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23dd0fa77e5db56b4c1d233e723f9465') in 0.002793 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 20.733709 seconds.
-  path: Assets/Nik/Models/Emperor/Animations/Attack 1.anim
-  artifactKey: Guid(c4b69828ce3f0604d99c75b56e4f3e1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Animations/Attack 1.anim using Guid(c4b69828ce3f0604d99c75b56e4f3e1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ebf417c8530333418ca334911f5a255') in 0.002761 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 7.026594 seconds.
-  path: Assets/Nik/Models/Emperor/Animations/PrepAttack.anim
-  artifactKey: Guid(c4b69828ce3f0604d99c75b56e4f3e1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Animations/PrepAttack.anim using Guid(c4b69828ce3f0604d99c75b56e4f3e1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a7ffa9dd66504786caf3e9c5c84a65a') in 0.002951 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 29.446436 seconds.
-  path: Assets/Nik/Models/Emperor/Animations/PrepAttack.anim
-  artifactKey: Guid(c4b69828ce3f0604d99c75b56e4f3e1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Animations/PrepAttack.anim using Guid(c4b69828ce3f0604d99c75b56e4f3e1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c0b23146773d512b6cfe0ad04c77baf') in 0.002901 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.301189 seconds.
-  path: Assets/Nik/Models/Emperor/Animations/EmperorController.controller
-  artifactKey: Guid(39aed8e3b0235df4a8a54cb0b9abc8e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Animations/EmperorController.controller using Guid(39aed8e3b0235df4a8a54cb0b9abc8e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a7f185abdb02005d69c2b983bce7174') in 0.002386 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 335.099263 seconds.
-  path: Assets/Nik/Models/Emperor/EmperorStateController.cs
-  artifactKey: Guid(a7ddacb7b0decdf4aaf66db27a01029f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/EmperorStateController.cs using Guid(a7ddacb7b0decdf4aaf66db27a01029f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e54f75ee6faddb1665128ce9f1ce1989') in 0.009761 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006785 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Dango\Documents\GitHub\SoulType\SoulType\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Dango\Documents\GitHub\SoulType\SoulType\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.23 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.116 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1116ms)
-		BeginReloadAssembly (128ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (41ms)
-		EndReloadAssembly (902ms)
-			LoadAssemblies (90ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (268ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (41ms)
-			SetupLoadedEditorAssemblies (436ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (10ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (89ms)
-				ProcessInitializeOnLoadAttributes (243ms)
-				ProcessInitializeOnLoadMethodAttributes (86ms)
-				AfterProcessingInitializeOnLoad (6ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (10ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.95 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6109 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 35 unused Assets / (0.8 MB). Loaded Objects now: 6804.
-Memory consumption went from 247.3 MB to 246.6 MB.
-Total: 3.788000 ms (FindLiveObjects: 0.444900 ms CreateObjectMapping: 0.150500 ms MarkObjects: 2.909700 ms  DeleteObjects: 0.282000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 49.304359 seconds.
-  path: Assets/Nik/Models/Emperor/Textures/EyeballMat.png
-  artifactKey: Guid(1b6c96bf61894934b93533ed1a196aa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Textures/EyeballMat.png using Guid(1b6c96bf61894934b93533ed1a196aa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '691da8be0965825e0ea2871508f3b611') in 0.165054 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Nik/Models/Emperor/Textures/EyeballOcclusion.png
-  artifactKey: Guid(2c3c0ef09462c7945805f43af18392f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Textures/EyeballOcclusion.png using Guid(2c3c0ef09462c7945805f43af18392f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c40755ddfde65b9463d2004a91afe762') in 0.052489 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Nik/Models/Emperor/Textures/EyeballNormal.png
-  artifactKey: Guid(6cdb8ec51e51ace4e95826b2bd5713c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Textures/EyeballNormal.png using Guid(6cdb8ec51e51ace4e95826b2bd5713c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c1ac9a00a9d73ae5d6fdb0d7bb62c29') in 0.099349 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Nik/Models/Emperor/Textures/EyeballMetallic.png
-  artifactKey: Guid(eec26d051211b794b81f78543265136e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Textures/EyeballMetallic.png using Guid(eec26d051211b794b81f78543265136e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd381f277a58325c72754db497e142919') in 0.052357 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.006210 seconds.
-  path: Assets/Nik/Models/Emperor/Textures/EyeballNormal.png
-  artifactKey: Guid(6cdb8ec51e51ace4e95826b2bd5713c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Textures/EyeballNormal.png using Guid(6cdb8ec51e51ace4e95826b2bd5713c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70759a39c30e51acf4c0a3561cba12a3') in 0.015329 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 37.281772 seconds.
-  path: Assets/Nik/Models/Emperor/Materials/EmperorClothMat.mat
-  artifactKey: Guid(4db908d6de28b0a45bab09fae63fc7a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Materials/EmperorClothMat.mat using Guid(4db908d6de28b0a45bab09fae63fc7a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae18e078aefbaade65029b5d1efc938e') in 0.133931 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 118.580716 seconds.
-  path: Assets/Nik/Models/Emperor/Emperor_v1.fbx
-  artifactKey: Guid(2a13760fc3731954b87858ec57fe28ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Emperor_v1.fbx using Guid(2a13760fc3731954b87858ec57fe28ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '202f628eed556c54b1d0ffcd15aa2358') in 0.212239 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Nik/Models/Emperor/Emperor_v3.fbx
-  artifactKey: Guid(198a4d9b2b91c6e41be18a3078aa48d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Emperor_v3.fbx using Guid(198a4d9b2b91c6e41be18a3078aa48d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a659f9844222e238c0cd47575dbe5be') in 0.233638 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.071261 seconds.
-  path: Assets/Nik/Models/Emperor/Emperor_v1.prefab
-  artifactKey: Guid(ce595d949288e664d8630cbb4ef489c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Emperor_v1.prefab using Guid(ce595d949288e664d8630cbb4ef489c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddac16b267dccb651a008e12758e920b') in 0.033725 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 11.100333 seconds.
-  path: Assets/Nik/Models/Emperor/Models
-  artifactKey: Guid(8fab075bf5435bc42ae6fbafe8156dbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Models using Guid(8fab075bf5435bc42ae6fbafe8156dbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f957a48699f94b5e7107ec61bc2f7abc') in 0.005576 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006687 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Dango\Documents\GitHub\SoulType\SoulType\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Dango\Documents\GitHub\SoulType\SoulType\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.44 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.138 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1138ms)
-		BeginReloadAssembly (130ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (41ms)
-		EndReloadAssembly (923ms)
-			LoadAssemblies (85ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (269ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (49ms)
-			SetupLoadedEditorAssemblies (447ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (91ms)
-				ProcessInitializeOnLoadAttributes (249ms)
-				ProcessInitializeOnLoadMethodAttributes (87ms)
-				AfterProcessingInitializeOnLoad (6ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (10ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 3.39 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6109 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 35 unused Assets / (0.8 MB). Loaded Objects now: 6863.
-Memory consumption went from 247.5 MB to 246.7 MB.
-Total: 4.428400 ms (FindLiveObjects: 0.527600 ms CreateObjectMapping: 0.154400 ms MarkObjects: 3.345900 ms  DeleteObjects: 0.399600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 81.614029 seconds.
-  path: Assets/Nik/Models/Emperor/Emperor.prefab
-  artifactKey: Guid(56d19749c2f89cb45b3bb7317cf8a47e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Emperor.prefab using Guid(56d19749c2f89cb45b3bb7317cf8a47e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db9eb1c84284874588224e35ee2b6d28') in 0.193876 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.320363 seconds.
-  path: Assets/Nik/Models/Emperor/Animations/Idle.anim
-  artifactKey: Guid(dbcd15a5352a447439775ff89411cc8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Animations/Idle.anim using Guid(dbcd15a5352a447439775ff89411cc8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70dc2c3bd132bc19f4a5ec0c0c53f730') in 0.002898 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006633 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Dango\Documents\GitHub\SoulType\SoulType\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Dango\Documents\GitHub\SoulType\SoulType\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.17 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.093 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1094ms)
-		BeginReloadAssembly (127ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (40ms)
-		EndReloadAssembly (881ms)
-			LoadAssemblies (82ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (253ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (42ms)
-			SetupLoadedEditorAssemblies (440ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (10ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (89ms)
-				ProcessInitializeOnLoadAttributes (245ms)
-				ProcessInitializeOnLoadMethodAttributes (88ms)
-				AfterProcessingInitializeOnLoad (6ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.78 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6109 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 35 unused Assets / (0.8 MB). Loaded Objects now: 6918.
-Memory consumption went from 247.6 MB to 246.8 MB.
-Total: 3.715200 ms (FindLiveObjects: 0.449300 ms CreateObjectMapping: 0.159000 ms MarkObjects: 2.816300 ms  DeleteObjects: 0.289700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 72.621788 seconds.
-  path: Assets/Nik/Models/Emperor/Animations/EmperorController.controller
-  artifactKey: Guid(39aed8e3b0235df4a8a54cb0b9abc8e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Animations/EmperorController.controller using Guid(39aed8e3b0235df4a8a54cb0b9abc8e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e0ba1facc398103bfa505186fb0d6e6') in 0.022765 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.958755 seconds.
-  path: Assets/Nik/Models/Emperor/Animations/EmperorController.controller
-  artifactKey: Guid(39aed8e3b0235df4a8a54cb0b9abc8e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Emperor/Animations/EmperorController.controller using Guid(39aed8e3b0235df4a8a54cb0b9abc8e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05ecead2f586f1a03fc37c56dae37ad4') in 0.003949 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 413.283245 seconds.
-  path: Assets/Nik/Models/Monster/Animations/Idle.anim
-  artifactKey: Guid(50a42d444adf0f24a8cf95d5596ccc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Animations/Idle.anim using Guid(50a42d444adf0f24a8cf95d5596ccc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d0fe71ce11f82c16018149259f13d6e') in 0.003861 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.554092 seconds.
-  path: Assets/Nik/Models/Monster/Animations/PrepAttack.anim
-  artifactKey: Guid(b67e877abebe9b34b8e1ee0de24e6c38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Animations/PrepAttack.anim using Guid(b67e877abebe9b34b8e1ee0de24e6c38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b80106714bed221f6e7474d1ea49c1b1') in 0.002786 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.826658 seconds.
-  path: Assets/Nik/Models/Monster/Animations/MonsterController.controller
-  artifactKey: Guid(175770e9a79cec445beafdb6a3b4772a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Animations/MonsterController.controller using Guid(175770e9a79cec445beafdb6a3b4772a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57a2c34c26be681488b233c6d1040ca4') in 0.006895 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 78.553513 seconds.
-  path: Assets/Nik/Models/Monster/Animations/PrepAttack.anim
-  artifactKey: Guid(b67e877abebe9b34b8e1ee0de24e6c38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Animations/PrepAttack.anim using Guid(b67e877abebe9b34b8e1ee0de24e6c38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd0cbb3c45f72befabfba66f749ba504') in 0.002593 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 50.759881 seconds.
-  path: Assets/Nik/Models/Monster/Animations/Idle.anim
-  artifactKey: Guid(50a42d444adf0f24a8cf95d5596ccc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Animations/Idle.anim using Guid(50a42d444adf0f24a8cf95d5596ccc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f4cef100bcb2bd01012df55d475275c') in 0.002853 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 24.259658 seconds.
-  path: Assets/Nik/Models/Monster/Animations/Idle.anim
-  artifactKey: Guid(50a42d444adf0f24a8cf95d5596ccc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Animations/Idle.anim using Guid(50a42d444adf0f24a8cf95d5596ccc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd4959333bda9e2b119ec4adfe411e83') in 0.003037 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 94.052509 seconds.
-  path: Assets/Nik/Models/Monster/Animations/Flinch.anim
-  artifactKey: Guid(fb693372c59996b4288e2ba02b767f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Animations/Flinch.anim using Guid(fb693372c59996b4288e2ba02b767f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13ab76efebdf800f3bbefad3a145021d') in 0.002734 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 11.944229 seconds.
-  path: Assets/Nik/Models/Monster/Materials/initialShadingGroup_albedo.mat
-  artifactKey: Guid(6638fbf933f204343a23601773cf66f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Materials/initialShadingGroup_albedo.mat using Guid(6638fbf933f204343a23601773cf66f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '870e646c1da05d66e8a1703e2fc86cdc') in 0.171677 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.825890 seconds.
-  path: Assets/Nik/Models/Monster/Texture/initialShadingGroup_albedo.jpg
-  artifactKey: Guid(8201b8d36bfd2104a9ec7f1371c5fab5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Texture/initialShadingGroup_albedo.jpg using Guid(8201b8d36bfd2104a9ec7f1371c5fab5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adf4b2a3b7836af7ab569aabd9f467e3') in 0.018174 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Nik/Models/Monster/Texture/initialShadingGroup_metallic.jpg
-  artifactKey: Guid(95102c76b265248408bfbf860b46625e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Texture/initialShadingGroup_metallic.jpg using Guid(95102c76b265248408bfbf860b46625e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9143b9e2df492dc290369c7784aa6bab') in 0.021354 seconds 
+  Time since last request: 378096.371458 seconds.
+  path: Assets/Readme.asset
+  artifactKey: Guid(4181bfe715a83e843b7538d750dc57cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Readme.asset using Guid(4181bfe715a83e843b7538d750dc57cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5136d8d0031a7741fd1d279afa601c71') in 0.049754 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000023 seconds.
-  path: Assets/Nik/Models/Monster/Texture/initialShadingGroup_normal.jpg
-  artifactKey: Guid(777520c3736273341b232674d81e4dd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Texture/initialShadingGroup_normal.jpg using Guid(777520c3736273341b232674d81e4dd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba0072ef88b16e84fd0a21b3810c76b3') in 0.030487 seconds 
+  path: Assets/UniversalRenderPipelineAsset_Renderer.asset
+  artifactKey: Guid(dd7e737974771d04d9ced706d59d1245) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniversalRenderPipelineAsset_Renderer.asset using Guid(dd7e737974771d04d9ced706d59d1245) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b697c8842bbb636bc68ec0b28a0b366') in 0.013898 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Nik/Models/Monster/Texture/initialShadingGroup_roughness.jpg
-  artifactKey: Guid(b1039e2cd0651fd46ae96f208f2ab8bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Texture/initialShadingGroup_roughness.jpg using Guid(b1039e2cd0651fd46ae96f208f2ab8bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31d6772532d4e44ecab66b05a172bdbc') in 0.011877 seconds 
+  Time since last request: 0.000034 seconds.
+  path: Assets/UniversalRenderPipelineGlobalSettings.asset
+  artifactKey: Guid(66c48cfa728af984db6a9f2630bacb2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniversalRenderPipelineGlobalSettings.asset using Guid(66c48cfa728af984db6a9f2630bacb2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cd0cf48477a3068ae3ae80efce9afdf') in 0.009866 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Nik/Models/Monster/Texture/initialShadingGroup_AO.jpg
-  artifactKey: Guid(490dacf6e202c0842803b7b289953769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Texture/initialShadingGroup_AO.jpg using Guid(490dacf6e202c0842803b7b289953769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b070491283134ade34ccb8d0a690f32') in 0.012209 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 7.245663 seconds.
-  path: Assets/Nik/Models/Monster/Animations/MonsterController.controller
-  artifactKey: Guid(175770e9a79cec445beafdb6a3b4772a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Animations/MonsterController.controller using Guid(175770e9a79cec445beafdb6a3b4772a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f09fbdfcae0d9e2c2498f3962a74ab14') in 0.002653 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 37.222640 seconds.
-  path: Assets/Nik/Models/Monster/Animations/PrepAttack.anim
-  artifactKey: Guid(b67e877abebe9b34b8e1ee0de24e6c38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Animations/PrepAttack.anim using Guid(b67e877abebe9b34b8e1ee0de24e6c38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55e74fef33d5d1895ad50799ec4af5c7') in 0.002948 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 388.377761 seconds.
-  path: Assets/Nik/Models/Monster/Animations/PrepAttack.anim
-  artifactKey: Guid(b67e877abebe9b34b8e1ee0de24e6c38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Animations/PrepAttack.anim using Guid(b67e877abebe9b34b8e1ee0de24e6c38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd34feeb25e2287d3c51972ff5e4fe43d') in 0.002698 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.362599 seconds.
-  path: Assets/Nik/Models/Monster/Animations/MonsterController.controller
-  artifactKey: Guid(175770e9a79cec445beafdb6a3b4772a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Animations/MonsterController.controller using Guid(175770e9a79cec445beafdb6a3b4772a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '540e853f35acc2179c642d3ac9f5696b') in 0.003406 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 161.674677 seconds.
-  path: Assets/Nik/Models/Monster/Animations/MonsterController.controller
-  artifactKey: Guid(175770e9a79cec445beafdb6a3b4772a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Animations/MonsterController.controller using Guid(175770e9a79cec445beafdb6a3b4772a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b613a18af3718c0f8ca5c888f28c57f') in 0.003523 seconds 
+  Time since last request: 0.000022 seconds.
+  path: Assets/UniversalRenderPipelineAsset.asset
+  artifactKey: Guid(f86b3aed054db7d4a983e73339478814) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniversalRenderPipelineAsset.asset using Guid(f86b3aed054db7d4a983e73339478814) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c4652e7ec61df450b3e8ba8267bd747') in 0.013829 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.006882 seconds.
+Registered in 0.016112 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Dango\Documents\GitHub\SoulType\SoulType\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Dango\Documents\GitHub\SoulType\SoulType\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\nolan\OneDrive\Documents\GitHub\SoulType\SoulType\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\nolan\OneDrive\Documents\GitHub\SoulType\SoulType\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.37 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.25 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.189 seconds
+- Completed reload, in  1.606 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1190ms)
-		BeginReloadAssembly (131ms)
+	ReloadAssembly (1607ms)
+		BeginReloadAssembly (171ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
+			DisableScriptedObjects (9ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (43ms)
-		EndReloadAssembly (970ms)
-			LoadAssemblies (84ms)
+			CreateAndSetChildDomain (53ms)
+		EndReloadAssembly (1316ms)
+			LoadAssemblies (123ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (268ms)
+			SetupTypeCache (436ms)
 			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (44ms)
-			SetupLoadedEditorAssemblies (504ms)
+			RebuildScriptCaches (66ms)
+			SetupLoadedEditorAssemblies (627ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (10ms)
-				SetLoadedEditorAssemblies (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (104ms)
-				ProcessInitializeOnLoadAttributes (284ms)
-				ProcessInitializeOnLoadMethodAttributes (98ms)
-				AfterProcessingInitializeOnLoad (7ms)
+				BeforeProcessingInitializeOnLoad (108ms)
+				ProcessInitializeOnLoadAttributes (361ms)
+				ProcessInitializeOnLoadMethodAttributes (137ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (12ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 3.69 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 3.65 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6109 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 35 unused Assets / (0.8 MB). Loaded Objects now: 6973.
-Memory consumption went from 247.7 MB to 246.9 MB.
-Total: 4.187100 ms (FindLiveObjects: 0.585500 ms CreateObjectMapping: 0.251800 ms MarkObjects: 3.022000 ms  DeleteObjects: 0.326900 ms)
+Unloading 6105 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 35 unused Assets / (0.8 MB). Loaded Objects now: 6718.
+Memory consumption went from 240.0 MB to 239.3 MB.
+Total: 5.582700 ms (FindLiveObjects: 0.472700 ms CreateObjectMapping: 0.811700 ms MarkObjects: 3.966500 ms  DeleteObjects: 0.330500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -743,97 +241,80 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 146.041199 seconds.
-  path: Assets/Nik/Models/Monster/Animations/MonsterController.controller
-  artifactKey: Guid(175770e9a79cec445beafdb6a3b4772a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Animations/MonsterController.controller using Guid(175770e9a79cec445beafdb6a3b4772a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '426d6f7a17795d14a29e634811798503') in 0.021106 seconds 
+  Time since last request: 62.179185 seconds.
+  path: Assets/Scenes/Combat.unity
+  artifactKey: Guid(954734383d6e6474b8dd2a1669037903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Combat.unity using Guid(954734383d6e6474b8dd2a1669037903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd97535a1e662b88797e392d338bedf18') in 0.023719 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 213.097653 seconds.
-  path: Assets/Nik/Models/Monster/Animations/Attack.anim
-  artifactKey: Guid(d93145aeaae43df4cb161f283852bb4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Animations/Attack.anim using Guid(d93145aeaae43df4cb161f283852bb4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b32078b2599e90ef0bd9372748b557b2') in 0.002966 seconds 
+  Time since last request: 44.866213 seconds.
+  path: Assets/Scripts/EnemyStatsScript.cs
+  artifactKey: Guid(df7f65cf826879b42a667b45ce159c0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EnemyStatsScript.cs using Guid(df7f65cf826879b42a667b45ce159c0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5b9b01e91a88538577e6f199f985546') in 0.022834 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 11.843883 seconds.
-  path: Assets/Nik/Models/Monster/Animations/Flinch.anim
-  artifactKey: Guid(fb693372c59996b4288e2ba02b767f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Animations/Flinch.anim using Guid(fb693372c59996b4288e2ba02b767f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96e77626ed32af13592acfbc0143652b') in 0.003239 seconds 
+  Time since last request: 13.429198 seconds.
+  path: Assets/Scripts/PlayerStatsScript.cs
+  artifactKey: Guid(24a22cc677c5f2c4eb40ae94a91b1936) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayerStatsScript.cs using Guid(24a22cc677c5f2c4eb40ae94a91b1936) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a637bcd81ba90f155ae3b66cc54d6563') in 0.016974 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.471067 seconds.
-  path: Assets/Nik/Models/Monster/Animations/Idle.anim
-  artifactKey: Guid(50a42d444adf0f24a8cf95d5596ccc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Animations/Idle.anim using Guid(50a42d444adf0f24a8cf95d5596ccc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16f48e556d9044f6538cecab4c64eae5') in 0.002786 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 8.273725 seconds.
-  path: Assets/Nik/Models/Monster/Animations/MonsterController.controller
-  artifactKey: Guid(175770e9a79cec445beafdb6a3b4772a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Animations/MonsterController.controller using Guid(175770e9a79cec445beafdb6a3b4772a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bfc40341d778ea49237e6c99119f8d2') in 0.003651 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 74.953818 seconds.
-  path: Assets/Nik/Models/Monster/Animations/MonsterController.controller
-  artifactKey: Guid(175770e9a79cec445beafdb6a3b4772a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Animations/MonsterController.controller using Guid(175770e9a79cec445beafdb6a3b4772a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e265675fb8c55beee32fd0d8300b2ade') in 0.003991 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.494427 seconds.
-  path: Assets/Nik/Models/Monster/Animations/Attack.anim
-  artifactKey: Guid(d93145aeaae43df4cb161f283852bb4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Animations/Attack.anim using Guid(d93145aeaae43df4cb161f283852bb4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '872ae79f8e1574a525b406ceb71fb3f5') in 0.003436 seconds 
+  Time since last request: 9.893741 seconds.
+  path: Assets/Scripts/PlayerUpdatesScript.cs
+  artifactKey: Guid(e68ef3ecaee789b46ba1e99eec904c5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayerUpdatesScript.cs using Guid(e68ef3ecaee789b46ba1e99eec904c5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f9bcfae8b798a9302712764ef544e10') in 0.009699 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.006895 seconds.
+Registered in 0.010858 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Dango\Documents\GitHub\SoulType\SoulType\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Dango\Documents\GitHub\SoulType\SoulType\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\nolan\OneDrive\Documents\GitHub\SoulType\SoulType\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\nolan\OneDrive\Documents\GitHub\SoulType\SoulType\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.19 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.20 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.083 seconds
+- Completed reload, in  1.457 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1083ms)
-		BeginReloadAssembly (118ms)
+	ReloadAssembly (1461ms)
+		BeginReloadAssembly (176ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (36ms)
-		EndReloadAssembly (881ms)
-			LoadAssemblies (76ms)
+			CreateAndSetChildDomain (64ms)
+		EndReloadAssembly (1185ms)
+			LoadAssemblies (104ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (254ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (42ms)
-			SetupLoadedEditorAssemblies (439ms)
+			SetupTypeCache (375ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (58ms)
+			SetupLoadedEditorAssemblies (572ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (10ms)
-				SetLoadedEditorAssemblies (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (88ms)
-				ProcessInitializeOnLoadAttributes (245ms)
-				ProcessInitializeOnLoadMethodAttributes (88ms)
+				BeforeProcessingInitializeOnLoad (100ms)
+				ProcessInitializeOnLoadAttributes (329ms)
+				ProcessInitializeOnLoadMethodAttributes (121ms)
 				AfterProcessingInitializeOnLoad (6ms)
-				EditorAssembliesLoaded (0ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
+			AwakeInstancesAfterBackupRestoration (18ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 3.09 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 3.80 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6110 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 35 unused Assets / (0.8 MB). Loaded Objects now: 6988.
-Memory consumption went from 247.8 MB to 247.0 MB.
-Total: 3.784000 ms (FindLiveObjects: 0.435200 ms CreateObjectMapping: 0.152200 ms MarkObjects: 2.878100 ms  DeleteObjects: 0.317900 ms)
+Unloading 6105 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 35 unused Assets / (0.8 MB). Loaded Objects now: 6733.
+Memory consumption went from 240.0 MB to 239.3 MB.
+Total: 4.264200 ms (FindLiveObjects: 0.458700 ms CreateObjectMapping: 0.446200 ms MarkObjects: 2.990200 ms  DeleteObjects: 0.367700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -841,37 +322,73 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 119.575475 seconds.
-  path: Assets/Nik/Models/Monster/Animations/Attack.anim
-  artifactKey: Guid(d93145aeaae43df4cb161f283852bb4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Animations/Attack.anim using Guid(d93145aeaae43df4cb161f283852bb4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdccbb6d7e42bcaf94606262f3c56492') in 0.020203 seconds 
+  Time since last request: 153.202009 seconds.
+  path: Assets/Nolan/New Animation.anim
+  artifactKey: Guid(42b6001a68372c94c931b7f4dd998fe3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nolan/New Animation.anim using Guid(42b6001a68372c94c931b7f4dd998fe3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '538dc8c37d09925158d16f89ae17ad72') in 0.023842 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.223028 seconds.
-  path: Assets/Nik/Models/Monster/Animations/Flinch.anim
-  artifactKey: Guid(fb693372c59996b4288e2ba02b767f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Animations/Flinch.anim using Guid(fb693372c59996b4288e2ba02b767f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f7d2e6390e03e0238f1c4e952d65124') in 0.002965 seconds 
+  Time since last request: 0.000022 seconds.
+  path: Assets/Nolan/New Animator Controller.controller
+  artifactKey: Guid(f5a5c8bf1d9d67e4399e0f5ae63da99a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nolan/New Animator Controller.controller using Guid(f5a5c8bf1d9d67e4399e0f5ae63da99a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dad7828508a5ea0d39f0fda2cd4e665') in 0.011240 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 72.864494 seconds.
-  path: Assets/Nik/Models/Monster/MonsterSubs.prefab
-  artifactKey: Guid(776ac9aeac8fe02409f37808d1a4539e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/MonsterSubs.prefab using Guid(776ac9aeac8fe02409f37808d1a4539e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bedbe2961f759341670f4f80c155378d') in 0.160550 seconds 
+  Time since last request: 8.824030 seconds.
+  path: Assets/Nolan/Nolan Test.unity
+  artifactKey: Guid(b3a05fcffdf630044bd2d50e278e9b96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nolan/Nolan Test.unity using Guid(b3a05fcffdf630044bd2d50e278e9b96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f0ad48abeac5562ad05a362ca48c89d') in 0.018807 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.493134 seconds.
-  path: Assets/Nik/Models/Monster/MonsterStateController.cs
-  artifactKey: Guid(6ccd28ba417a4d34a94051cc1c853a6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/MonsterStateController.cs using Guid(6ccd28ba417a4d34a94051cc1c853a6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ed2baaaae2f3ee5547e5e26c0c55149') in 0.004861 seconds 
+  Time since last request: 88.544773 seconds.
+  path: Assets/Nolan/Screen Overlays/Attack Incoming Overlay.png
+  artifactKey: Guid(d664e1d02cb1d624f9ab7226ff4e6afc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nolan/Screen Overlays/Attack Incoming Overlay.png using Guid(d664e1d02cb1d624f9ab7226ff4e6afc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce24e9d87d92f2f6803331697368cf64') in 0.143856 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 19.369245 seconds.
-  path: Assets/Nik/Models/Monster/Monster.prefab
-  artifactKey: Guid(0146f0a8456635c41b68cf3d7a157d3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Monster.prefab using Guid(0146f0a8456635c41b68cf3d7a157d3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0c72109c125d86195b29b8b49250ea0') in 0.022554 seconds 
+  Time since last request: 0.000027 seconds.
+  path: Assets/Nolan/Screen Overlays/Heal Overlay.jpg
+  artifactKey: Guid(edb60867c92fbd6479f6234334fb210e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nolan/Screen Overlays/Heal Overlay.jpg using Guid(edb60867c92fbd6479f6234334fb210e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f2873a3d9e80d63f8e9ce2563c4171d') in 0.053205 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.756591 seconds.
-  path: Assets/Nik/Models/Monster/Monster.prefab
-  artifactKey: Guid(0146f0a8456635c41b68cf3d7a157d3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nik/Models/Monster/Monster.prefab using Guid(0146f0a8456635c41b68cf3d7a157d3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b516559d8d762a8e32fe1963fb090bc0') in 0.017766 seconds 
+  Time since last request: 0.000058 seconds.
+  path: Assets/Nolan/Screen Overlays/Ice Overlay.png
+  artifactKey: Guid(c03621b8393a1ec4495d6ccdaaf62c4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nolan/Screen Overlays/Ice Overlay.png using Guid(c03621b8393a1ec4495d6ccdaaf62c4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3845650b92db3ca6d4cf0deb45e1954d') in 0.256351 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Nolan/Screen Overlays/scratch-scratch-overlay-distress-effect-texture-scratch-overlay-11562956621ypvlwagqyy.png
+  artifactKey: Guid(7d8237473ce70c843beb5dd460f507cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nolan/Screen Overlays/scratch-scratch-overlay-distress-effect-texture-scratch-overlay-11562956621ypvlwagqyy.png using Guid(7d8237473ce70c843beb5dd460f507cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92cdd7eb08f4e6ef6e39b823a4ce488f') in 0.075958 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/Nolan/Screen Overlays/Shiield Overlay.jpg
+  artifactKey: Guid(fc71aacc59210564dbfe1406b99e4837) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nolan/Screen Overlays/Shiield Overlay.jpg using Guid(fc71aacc59210564dbfe1406b99e4837) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b6ca90ef21ec661a18313bba139a244') in 0.057544 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Nolan/Screen Overlays/Dying Overlay.png
+  artifactKey: Guid(81a49ab227c90a04b8e88ceec0cb523d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nolan/Screen Overlays/Dying Overlay.png using Guid(81a49ab227c90a04b8e88ceec0cb523d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7000a003c596971f919e9b725c01c310') in 0.063685 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Nolan/Screen Overlays/Hit Overlay.png
+  artifactKey: Guid(025f9bf1f39c8f7469bdf7d78ee14d1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nolan/Screen Overlays/Hit Overlay.png using Guid(025f9bf1f39c8f7469bdf7d78ee14d1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dfd9cf7a5d64bdb13ae3a2728c3dda4') in 0.049270 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Nolan/Screen Overlays/Fire Overlay.png
+  artifactKey: Guid(b4b8280a8bc9ea643a4659a803436396) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nolan/Screen Overlays/Fire Overlay.png using Guid(b4b8280a8bc9ea643a4659a803436396) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2358bb37e21c266cfaa727ae8e251f8c') in 0.031889 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Nolan/Screen Overlays/Technology Decorative Electro Optic Effect PNG Picture And Clipart Image For Free Download - Lovepik.png
+  artifactKey: Guid(e761aa9884c27e64b9f8c5b27a7958d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nolan/Screen Overlays/Technology Decorative Electro Optic Effect PNG Picture And Clipart Image For Free Download - Lovepik.png using Guid(e761aa9884c27e64b9f8c5b27a7958d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb33bb16991e9d899e97ae4b1aabafe5') in 0.075990 seconds 
