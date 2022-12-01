@@ -3296,6 +3296,7 @@ GameObject:
   - component: {fileID: 7714535998857152527}
   - component: {fileID: 7714535998857152524}
   - component: {fileID: 7471764954014967278}
+  - component: {fileID: 1623338300941824941}
   m_Layer: 0
   m_Name: Wraith
   m_TagString: Wraith
@@ -3363,6 +3364,20 @@ CapsuleCollider:
   m_GameObject: {fileID: 6936767399494963895}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 18.324097
+  m_Height: 127.30756
+  m_Direction: 1
+  m_Center: {x: -0.15824358, y: 63.153786, z: -1.2324988}
+--- !u!136 &1623338300941824941
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6936767399494963895}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 18.324097
   m_Height: 127.30756

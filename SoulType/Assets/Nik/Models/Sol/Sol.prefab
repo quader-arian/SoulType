@@ -1445,6 +1445,7 @@ GameObject:
   - component: {fileID: 2449192183580859467}
   - component: {fileID: 8775394896709844510}
   - component: {fileID: 7354500205904761389}
+  - component: {fileID: 2553680848825384223}
   m_Layer: 0
   m_Name: Sol
   m_TagString: Sol
@@ -1538,6 +1539,20 @@ CapsuleCollider:
   m_GameObject: {fileID: 2449192183580859466}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 36.68408
+  m_Height: 164.10497
+  m_Direction: 1
+  m_Center: {x: 0, y: -2.9382038, z: -1.0209821}
+--- !u!136 &2553680848825384223
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2449192183580859466}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 36.68408
   m_Height: 164.10497

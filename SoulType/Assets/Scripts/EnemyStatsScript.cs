@@ -23,8 +23,8 @@ public class EnemyStatsScript : MonoBehaviour
     public static bool inCombat;
     public static string enemyType;
 
-    public static string[,] atk = new string[10,32];
-    public static int[] atkTimes = new int[10];
+    public static string[,] atk = new string[5,32];
+    public static int[] atkTimes = new int[5];
     public static int currAtk;
     private int i;
 
@@ -45,6 +45,17 @@ public class EnemyStatsScript : MonoBehaviour
     public GameObject words;
     public DefWordScript thisWord;
 
+    public GameObject sol;
+    public GameObject observer;
+    public GameObject funguy;
+    public GameObject skeehaw;
+    public GameObject wraith;
+    public GameObject et;
+    public GameObject emperor;
+    public GameObject ghoul;
+    public GameObject pinkfoot;
+    public GameObject monster;
+
     public ScreenFX Nolan;
     // Start is called before the first frame update
     void Start()
@@ -52,7 +63,7 @@ public class EnemyStatsScript : MonoBehaviour
         //Nolan.PlayAniBlackFade();
         maxHp = baseHp;
         hp = maxHp;
-        currAtk = Random.Range(0, 10);
+        currAtk = Random.Range(0, 5);
         startTimeBtwSpawns = 8;
         timeBtwSpawns = startTimeBtwSpawns;
         locs = GameObject.FindGameObjectsWithTag("DefLocations");
@@ -66,6 +77,26 @@ public class EnemyStatsScript : MonoBehaviour
         isSlowed = false;
         isImmune = false;
         isPowered = false;
+
+        if(enemyType == "Monster"){
+            monster.SetActive(true);
+        }else if(enemyType == "Ghoul"){
+            ghoul.SetActive(true);
+        }else if(enemyType == "ET"){
+            et.SetActive(true);
+        }else if(enemyType == "Gus"){
+            funguy.SetActive(true);
+        }else if(enemyType == "Sol"){
+            sol.SetActive(true);
+        }else if(enemyType == "Wraith"){
+            wraith.SetActive(true);
+        }else if(enemyType == "Skeehaw"){
+            skeehaw.SetActive(true);
+        }else if(enemyType == "Observer"){
+            observer.SetActive(true);
+        }else if(enemyType == "Emperor"){
+            ghoul.SetActive(true);
+        }
     }
 
     // Update is called once per frame
@@ -147,7 +178,7 @@ public class EnemyStatsScript : MonoBehaviour
             }
             i=0;
             startTimeBtwSpawns = atkTimes[currAtk];
-            currAtk = Random.Range(0, 10);
+            currAtk = Random.Range(0, 5);
             timeBtwSpawns = startTimeBtwSpawns;
         }
         else
@@ -161,8 +192,16 @@ public class EnemyStatsScript : MonoBehaviour
             loss = false;
             inCombat = false;   
             //Nolan.PlayAniBlackFade();
-            //attackInit();
-            //SceneManager.UnloadScene("Combat");
+            attackInit();
+            sol.SetActive(false);
+            observer.SetActive(false);
+            funguy.SetActive(false);
+            et.SetActive(false);
+            emperor.SetActive(false);
+            ghoul.SetActive(false);
+            pinkfoot.SetActive(false);
+            monster.SetActive(false);
+            SceneManager.UnloadScene("Combat");
         }
         if(PlayerStatsScript.hp <= 0){
             win = false;
@@ -170,13 +209,21 @@ public class EnemyStatsScript : MonoBehaviour
             inCombat = false;
             //Nolan.PlayAniBlackFade();
             //timer unload
-            //attackInit();
-            //SceneManager.UnloadScene("Combat");
+            attackInit();
+            sol.SetActive(false);
+            observer.SetActive(false);
+            funguy.SetActive(false);
+            et.SetActive(false);
+            emperor.SetActive(false);
+            ghoul.SetActive(false);
+            pinkfoot.SetActive(false);
+            monster.SetActive(false);
+            SceneManager.UnloadScene("Combat");
         }
     }
 
     public static void attackInit(){
-        for(int i = 0; i < 10; i++){
+        for(int i = 0; i < 5; i++){
             for(int j = 0; j < 32; j++){
                 atk[i, j] = "";
             }

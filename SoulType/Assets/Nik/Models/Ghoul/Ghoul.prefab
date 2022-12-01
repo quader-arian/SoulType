@@ -913,6 +913,7 @@ GameObject:
   - component: {fileID: 1520742853507926350}
   - component: {fileID: -1957562759921127685}
   - component: {fileID: 5825524272633529596}
+  - component: {fileID: 5549711562487573607}
   m_Layer: 0
   m_Name: Ghoul
   m_TagString: Ghoul
@@ -1005,6 +1006,20 @@ NavMeshAgent:
   m_BaseOffset: 0.3
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &5549711562487573607
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863270066802551821}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.2699748
+  m_Height: 2.7380943
+  m_Direction: 1
+  m_Center: {x: -3.9210507e-10, y: 1.3744162, z: 0.14717373}
 --- !u!1 &2156019286833906694
 GameObject:
   m_ObjectHideFlags: 0

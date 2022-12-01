@@ -250,6 +250,7 @@ GameObject:
   - component: {fileID: 7155285520126066080}
   - component: {fileID: 1596772472509982634}
   - component: {fileID: 4534316571636574319}
+  - component: {fileID: 5480375000247173336}
   m_Layer: 0
   m_Name: FunGuy
   m_TagString: FunGuy
@@ -315,6 +316,20 @@ CapsuleCollider:
   m_GameObject: {fileID: 1161704956824710480}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 7.8197284
+  m_Height: 23.408384
+  m_Direction: 1
+  m_Center: {x: 0, y: 10.62552, z: -0.066269316}
+--- !u!136 &5480375000247173336
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161704956824710480}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 7.8197284
   m_Height: 23.408384

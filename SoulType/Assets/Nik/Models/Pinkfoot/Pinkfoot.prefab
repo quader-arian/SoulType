@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 8768925461845602794}
   - component: {fileID: 4289428421371640191}
   - component: {fileID: 8827226512582055308}
+  - component: {fileID: 6566856857011089244}
   m_Layer: 0
   m_Name: Pinkfoot
   m_TagString: Pinkfoot
@@ -112,6 +113,20 @@ CapsuleCollider:
   m_GameObject: {fileID: 462652191736164166}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.03257358
+  m_Height: 0.16203123
+  m_Direction: 1
+  m_Center: {x: 0.005039683, y: 0.07646198, z: 0.023054827}
+--- !u!136 &6566856857011089244
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462652191736164166}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.03257358
   m_Height: 0.16203123

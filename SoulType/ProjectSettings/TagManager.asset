@@ -3,7 +3,25 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - CinemachineTarget
+  - Sol
+  - Observer
+  - ET
+  - DefWord
+  - DefLocations
+  - AtkPanel
+  - Canvas
+  - AtkWord
+  - BF
+  - Skeehaw
+  - Ghoul
+  - FunGuy
+  - Monster
+  - Pinkfoot
+  - Wraith
+  - Emperor
+  - Ceiling
   layers:
   - Default
   - TransparentFX

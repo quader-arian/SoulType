@@ -89,11 +89,6 @@ public class TestingScript : MonoBehaviour
         EnemyStatsScript.atkTimes[2] = 15;
         EnemyStatsScript.atkTimes[3] = 15;
         EnemyStatsScript.atkTimes[4] = 15;
-        EnemyStatsScript.atkTimes[5] = 15;
-        EnemyStatsScript.atkTimes[6] = 15;
-        EnemyStatsScript.atkTimes[7] = 15;
-        EnemyStatsScript.atkTimes[8] = 15;
-        EnemyStatsScript.atkTimes[9] = 15;
 
     }
 
