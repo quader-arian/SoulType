@@ -58,6 +58,7 @@ public class PlayerUpdatesScript : MonoBehaviour
         if(PlayerStatsScript.isImmune && PlayerStatsScript.immuneTime >= 0){
             PlayerStatsScript.immuneTime -= Time.deltaTime;
             healthBarImage.color = new Color32(147,112,219,255);
+            NolanFX.Shield.gameObject.SetActive(true);
             NolanFX.PlayAniShield();
         }else if(PlayerStatsScript.isImmune){
             PlayerStatsScript.isImmune = false;
@@ -74,7 +75,7 @@ public class PlayerUpdatesScript : MonoBehaviour
             PlayerStatsScript.burnTime -= Time.deltaTime;
             PlayerStatsScript.hp -= 10*Time.deltaTime;
             healthBarImage.color = Color.red;
-            Debug.Log(NolanFX);
+            NolanFX.Fire.gameObject.SetActive(true);
             NolanFX.PlayAniFire();
 
         }else if(PlayerStatsScript.isBurn){
@@ -86,10 +87,11 @@ public class PlayerUpdatesScript : MonoBehaviour
         if(PlayerStatsScript.isSlowed && PlayerStatsScript.slowTime >= 0){
             PlayerStatsScript.slowTime -= Time.deltaTime;
             healthBarImage.color = new Color32(255,140,0,255);
+            NolanFX.Frozen.gameObject.SetActive(true);
             NolanFX.PlayAniFrozen();
         }else if(PlayerStatsScript.isSlowed){
             PlayerStatsScript.isSlowed = false;
-            PlayerStatsScript.slowTime =  5f;
+            PlayerStatsScript.slowTime =  2f;
             NolanFX.Frozen.gameObject.SetActive(false);
         }
         // electric = powered
@@ -97,6 +99,8 @@ public class PlayerUpdatesScript : MonoBehaviour
 
             PlayerStatsScript.poweredTime -= Time.deltaTime;
             healthBarImage.color = Color.blue;
+            NolanFX.Electric.gameObject.SetActive(true);
+
             NolanFX.PlayAniElectric();
         }else if(PlayerStatsScript.isPowered){
             PlayerStatsScript.isPowered = false;

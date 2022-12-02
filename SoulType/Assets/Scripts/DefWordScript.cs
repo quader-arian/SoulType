@@ -20,6 +20,7 @@ public class DefWordScript : MonoBehaviour
     public Image typeImage;
     private Sprite spriteImage;
 
+ 
     //public ScreenFX Nolan;
     // Start is called before the first frame update
     void Start()
@@ -127,13 +128,18 @@ public class DefWordScript : MonoBehaviour
                     PlayerStatsScript.burnTime = 4f + (PlayerStatsScript.atkLvl - 1) + PlayerStatsScript.mpLvl;
                 }else if(type == "ice"){
                     PlayerStatsScript.isSlowed = true;
-                    PlayerStatsScript.slowTime = 6f + (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl;
+                    PlayerStatsScript.slowTime = 2f + (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl;
                 }else if(type == "shield"){
                     EnemyStatsScript.isImmune = true;
                     EnemyStatsScript.immuneTime = 10f;
                 }
                 PlayerStatsScript.hp -= dmg;
-            }        
+
+
+
+
+
+            }
             Destroy(gameObject);    
         }
         if(parry <= 0){

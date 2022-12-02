@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class EndGame : MonoBehaviour
 {
@@ -38,10 +40,18 @@ UnityEvent onInteract;
 
                  
                 source.PlayOneShot(clip);
-                congratsmess.gameObject.SetActive(true);
-                //go to main menu
+                
 
+                {
+                    StartCoroutine(Delay());
+                }
 
+                IEnumerator Delay()
+                {
+                    congratsmess.gameObject.SetActive(true);
+                    yield return new WaitForSeconds(4);
+                    SceneManager.LoadScene("Title");
+                }
 
 
 

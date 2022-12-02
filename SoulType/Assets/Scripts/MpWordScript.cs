@@ -12,6 +12,15 @@ public class MpWordScript : MonoBehaviour
     
     private float timeAlive;
 
+
+    public AudioSource source;
+    public AudioClip healsound;
+    public AudioClip firesound;
+    public AudioClip icesound;
+    public AudioClip shieldsound;
+    public AudioClip lightningsound;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,22 +46,32 @@ public class MpWordScript : MonoBehaviour
                     else{
                         PlayerStatsScript.hp += 50 * PlayerStatsScript.mpLvl;
                     }
+                    source.PlayOneShot(healsound);
+
                     PlayerStatsScript.healCooldown = 25f;
                 }else if(type == "fire"  && PlayerStatsScript.burnCooldown <= 0){
                     EnemyStatsScript.isBurn = true;
                     EnemyStatsScript.burnTime = 8f;
+
+                    source.PlayOneShot(firesound);
                     PlayerStatsScript.burnCooldown = 25f;
                 }else if(type == "ice" && PlayerStatsScript.slowCooldown <= 0){
                     EnemyStatsScript.isSlowed = true;
                     EnemyStatsScript.slowTime = 8f;
+
+                    source.PlayOneShot(shieldsound);
                     PlayerStatsScript.slowCooldown = 25f;
                 }else if(type == "shield" && PlayerStatsScript.immuneCooldown <= 0){
                     PlayerStatsScript.isImmune = true;
-                    PlayerStatsScript.immuneTime = (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl + 3f; 
+                    PlayerStatsScript.immuneTime = (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl + 3f;
+
+                    source.PlayOneShot(shieldsound);
                     PlayerStatsScript.immuneCooldown = 25f;
                 }else if(type == "lightning" && PlayerStatsScript.poweredCooldown <= 0){
                     PlayerStatsScript.isPowered = true;
                     PlayerStatsScript.poweredTime = (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl + 3f;
+
+                    source.PlayOneShot(lightningsound);
                     PlayerStatsScript.poweredCooldown = 25f;
                 }
                 checkLocks(thisObject);

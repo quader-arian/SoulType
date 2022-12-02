@@ -7,11 +7,15 @@ public class PlayerStatsScript : MonoBehaviour
 {
     public bool testing;
 
+
+
+    static public float hp;
+
+
     static public int atkLvl;
 
     static public int defLvl;
     static public int maxHp;
-    static public float hp;
 
     static public int mpLvl;
 
@@ -23,7 +27,7 @@ public class PlayerStatsScript : MonoBehaviour
 
     static public int healPrice;
     static public int firePrice;
-    static public int icePrice;
+    static public int icePrice; 
     static public int lightningPrice;
     static public int shieldPrice;
     static public int atkPrice;

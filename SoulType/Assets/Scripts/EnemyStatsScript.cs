@@ -241,21 +241,42 @@ public class EnemyStatsScript : MonoBehaviour
           
         }
         if(PlayerStatsScript.hp <= 0){
-            win = false;
-            loss = true;
-            inCombat = false;
-            //Nolan.PlayAniBlackFade();
-            //timer unload
-            attackInit();
-            sol.SetActive(false);
-            observer.SetActive(false);
-            funguy.SetActive(false);
-            et.SetActive(false);
-            emperor.SetActive(false);
-            ghoul.SetActive(false);
-            pinkfoot.SetActive(false);
-            monster.SetActive(false);
-            SceneManager.UnloadScene("Combat");
+            statictransition.gameObject.SetActive(false);
+            {
+                StartCoroutine(Delay());
+            }
+
+            IEnumerator Delay()
+            {
+                statictransition.gameObject.SetActive(true);
+                if (!alreadyPlayed)
+                {
+                    source.PlayOneShot(clip);
+                    alreadyPlayed = true;
+
+                }
+
+                yield return new WaitForSeconds(1f);
+
+
+                win = false;
+                loss = true;
+                inCombat = false;
+                //Nolan.PlayAniBlackFade();
+                //timer unload
+                attackInit();
+                sol.SetActive(false);
+                observer.SetActive(false);
+                funguy.SetActive(false);
+                et.SetActive(false);
+                emperor.SetActive(false);
+                ghoul.SetActive(false);
+                pinkfoot.SetActive(false);
+                monster.SetActive(false);
+                SceneManager.UnloadScene("Combat");
+
+
+            }
         }
     }
 

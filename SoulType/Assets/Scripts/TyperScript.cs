@@ -12,6 +12,13 @@ public class TyperScript : MonoBehaviour
     static private string sendWord;
     static private bool isCompleted;
 
+
+    public AudioSource source;
+    public AudioClip type;
+    public AudioClip enter;
+
+
+
     public ScreenFX Nolan;
     // Start is called before the first frame update
     void Start()
@@ -49,21 +56,28 @@ public class TyperScript : MonoBehaviour
 
         foreach (char c in keysPressed){
             if (c == '\b'){
-                  //Nolan.PlayAniHit();
+                //Nolan.PlayAniHit();
+
                 if (send.Length != 0){
                     send = send.Substring(0, send.Length - 1);
-                }else if(currWord.Length != 0){
-                    backSpaced = true;
-                  
                 }
-            }else if ((c == '\n') || (c == ' ') || (c == '\r')){
+                else if(currWord.Length != 0){
+                    backSpaced = true;
+                    source.PlayOneShot(type);
+
+                }
+            }
+            else if ((c == '\n') || (c == ' ') || (c == '\r')){
                 send += '~';
                 //Nolan.PlayAniHit();
+                source.PlayOneShot(enter);
+
                 return send;
                 
             }else{
                 send += c;
                 //Nolan.PlayAniHit();
+                source.PlayOneShot(type);
             }
         }
         return send;
