@@ -61,6 +61,9 @@ public class EnemyStatsScript : MonoBehaviour
     public AudioClip clip;
     public bool alreadyPlayed = false;
 
+
+
+
     public ScreenFX Nolan;
     // Start is called before the first frame update
     void Start()

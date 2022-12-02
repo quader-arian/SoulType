@@ -36,7 +36,7 @@ public class SpellTerminalIce : MonoBehaviour
                 unlocked = true;
 
                 //change code underneath
-                PlayerStatsScript.iceUnlock = true;
+                //PlayerStatsScript.iceUnlock = true;
 
 
                 {

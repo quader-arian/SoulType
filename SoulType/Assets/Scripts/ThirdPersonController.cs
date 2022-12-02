@@ -534,7 +534,7 @@ namespace StarterAssets
 
                 //called when combat begins
                 EnemyStatsScript.attackInit();
-                EnemyStatsScript.baseHp = 750;
+                EnemyStatsScript.baseHp = 700;
                 EnemyStatsScript.enemyType = "Ghoul";
 
                 //atk1
@@ -592,7 +592,7 @@ namespace StarterAssets
 
                 //called when combat begins
         EnemyStatsScript.attackInit();
-        EnemyStatsScript.baseHp = 750;
+        EnemyStatsScript.baseHp = 650;
         EnemyStatsScript.enemyType = "ET";
 //atk1 
         EnemyStatsScript.atk[0,0] = "assimilate-2-5-ice-20";
@@ -646,7 +646,7 @@ namespace StarterAssets
                 combatmusic.gameObject.SetActive(true);
                 //Gus fight
                 EnemyStatsScript.attackInit();
-        EnemyStatsScript.baseHp = 800;
+        EnemyStatsScript.baseHp = 750;
         EnemyStatsScript.enemyType = "Gus";
 //atk1
         EnemyStatsScript.atk[0,0] = "will-2-3-ice-20";
@@ -769,7 +769,7 @@ EnemyStatsScript.atk[1,5] = "herd-2-9-none-20";
                 //Pinkfoot fight
 
                  EnemyStatsScript.attackInit();
-        EnemyStatsScript.baseHp = 1450;
+        EnemyStatsScript.baseHp = 1400;
         EnemyStatsScript.enemyType = "Pinkfoot";
 //atk1
         EnemyStatsScript.atk[0,0] = "I-2-2-fire-20";
@@ -824,7 +824,7 @@ EnemyStatsScript.atk[1,5] = "herd-2-9-none-20";
                 combatmusic.gameObject.SetActive(true);
                 //Wraith fight
                 EnemyStatsScript.attackInit();
-                EnemyStatsScript.baseHp = 1500;
+                EnemyStatsScript.baseHp = 1450;
         EnemyStatsScript.enemyType = "Wraith";
 //atk1
         EnemyStatsScript.atk[0,0] = "humans-2-5-none-20";
@@ -884,7 +884,7 @@ EnemyStatsScript.atk[1,5] = "sins-2-9-shield-20";
                 combatmusic.gameObject.SetActive(true);
                 //Sol fight
                  EnemyStatsScript.attackInit();
-                EnemyStatsScript.baseHp = 1500;
+                EnemyStatsScript.baseHp = 1400;
         EnemyStatsScript.enemyType = "Sol";
 //atk1
         EnemyStatsScript.atk[0,0] = "big-2-5-none-20";
@@ -949,23 +949,23 @@ EnemyStatsScript.atk[1,5] = "Jim-2-10-lighting-20";
                 combatmusic.gameObject.SetActive(true);
                 //Observer fight
                 EnemyStatsScript.attackInit();
-        EnemyStatsScript.baseHp = 1650;
+        EnemyStatsScript.baseHp = 1500;
         EnemyStatsScript.enemyType = "Observer";
 //atk1
-        EnemyStatsScript.atk[0,0] = "k'yarnak-2-5-fire-20";
+        EnemyStatsScript.atk[0,0] = "kyarnak-2-5-fire-20";
         EnemyStatsScript.atk[0,1] = "phlegethor-2-6-ice-20";
-        EnemyStatsScript.atk[0,2] = "l'ebumna-2-7-none-20";
-        EnemyStatsScript.atk[0,3] = "syha'h n'ghft-2-8-shield-20";
+        EnemyStatsScript.atk[0,2] = "lebumna-2-7-none-20";
+        EnemyStatsScript.atk[0,3] = "syhah-2-8-shield-20";
  //atk2
-        EnemyStatsScript.atk[1,0] = "s'uhn-ngh-2-5-fire-20";
+        EnemyStatsScript.atk[1,0] = "suhnngh-2-5-fire-20";
         EnemyStatsScript.atk[1,1] = "athg-2-6-ice-20";
-        EnemyStatsScript.atk[1,2] = "li'hee,-2-7-none-20";
-   	EnemyStatsScript.atk[1,3] = "orr'e syha'h,-2-8-shield-20";
+        EnemyStatsScript.atk[1,2] = "lihee-2-7-none-20";
+   	EnemyStatsScript.atk[1,3] = "orre-2-8-shield-20";
  //atk3
         EnemyStatsScript.atk[2,0] = "ya-2-5-fire-20";
         EnemyStatsScript.atk[2,1] = "na-2-6-none-20";
         EnemyStatsScript.atk[2,2] = "kadishtu-2-7-heal-20";
-        EnemyStatsScript.atk[2,3] = "nilgh'ri-2-8-shield-20";
+        EnemyStatsScript.atk[2,3] = "nilghri-2-8-shield-20";
  //atk4
         EnemyStatsScript.atk[3,0] = "#1928-2-5-fire-20";
         EnemyStatsScript.atk[3,1] = "Observer-2-6-ice-20";
@@ -978,8 +978,8 @@ EnemyStatsScript.atk[1,5] = "Jim-2-10-lighting-20";
 
 
                 //atk5
-                EnemyStatsScript.atk[4,0] = "ph'nglui-2-5-ice-20";
-        EnemyStatsScript.atk[4,1] = "mglw'nafh-2-6-shield-20";
+                EnemyStatsScript.atk[4,0] = "phnglui-2-5-ice-20";
+        EnemyStatsScript.atk[4,1] = "mglwnafh-2-6-shield-20";
 
 
                 EnemyStatsScript.atkTimes[0] = 13;
@@ -1007,7 +1007,7 @@ EnemyStatsScript.atk[1,5] = "Jim-2-10-lighting-20";
                 //Monster fight
 
                 EnemyStatsScript.attackInit();
-                EnemyStatsScript.baseHp = 1700;
+                EnemyStatsScript.baseHp = 1600;
         EnemyStatsScript.enemyType = "Monster";
 //atk1
         EnemyStatsScript.atk[0,0] = "brands-2-5-heal-20";

@@ -9,6 +9,8 @@ public class Bonfire : MonoBehaviour
 {
     public AudioSource source;
     public AudioClip clip;
+    public AudioClip healsound;
+
     private bool bonfireactivated = false;
     public bool isNotAt = true;
     private BonfirePositions bf;
@@ -19,6 +21,8 @@ public class Bonfire : MonoBehaviour
     [SerializeField] private Transform bonfireoff;
     [SerializeField] private Transform bonfireon;
     [SerializeField] private Transform bonfirelitmessage;
+    [SerializeField] private Transform healedmessage;
+
 
 
 
@@ -41,14 +45,19 @@ public class Bonfire : MonoBehaviour
                 {
 
 
-                    //open the level up menu
+                    PlayerStatsScript.hp = 500;
+                    PlayerStatsScript.hp = PlayerStatsScript.maxHp;
+                    source.PlayOneShot(healsound);
+                    {
+                        StartCoroutine(Delay());
+                    }
 
-
-                    //replenish all HP and MP
-
-                    //Disable all input from player
-
-
+                    IEnumerator Delay()
+                    {
+                       healedmessage.gameObject.SetActive(true);
+                        yield return new WaitForSeconds(2);
+                        healedmessage.gameObject.SetActive(false);
+                    }
 
                 }
                 else
@@ -103,13 +112,11 @@ public class Bonfire : MonoBehaviour
         if (other.gameObject.tag == "Player")
 
         {
-            if (!bonfireactivated)
-            {
-
+          
                 bonfiremessage.gameObject.SetActive(true);
                 isNotAt = false;
 
-            }
+            
        
 
 

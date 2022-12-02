@@ -592,7 +592,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -1008199000582521667, guid: e3e3b05ccfa5ac141bf3c0c0ec517b1b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e3e3b05ccfa5ac141bf3c0c0ec517b1b, type: 3}
 --- !u!1 &154922191
 GameObject:
@@ -3792,7 +3793,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1118881153}
-  - component: {fileID: 1118881155}
   - component: {fileID: 1118881154}
   m_Layer: 0
   m_Name: AttackSounds
@@ -3808,13 +3808,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1118881151}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 87.9423, y: -1.7124767, z: -16.041862}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -457.0577, y: -308.21246, z: -16.041862}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 510657421}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1118881154
 AudioSource:
@@ -3912,20 +3912,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1118881155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1118881151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1b5f96b0dfc20d4b83dfdd65207ca85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  source: {fileID: 1118881154}
-  damagesound: {fileID: 8300000, guid: bec095ba0c8a9344fb5ccb817d1bf9ba, type: 3}
 --- !u!1 &1120757596
 GameObject:
   m_ObjectHideFlags: 0
@@ -6606,7 +6592,7 @@ PrefabInstance:
     - target: {fileID: 5052674333233538279, guid: 45b5950e3bfef0d4685530d397efcba0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 35.2
+      value: 27.77
       objectReference: {fileID: 0}
     - target: {fileID: 5052674333233538279, guid: 45b5950e3bfef0d4685530d397efcba0,
         type: 3}
@@ -7304,7 +7290,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1833676905}
   - component: {fileID: 1833676904}
-  - component: {fileID: 1833676903}
   m_Layer: 0
   m_Name: HitSounds
   m_TagString: Untagged
@@ -7312,20 +7297,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1833676903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1833676902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f5274a2a3557744cadc56cd96b220ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  source: {fileID: 1833676904}
-  hitsound: {fileID: 8300000, guid: 910ea7b6dfe421144bcb4d6cb52f8634, type: 3}
 --- !u!82 &1833676904
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7435,7 +7406,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1849342072
 GameObject:
