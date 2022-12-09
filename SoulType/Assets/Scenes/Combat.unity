@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2342,7 +2342,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -186.00018, y: -47.799942}
+  m_AnchoredPosition: {x: -186.00018, y: -47.799927}
   m_SizeDelta: {x: 265.804, y: 19.886}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1039271624
@@ -2834,7 +2834,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -179.3424, y: -47.85594}
+  m_AnchoredPosition: {x: -179.3424, y: -47.855957}
   m_SizeDelta: {x: 95.464, y: 102.237}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1114119096
@@ -3507,7 +3507,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4419,7 +4419,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -176.99695, y: -49.000046}
+  m_AnchoredPosition: {x: -176.99695, y: -49.00006}
   m_SizeDelta: {x: 100, y: 152.148}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1425037105
@@ -5066,7 +5066,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -136.42125, y: -72.8004}
+  m_AnchoredPosition: {x: -136.42126, y: -72.8004}
   m_SizeDelta: {x: 166.65, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1553857098
@@ -5316,7 +5316,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -136.42125, y: -97.80087}
+  m_AnchoredPosition: {x: -136.42126, y: -97.80087}
   m_SizeDelta: {x: 166.65, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1617929404
@@ -7072,17 +7072,17 @@ PrefabInstance:
     - target: {fileID: 1322565936993755742, guid: 56d19749c2f89cb45b3bb7317cf8a47e,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 70
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 1322565936993755742, guid: 56d19749c2f89cb45b3bb7317cf8a47e,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 70
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 1322565936993755742, guid: 56d19749c2f89cb45b3bb7317cf8a47e,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 70
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 1322565936993755742, guid: 56d19749c2f89cb45b3bb7317cf8a47e,
         type: 3}
@@ -7097,7 +7097,7 @@ PrefabInstance:
     - target: {fileID: 1322565936993755742, guid: 56d19749c2f89cb45b3bb7317cf8a47e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 41.08
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1322565936993755742, guid: 56d19749c2f89cb45b3bb7317cf8a47e,
         type: 3}
