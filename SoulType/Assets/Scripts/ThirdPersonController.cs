@@ -88,6 +88,8 @@ namespace StarterAssets
 
 
         static public bool isPaused = false;
+        static public bool isCombat = false;
+
 
 
         public GameObject enemies;
@@ -218,6 +220,7 @@ namespace StarterAssets
                 enemies.SetActive(true);
                 combatmusic.gameObject.SetActive(false);
                 explorationmusic.gameObject.SetActive(true);
+                isCombat = false;
 
 
 
@@ -231,6 +234,7 @@ namespace StarterAssets
                 EnemyStatsScript.win = true;
                 PlayerStatsScript.hp = 500;
                 PlayerStatsScript.hp = PlayerStatsScript.maxHp;
+                isCombat = false;
 
                 {
                     StartCoroutine(Delay());
@@ -255,11 +259,16 @@ namespace StarterAssets
             if (Input.GetKeyDown(KeyCode.Escape))
             {
 
+                if (isCombat == false)
+                {
+
+                    pausedMenu.gameObject.SetActive(true);
+                    isPaused = true;
+
+                }
 
 
-
-                pausedMenu.gameObject.SetActive(true);
-                isPaused = true;
+              
 
 
             }
@@ -529,6 +538,8 @@ namespace StarterAssets
             {
                 explorationmusic.gameObject.SetActive(false);
                 combatmusic.gameObject.SetActive(true);
+                isCombat = true;
+
                 Debug.Log("touch");
                 //ghoul fight
 
@@ -551,7 +562,7 @@ namespace StarterAssets
                 //atk3
                 EnemyStatsScript.atk[2,0] = "#301-2-5-heal-20";
                 EnemyStatsScript.atk[2,8] = "Ghoul-2-6-none-20";
-                EnemyStatsScript.atk[2,16] = "From-2-7-none-20";
+                EnemyStatsScript.atk[2,16] = "from-2-7-none-20";
                 EnemyStatsScript.atk[2,17] = "the-2-8-heal-20";
                 EnemyStatsScript.atk[2,24] = "Corpselands-2-9-heal-20";
                 //atk4
@@ -588,10 +599,12 @@ namespace StarterAssets
             {
                 explorationmusic.gameObject.SetActive(false);
                 combatmusic.gameObject.SetActive(true);
+                isCombat = true;
+
                 //ET fight
 
                 //called when combat begins
-        EnemyStatsScript.attackInit();
+                EnemyStatsScript.attackInit();
         EnemyStatsScript.baseHp = 650;
         EnemyStatsScript.enemyType = "ET";
 //atk1 
@@ -613,7 +626,7 @@ namespace StarterAssets
            //atk4
                 EnemyStatsScript.atk[3,0] = "#806-2-5-none-20";
                 EnemyStatsScript.atk[3,8] = "ET-2-6-immune-20";
-                EnemyStatsScript.atk[3,16] = "From-2-7-none-20";
+                EnemyStatsScript.atk[3,16] = "from-2-7-none-20";
                 EnemyStatsScript.atk[3,18] = "Dimension-2-8-none-20";
                 EnemyStatsScript.atk[3,20] = "5037-2-9-none-20";
                 EnemyStatsScript.atk[3,24] = "Planet-2-10-ice-20";
@@ -644,6 +657,8 @@ namespace StarterAssets
             {
                 explorationmusic.gameObject.SetActive(false);
                 combatmusic.gameObject.SetActive(true);
+                isCombat = true;
+
                 //Gus fight
                 EnemyStatsScript.attackInit();
         EnemyStatsScript.baseHp = 750;
@@ -711,6 +726,8 @@ namespace StarterAssets
             {
                 explorationmusic.gameObject.SetActive(false);
                 combatmusic.gameObject.SetActive(true);
+                isCombat = true;
+
                 //Skeehaw fight
                 EnemyStatsScript.attackInit();
         EnemyStatsScript.baseHp = 1000;
@@ -783,9 +800,11 @@ EnemyStatsScript.atk[1,21] = "Draw!-2-14-fire-20";
             {
                 explorationmusic.gameObject.SetActive(false);
                 combatmusic.gameObject.SetActive(true);
+                isCombat = true;
+
                 //Pinkfoot fight
 
-                 EnemyStatsScript.attackInit();
+                EnemyStatsScript.attackInit();
         EnemyStatsScript.baseHp = 1400;
         EnemyStatsScript.enemyType = "Pinkfoot";
 //atk1
@@ -846,6 +865,8 @@ EnemyStatsScript.atk[1,21] = "Draw!-2-14-fire-20";
             {
                 explorationmusic.gameObject.SetActive(false);
                 combatmusic.gameObject.SetActive(true);
+                isCombat = true;
+
                 //Wraith fight
                 EnemyStatsScript.attackInit();
                 EnemyStatsScript.baseHp = 1450;
@@ -906,8 +927,10 @@ EnemyStatsScript.atk[1,5] = "sins.-2-9-shield-20";
             {
                 explorationmusic.gameObject.SetActive(false);
                 combatmusic.gameObject.SetActive(true);
+                isCombat = true;
+
                 //Sol fight
-                 EnemyStatsScript.attackInit();
+                EnemyStatsScript.attackInit();
                 EnemyStatsScript.baseHp = 1400;
         EnemyStatsScript.enemyType = "Sol";
 //atk1
@@ -971,6 +994,8 @@ EnemyStatsScript.atk[1,18] = "Jim-2-10-lighting-20";
             {
                 explorationmusic.gameObject.SetActive(false);
                 combatmusic.gameObject.SetActive(true);
+                isCombat = true;
+
                 //Observer fight
                 EnemyStatsScript.attackInit();
         EnemyStatsScript.baseHp = 1500;
@@ -1028,6 +1053,8 @@ EnemyStatsScript.atk[1,18] = "Jim-2-10-lighting-20";
             {
                 explorationmusic.gameObject.SetActive(false);
                 combatmusic.gameObject.SetActive(true);
+                isCombat = true;
+
                 //Monster fight
 
                 EnemyStatsScript.attackInit();
@@ -1088,10 +1115,12 @@ EnemyStatsScript.atk[1,19] = "Compound-2-9-none-20";
             {
                 explorationmusic.gameObject.SetActive(false);
                 bossmusic.gameObject.SetActive(true);
+                isCombat = true;
+
                 //Boss fight
 
                 //called when combat begins
-        EnemyStatsScript.attackInit();
+                EnemyStatsScript.attackInit();
                 EnemyStatsScript.baseHp = 4200;
         EnemyStatsScript.enemyType = "Emperor";
 //atk1
