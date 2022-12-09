@@ -561,3 +561,15 @@ MonoBehaviour:
   timer: {fileID: 2286324171985022441}
   bar: {fileID: 4818571291312129025}
   typeImage: {fileID: 3355003093251361003}
+  source: {fileID: 0}
+  healsound: {fileID: 0}
+  firesound: {fileID: 0}
+  icesound: {fileID: 0}
+  shieldsound: {fileID: 0}
+  lightningsound: {fileID: 0}
+  basicsound: {fileID: 0}
+  playerattack: {fileID: 0}
+  monsters:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

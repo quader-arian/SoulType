@@ -12,7 +12,6 @@ public class MpWordScript : MonoBehaviour
     
     private float timeAlive;
 
-
     public AudioSource source;
     public AudioClip healsound;
     public AudioClip firesound;
@@ -59,7 +58,7 @@ public class MpWordScript : MonoBehaviour
                     EnemyStatsScript.isSlowed = true;
                     EnemyStatsScript.slowTime = 8f;
 
-                    source.PlayOneShot(shieldsound);
+                    source.PlayOneShot(icesound);
                     PlayerStatsScript.slowCooldown = 25f;
                 }else if(type == "shield" && PlayerStatsScript.immuneCooldown <= 0){
                     PlayerStatsScript.isImmune = true;

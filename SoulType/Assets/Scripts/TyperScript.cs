@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using TMPro;
 using System;
+using Random = UnityEngine.Random;
 
 public class TyperScript : MonoBehaviour
 {
@@ -12,14 +15,11 @@ public class TyperScript : MonoBehaviour
     static private string sendWord;
     static private bool isCompleted;
 
-
     public AudioSource source;
-    public AudioClip type;
+    public AudioClip type1;
+    public AudioClip type2;
     public AudioClip enter;
 
-
-
-    public ScreenFX Nolan;
     // Start is called before the first frame update
     void Start()
     {   
@@ -53,31 +53,37 @@ public class TyperScript : MonoBehaviour
     {
         string keysPressed = Input.inputString;
         string send = "";
+        int rand = 0;
 
         foreach (char c in keysPressed){
             if (c == '\b'){
-                //Nolan.PlayAniHit();
-
                 if (send.Length != 0){
                     send = send.Substring(0, send.Length - 1);
                 }
                 else if(currWord.Length != 0){
                     backSpaced = true;
-                    source.PlayOneShot(type);
-
+                    rand = Random.Range(0, 2);
+                    if(rand == 0){
+                        source.PlayOneShot(type1);
+                    }else{
+                        source.PlayOneShot(type2);
+                    }
                 }
             }
             else if ((c == '\n') || (c == ' ') || (c == '\r')){
                 send += '~';
-                //Nolan.PlayAniHit();
                 source.PlayOneShot(enter);
 
                 return send;
                 
             }else{
                 send += c;
-                //Nolan.PlayAniHit();
-                source.PlayOneShot(type);
+                rand = Random.Range(0, 2);
+                if(rand == 0){
+                    source.PlayOneShot(type1);
+                }else{
+                    source.PlayOneShot(type2);
+                }
             }
         }
         return send;

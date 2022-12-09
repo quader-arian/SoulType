@@ -20,8 +20,16 @@ public class DefWordScript : MonoBehaviour
     public Image typeImage;
     private Sprite spriteImage;
 
- 
-    //public ScreenFX Nolan;
+    public AudioSource source;
+    public AudioClip healsound;
+    public AudioClip firesound;
+    public AudioClip icesound;
+    public AudioClip shieldsound;
+    public AudioClip lightningsound;
+    public AudioClip basicsound;
+    public AudioClip playerattack;
+    public Animator[] monsters = new Animator[3];
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,23 +60,21 @@ public class DefWordScript : MonoBehaviour
         if(TyperScript.isReady()){
             if(word + '~' == TyperScript.recieveWord()){
                 if(parry > 0){
+                    source.PlayOneShot(playerattack);
                     EnemyStatsScript.hp -= dmg;
                 }
                 TyperScript.resetReady();
-                Destroy(gameObject);
                 if(PlayerStatsScript.isPowered){
+                    source.PlayOneShot(lightningsound);
                     GameObject[] defWords = GameObject.FindGameObjectsWithTag("DefWord");
-                    if(defWords.Length > 2){
-                        Destroy(defWords[0]);
-                        Destroy(defWords[1]);
-                        Destroy(defWords[2]);
-                    }else if(defWords.Length > 2){
+                    if(defWords.Length >= 2){
                         Destroy(defWords[0]);
                         Destroy(defWords[1]);
                     }else{
                         Destroy(defWords[0]);
                     }
                 }
+                Destroy(gameObject);
             }
         }
 
@@ -77,8 +83,18 @@ public class DefWordScript : MonoBehaviour
             parry -= Time.deltaTime;
         }
         if(block <= 0){
-           // Nolan.PlayAniHit(); 
+            if(EnemyStatsScript.enemyType == "Monster"){
+                foreach (Animator m in monsters){
+                    m.SetTrigger("attacking");
+                    m.SetTrigger("preparing");
+                }
+            }else{
+                EnemyStatsScript.animator.SetTrigger("attacking");
+                EnemyStatsScript.animator.SetTrigger("preparing");
+            }
             if(type == "lightning"){
+                source.PlayOneShot(lightningsound);
+                source.PlayOneShot(basicsound);
                 EnemyStatsScript.isPowered = true;
                 EnemyStatsScript.poweredTime = 1f;
                 GameObject[] defWords = GameObject.FindGameObjectsWithTag("DefWord");
@@ -95,15 +111,19 @@ public class DefWordScript : MonoBehaviour
                         else{
                             EnemyStatsScript.hp += 100;
                         }
+                        source.PlayOneShot(healsound);
                     }else if(newType == "fire"){
                         PlayerStatsScript.isBurn = true;
                         PlayerStatsScript.burnTime = 4f + (PlayerStatsScript.atkLvl - 1) + PlayerStatsScript.mpLvl;
+                        source.PlayOneShot(firesound);
                     }else if(newType == "ice"){
                         PlayerStatsScript.isSlowed = true;
                         PlayerStatsScript.slowTime = 6f + (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl;
+                        source.PlayOneShot(icesound);
                     }else if(newType == "shield"){
                         EnemyStatsScript.isImmune = true;
                         EnemyStatsScript.immuneTime = 10f;
+                        source.PlayOneShot(shieldsound);
                     }else if(newType == "lightning"){
                         continue;
                     }
@@ -123,27 +143,34 @@ public class DefWordScript : MonoBehaviour
                     else{
                         EnemyStatsScript.hp += 100;
                     }
+                    source.PlayOneShot(healsound);
                 }else if(type == "fire"){
                     PlayerStatsScript.isBurn = true;
                     PlayerStatsScript.burnTime = 4f + (PlayerStatsScript.atkLvl - 1) + PlayerStatsScript.mpLvl;
+                    source.PlayOneShot(firesound);
                 }else if(type == "ice"){
                     PlayerStatsScript.isSlowed = true;
                     PlayerStatsScript.slowTime = 2f + (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl;
+                    source.PlayOneShot(icesound);
                 }else if(type == "shield"){
                     EnemyStatsScript.isImmune = true;
                     EnemyStatsScript.immuneTime = 10f;
+                    source.PlayOneShot(shieldsound);
                 }
+                source.PlayOneShot(basicsound);
                 PlayerStatsScript.hp -= dmg;
-
-
-
-
-
             }
-            Destroy(gameObject);    
+            Destroy(gameObject);
         }
         if(parry <= 0){
             bar.color = new Color32(255,0,0,220);
+        }
+        if(EnemyStatsScript.enemyType == "Monster"){
+            foreach (Animator m in monsters){
+                m.ResetTrigger("flinching");
+            }
+        }else{
+            EnemyStatsScript.animator.ResetTrigger("flinching");;
         }
     }
 }

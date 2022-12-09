@@ -14,8 +14,8 @@ public class PlayerUpdatesScript : MonoBehaviour
     public Image lightningImage;
     public Image healImage;
     public Image shieldImage;
+    public Image hurt;
 
-    public ScreenFX NolanFX;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,22 +48,13 @@ public class PlayerUpdatesScript : MonoBehaviour
         }
         hpText.text = (int)PlayerStatsScript.hp+ "/" +PlayerStatsScript.maxHp;
         healthBarImage.fillAmount = Mathf.Clamp(PlayerStatsScript.hp / PlayerStatsScript.maxHp, 0, 1f);
-        if ( 0.5 > (PlayerStatsScript.hp / PlayerStatsScript.maxHp)){
-            NolanFX.Dying.SetActive(true);
-        }
-        if ( 0.5 < (PlayerStatsScript.hp / PlayerStatsScript.maxHp)){
-            NolanFX.Dying.SetActive(false);
-        }
 
         if(PlayerStatsScript.isImmune && PlayerStatsScript.immuneTime >= 0){
             PlayerStatsScript.immuneTime -= Time.deltaTime;
             healthBarImage.color = new Color32(147,112,219,255);
-            NolanFX.Shield.gameObject.SetActive(true);
-            NolanFX.PlayAniShield();
         }else if(PlayerStatsScript.isImmune){
             PlayerStatsScript.isImmune = false;
             PlayerStatsScript.immuneTime = (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl + 3f; 
-            NolanFX.Shield.gameObject.SetActive(false);
         }
 
         if(PlayerStatsScript.isImmune){
@@ -75,37 +66,25 @@ public class PlayerUpdatesScript : MonoBehaviour
             PlayerStatsScript.burnTime -= Time.deltaTime;
             PlayerStatsScript.hp -= 10*Time.deltaTime;
             healthBarImage.color = Color.red;
-            NolanFX.Fire.gameObject.SetActive(true);
-            NolanFX.PlayAniFire();
-
         }else if(PlayerStatsScript.isBurn){
             PlayerStatsScript.isBurn = false;
             PlayerStatsScript.burnTime = 5f; 
-            NolanFX.Fire.gameObject.SetActive(false);
         }
         // slowed = freeze
         if(PlayerStatsScript.isSlowed && PlayerStatsScript.slowTime >= 0){
             PlayerStatsScript.slowTime -= Time.deltaTime;
-            healthBarImage.color = new Color32(255,140,0,255);
-            NolanFX.Frozen.gameObject.SetActive(true);
-            NolanFX.PlayAniFrozen();
+            healthBarImage.color = Color.blue;
         }else if(PlayerStatsScript.isSlowed){
             PlayerStatsScript.isSlowed = false;
             PlayerStatsScript.slowTime =  2f;
-            NolanFX.Frozen.gameObject.SetActive(false);
         }
         // electric = powered
         if(PlayerStatsScript.isPowered && PlayerStatsScript.poweredTime >= 0){
-
             PlayerStatsScript.poweredTime -= Time.deltaTime;
-            healthBarImage.color = Color.blue;
-            NolanFX.Electric.gameObject.SetActive(true);
-
-            NolanFX.PlayAniElectric();
+            healthBarImage.color = new Color32(154,137,0,255);
         }else if(PlayerStatsScript.isPowered){
             PlayerStatsScript.isPowered = false;
             PlayerStatsScript.poweredTime = (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl + 3f;
-            NolanFX.Electric.gameObject.SetActive(false);
         }
 
         if(!PlayerStatsScript.isPowered && !PlayerStatsScript.isSlowed && !PlayerStatsScript.isImmune && !PlayerStatsScript.isBurn){
@@ -132,6 +111,11 @@ public class PlayerUpdatesScript : MonoBehaviour
             PlayerStatsScript.poweredCooldown -= Time.deltaTime;
             lightningImage.fillAmount = 1-PlayerStatsScript.poweredCooldown/25f;
         }
+
+        int hurtScale = (int)(1-(PlayerStatsScript.hp / PlayerStatsScript.maxHp)*255);
+        hurt.color = new Color32(255,10,8,(byte)hurtScale);
+
+
     }
 
 }
