@@ -23,7 +23,7 @@ public class EnemyStatsScript : MonoBehaviour
     public static bool inCombat;
     public static string enemyType;
 
-    public static string[,] atk = new string[5,32];
+    public static string[,] atk = new string[5, 32];
     public static int[] atkTimes = new int[5];
     public static int currAtk;
     private int i;
@@ -124,56 +124,77 @@ public class EnemyStatsScript : MonoBehaviour
         isImmune = false;
         isPowered = false;
 
-        if(enemyType == "Monster"){
+        if (enemyType == "Monster")
+        {
             monster.SetActive(true);
             basicattack = monsterAttack;
             death = monsterDeath;
-        }else if(enemyType == "Ghoul"){
+        }
+        else if (enemyType == "Ghoul")
+        {
             ghoul.SetActive(true);
             basicattack = ghoulAttack;
             death = ghoulDeath;
             animator = ghoul.GetComponent<Animator>();
-        }else if(enemyType == "ET"){
+        }
+        else if (enemyType == "ET")
+        {
             et.SetActive(true);
             basicattack = etAttack;
             death = etDeath;
             animator = et.GetComponent<Animator>();
-        }else if(enemyType == "Gus"){
+        }
+        else if (enemyType == "Gus")
+        {
             funguy.SetActive(true);
             basicattack = funguyAttack;
             death = funguyDeath;
             animator = funguy.GetComponent<Animator>();
-        }else if(enemyType == "Sol"){
+        }
+        else if (enemyType == "Sol")
+        {
             sol.SetActive(true);
             basicattack = solAttack;
             death = solDeath;
             animator = sol.GetComponent<Animator>();
-        }else if(enemyType == "Wraith"){
+        }
+        else if (enemyType == "Wraith")
+        {
             wraith.SetActive(true);
             basicattack = wraithAttack;
             death = wraithDeath;
             animator = wraith.GetComponent<Animator>();
-        }else if (enemyType == "Pinkfoot"){
+        }
+        else if (enemyType == "Pinkfoot")
+        {
             pinkfoot.SetActive(true);
             basicattack = pinkfootAttack;
             death = pinkfootDeath;
             animator = pinkfoot.GetComponent<Animator>();
-        }else if(enemyType == "Skeehaw"){
+        }
+        else if (enemyType == "Skeehaw")
+        {
             skeehaw.SetActive(true);
             basicattack = skeehawAttack;
             death = skeehawDeath;
             animator = skeehaw.GetComponent<Animator>();
-        }else if(enemyType == "Observer"){
+        }
+        else if (enemyType == "Observer")
+        {
             observer.SetActive(true);
             basicattack = observerAttack;
-            death  = observerDeath;
+            death = observerDeath;
             animator = observer.GetComponent<Animator>();
-        }else if(enemyType == "Emperor"){
+        }
+        else if (enemyType == "Emperor")
+        {
             emperor.SetActive(true);
             basicattack = emperorAttack;
             death = emperorDeath;
             animator = emperor.GetComponent<Animator>();
-        }else if(enemyType == "Pinkfoot"){
+        }
+        else if (enemyType == "Pinkfoot")
+        {
             pinkfoot.SetActive(true);
             basicattack = pinkfootAttack;
             death = pinkfootDeath;
@@ -185,102 +206,153 @@ public class EnemyStatsScript : MonoBehaviour
     void Update()
     {
         status.text = "";
-        if(isBurn){
-            status.text += " Burning " + ((int)burnTime+1);
-        }if(isSlowed){
-            status.text += " Stunned " + ((int)slowTime+1);
-        }if(isImmune){
-            status.text += " Shielded " + ((int)immuneTime+1);
-        }if(isPowered){
-            status.text += " Powered " + ((int)poweredTime+1);
-        }if(status.text != ""){
+        if (isBurn)
+        {
+            status.text += " Burning " + ((int)burnTime + 1);
+        }
+        if (isSlowed)
+        {
+            status.text += " Stunned " + ((int)slowTime + 1);
+        }
+        if (isImmune)
+        {
+            status.text += " Shielded " + ((int)immuneTime + 1);
+        }
+        if (isPowered)
+        {
+            status.text += " Powered " + ((int)poweredTime + 1);
+        }
+        if (status.text != "")
+        {
             status.text = status.text.Substring(1, status.text.Length - 1);
         }
-        hpText.text = (int)hp+ "/" + maxHp;
+        hpText.text = (int)hp + "/" + maxHp;
         healthBarImage.fillAmount = Mathf.Clamp(hp / maxHp, 0, 1f);
         nameText.text = enemyType;
 
-        if(isImmune && immuneTime >= 0){
+        if (isImmune && immuneTime >= 0)
+        {
             immuneTime -= Time.deltaTime;
-            healthBarImage.color = new Color32(147,112,219,255);
-        }else if(isImmune){
+            healthBarImage.color = new Color32(147, 112, 219, 255);
+        }
+        else if (isImmune)
+        {
             isImmune = false;
             immuneTime = 10f;
         }
 
-        if(isImmune){
+        if (isImmune)
+        {
             isBurn = false;
             isSlowed = false;
         }
 
-        if(isBurn && burnTime >= 0){
+        if (isBurn && burnTime >= 0)
+        {
             burnTime -= Time.deltaTime;
-            hp -= 25*Time.deltaTime;
+            hp -= 25 * Time.deltaTime;
             healthBarImage.color = Color.red;
-        }else if(isBurn){
+        }
+        else if (isBurn)
+        {
             isBurn = false;
             burnTime = 4f + (PlayerStatsScript.atkLvl - 1) + PlayerStatsScript.mpLvl;
         }
 
-        if(isSlowed && slowTime >= 0){
+        if (isSlowed && slowTime >= 0)
+        {
             slowTime -= Time.deltaTime;
             healthBarImage.color = Color.blue;
-        }else if(isSlowed){
+        }
+        else if (isSlowed)
+        {
             isSlowed = false;
             slowTime = 6f + (PlayerStatsScript.defLvl - 1) + PlayerStatsScript.mpLvl;
         }
 
-        if(isPowered && poweredTime >= 0){
+        if (isPowered && poweredTime >= 0)
+        {
             poweredTime -= Time.deltaTime;
-            healthBarImage.color = new Color32(154,137,0,255);
-        }else if(isPowered){
+            healthBarImage.color = new Color32(154, 137, 0, 255);
+        }
+        else if (isPowered)
+        {
             isPowered = false;
             poweredTime = 1f;
         }
 
-        if(!isPowered && !isSlowed && !isImmune && !isBurn){
-            healthBarImage.color = new Color32(0,159,15,255);
+        if (!isPowered && !isSlowed && !isImmune && !isBurn)
+        {
+            healthBarImage.color = new Color32(0, 159, 15, 255);
         }
 
-        if (timeBtwSpawns <= 0){
+        if (timeBtwSpawns <= 0)
+        {
             // inc atk
-            if(enemyType == "Monster"){
-                foreach (Animator m in monsters){
+            if (enemyType == "Monster")
+            {
+                foreach (Animator m in monsters)
+                {
                     m.ResetTrigger("cancel");
                     m.ResetTrigger("attacking");
                     m.SetTrigger("preparing");
                 }
-            }else{
+            }
+            else
+            {
                 animator.ResetTrigger("cancel");
                 animator.ResetTrigger("attacking");
                 animator.SetTrigger("preparing");
             }
-            
-            if(enemyType == "Monster"){
+
+            if (enemyType == "Monster")
+            {
                 source.PlayOneShot(monsterAlert);
-            }else if(enemyType == "Ghoul"){
+            }
+            else if (enemyType == "Ghoul")
+            {
                 source.PlayOneShot(ghoulAlert);
-            }else if(enemyType == "ET"){
+            }
+            else if (enemyType == "ET")
+            {
                 source.PlayOneShot(etAlert);
-            }else if(enemyType == "Gus"){
+            }
+            else if (enemyType == "Gus")
+            {
                 source.PlayOneShot(funguyAlert);
-            }else if(enemyType == "Sol"){
+            }
+            else if (enemyType == "Sol")
+            {
                 source.PlayOneShot(solAlert);
-            }else if(enemyType == "Wraith"){
+            }
+            else if (enemyType == "Wraith")
+            {
                 source.PlayOneShot(wraithAlert);
-            }else if (enemyType == "Pinkfoot"){
-                source.PlayOneShot(pinkfootAlert);
-            }else if(enemyType == "Skeehaw"){
-                source.PlayOneShot(skeehawAlert);
-            }else if(enemyType == "Observer"){
-                source.PlayOneShot(observerAlert);
-            }else if(enemyType == "Emperor"){
-                source.PlayOneShot(emperorAlert);
-            }else if(enemyType == "Pinkfoot"){
+            }
+            else if (enemyType == "Pinkfoot")
+            {
                 source.PlayOneShot(pinkfootAlert);
             }
-            foreach (GameObject loc in locs){
-                if(atk[currAtk, i] != "" && atk[currAtk, i] != null){
+            else if (enemyType == "Skeehaw")
+            {
+                source.PlayOneShot(skeehawAlert);
+            }
+            else if (enemyType == "Observer")
+            {
+                source.PlayOneShot(observerAlert);
+            }
+            else if (enemyType == "Emperor")
+            {
+                source.PlayOneShot(emperorAlert);
+            }
+            else if (enemyType == "Pinkfoot")
+            {
+                source.PlayOneShot(pinkfootAlert);
+            }
+            foreach (GameObject loc in locs)
+            {
+                if (atk[currAtk, i] != "" && atk[currAtk, i] != null)
+                {
                     string[] splitArray = atk[currAtk, i].Split(char.Parse("-"));
                     thisWord = words.GetComponent<DefWordScript>();
                     thisWord.word = splitArray[0];
@@ -303,33 +375,39 @@ public class EnemyStatsScript : MonoBehaviour
                 }
                 i++;
             }
-            i=0;
+            i = 0;
             startTimeBtwSpawns = atkTimes[currAtk];
             currAtk = Random.Range(0, 5);
             timeBtwSpawns = startTimeBtwSpawns;
         }
         else
         {
-            
+
             timeBtwSpawns -= Time.deltaTime;
         }
 
         GameObject[] defWords = GameObject.FindGameObjectsWithTag("DefWord");
-        if(defWords.Length <= 0){
-            if(enemyType == "Monster"){
-                foreach (Animator m in monsters){
+        if (defWords.Length <= 0)
+        {
+            if (enemyType == "Monster")
+            {
+                foreach (Animator m in monsters)
+                {
                     m.ResetTrigger("preparing");
                     m.ResetTrigger("attacking");
                     m.SetTrigger("cancel");
                 }
-            }else{
+            }
+            else
+            {
                 animator.ResetTrigger("preparing");
                 animator.ResetTrigger("attacking");
                 animator.SetTrigger("cancel");
-            } 
+            }
         }
 
-        if(hp <= 0){
+        if (hp <= 0)
+        {
             statictransition.gameObject.SetActive(false);
             {
                 StartCoroutine(Delay());
@@ -342,9 +420,18 @@ public class EnemyStatsScript : MonoBehaviour
                 {
                     source.PlayOneShot(clip);
                     source.PlayOneShot(death);
-                    animator.SetTrigger("flinching");
+                    if (enemyType == "Monster")
+                    {
+                        foreach (Animator m in monsters)
+                        {
+                            m.SetTrigger("flinching");
+                        }
+                    }
+                    else
+                    {
+                        animator.SetTrigger("flinching");
+                    }
                     alreadyPlayed = true;
-
                 }
                 yield return new WaitForSeconds(1f);
 
@@ -360,13 +447,24 @@ public class EnemyStatsScript : MonoBehaviour
                 ghoul.SetActive(false);
                 pinkfoot.SetActive(false);
                 monster.SetActive(false);
-                animator.ResetTrigger("flinching");
+                if (enemyType == "Monster")
+                {
+                    foreach (Animator m in monsters)
+                    {
+                        m.ResetTrigger("flinching");
+                    }
+                }
+                else
+                {
+                    animator.ResetTrigger("flinching");
+                }
                 SceneManager.UnloadScene("Combat");
             }
-           
-          
+
+
         }
-        if(PlayerStatsScript.hp <= 0){
+        if (PlayerStatsScript.hp <= 0)
+        {
             statictransition.gameObject.SetActive(false);
             {
                 StartCoroutine(Delay());
@@ -404,25 +502,32 @@ public class EnemyStatsScript : MonoBehaviour
         }
     }
 
-    public static void attackInit(){
-        for(int i = 0; i < 5; i++){
-            for(int j = 0; j < 32; j++){
+    public static void attackInit()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            for (int j = 0; j < 32; j++)
+            {
                 atk[i, j] = "";
             }
         }
     }
 
-    int ComparebyName(GameObject x, GameObject y){
+    int ComparebyName(GameObject x, GameObject y)
+    {
         int a = int.Parse(x.name);
         int b = int.Parse(y.name);
 
-        if(a > b){
+        if (a > b)
+        {
             return 1;
         }
-        else if (a < b){
+        else if (a < b)
+        {
             return -1;
         }
-        else{
+        else
+        {
             return 0;
         }
     }

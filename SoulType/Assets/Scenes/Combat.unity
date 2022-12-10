@@ -2015,14 +2015,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   words:
   - burning
-  - overheated
+  - overheat
   - firewall
   - inferno
   - sparks
   - salvo
   - scorch
   - ignite
-  - chilli
+  - chaos
   - pepper
   type: fire
   effect: {fileID: 0}

@@ -87,6 +87,9 @@ namespace StarterAssets
         [SerializeField] GameObject pausedMenu;
 
 
+        public GameObject lastFought;
+
+
         static public bool isPaused = false;
         static public bool isCombat = false;
 
@@ -221,7 +224,20 @@ namespace StarterAssets
                 combatmusic.gameObject.SetActive(false);
                 explorationmusic.gameObject.SetActive(true);
                 isCombat = false;
+                
 
+    
+
+            }
+
+
+            if (!EnemyStatsScript.loss)
+            {
+
+
+                EnemyStatsScript.loss = true;
+                Destroy(lastFought);
+                isCombat = false;
 
 
 
@@ -560,7 +576,7 @@ namespace StarterAssets
                 EnemyStatsScript.atk[1,2] = "more-2-7-none-20";
                 EnemyStatsScript.atk[1,4] = "scientists!-2-8-none-20";
                 //atk3
-                EnemyStatsScript.atk[2,0] = "#301-2-5-heal-20";
+                EnemyStatsScript.atk[2,0] = "ID301-2-5-heal-20";
                 EnemyStatsScript.atk[2,8] = "Ghoul-2-6-none-20";
                 EnemyStatsScript.atk[2,16] = "from-2-7-none-20";
                 EnemyStatsScript.atk[2,17] = "the-2-8-heal-20";
@@ -590,7 +606,7 @@ namespace StarterAssets
                 EnemyStatsScript.inCombat = true;
                 enemies.SetActive(false);
                 SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
-                Destroy(Col.gameObject);
+                lastFought = Col.gameObject;
             }
 
 
@@ -624,13 +640,13 @@ namespace StarterAssets
       EnemyStatsScript.atk[2,3] = "planet-2-7-none-20";
        EnemyStatsScript.atk[2,4] = "now.-2-8-stun-20";
            //atk4
-                EnemyStatsScript.atk[3,0] = "#806-2-5-none-20";
+                EnemyStatsScript.atk[3,0] = "ID806-2-5-none-20";
                 EnemyStatsScript.atk[3,8] = "ET-2-6-immune-20";
                 EnemyStatsScript.atk[3,16] = "from-2-7-none-20";
-                EnemyStatsScript.atk[3,18] = "Dimension-2-8-none-20";
-                EnemyStatsScript.atk[3,20] = "5037-2-9-none-20";
+                EnemyStatsScript.atk[3,18] = "outer-2-8-none-20";
+                EnemyStatsScript.atk[3,20] = "space-2-9-none-20";
                 EnemyStatsScript.atk[3,24] = "Planet-2-10-ice-20";
-                EnemyStatsScript.atk[3,26] = "Urzagool-2-11-immune-20";
+                EnemyStatsScript.atk[3,26] = "Mars-2-11-immune-20";
                 //atk5
                 EnemyStatsScript.atk[4,0] = "We-2-3-none-20";
         EnemyStatsScript.atk[4,1] = "will-2-4-ice-20";
@@ -647,7 +663,7 @@ namespace StarterAssets
                 EnemyStatsScript.inCombat = true;
                 enemies.SetActive(false);
                 SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
-                Destroy(Col.gameObject);
+                lastFought = Col.gameObject;
 
             }
 
@@ -664,15 +680,15 @@ namespace StarterAssets
         EnemyStatsScript.baseHp = 750;
         EnemyStatsScript.enemyType = "Gus";
 //atk1
-        EnemyStatsScript.atk[0,0] = "Feed-2-3-ice-20";
+        EnemyStatsScript.atk[0,0] = "Feed-2-3-none-20";
         EnemyStatsScript.atk[0,1] = "me-2-4-none-20";
         EnemyStatsScript.atk[0,8] = "and-2-5-none-20";
-        EnemyStatsScript.atk[0,9] = "be-2-6-ice-20";
+        EnemyStatsScript.atk[0,9] = "be-2-6-heal-20";
         EnemyStatsScript.atk[0,10] = "on-2-7-ice-20";
         EnemyStatsScript.atk[0,11] = "your-2-8-ice-20";
         EnemyStatsScript.atk[0,12] = "way.-2-9-ice-20";
  //atk2
-        EnemyStatsScript.atk[1,0] = "#611-2-5-lightning-20";
+        EnemyStatsScript.atk[1,0] = "ID611-2-5-lightning-20";
         EnemyStatsScript.atk[1,8] = "Gus-2-6-none-20";
         EnemyStatsScript.atk[1,16] = "from-2-7-none-20";
    	EnemyStatsScript.atk[1,18] = "Forest-2-8-ice-20";
@@ -683,7 +699,7 @@ namespace StarterAssets
                 //atk3
                 EnemyStatsScript.atk[2,0] = "Do-2-5-heal-20";
         EnemyStatsScript.atk[2,1] = "not-2-6-none-20";
-        EnemyStatsScript.atk[2,2] = "jump-2-7-ice-20";
+        EnemyStatsScript.atk[2,2] = "jump-2-7-none-20";
         EnemyStatsScript.atk[2,3] = "on-2-8-none-20";
        EnemyStatsScript.atk[2,4] = "my-2-9-none-20";
        EnemyStatsScript.atk[2,5] = "head.-2-10-ice-20";
@@ -713,7 +729,7 @@ namespace StarterAssets
                 EnemyStatsScript.inCombat = true;
                 enemies.SetActive(false);
                 SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
-                Destroy(Col.gameObject);
+                lastFought = Col.gameObject;
 
             }
 
@@ -774,7 +790,7 @@ EnemyStatsScript.atk[1,21] = "Draw!-2-14-fire-20";
        EnemyStatsScript.atk[3,25] = "get-2-10-fire-20";
         EnemyStatsScript.atk[3,26] = "got.-2-11-fire-20";
   //atk5
-        EnemyStatsScript.atk[4,0] = "#1200-2-5-fire-20";
+        EnemyStatsScript.atk[4,0] = "ID120-2-5-fire-20";
         EnemyStatsScript.atk[4,8] = "Skeehaw-2-6-none-20";
         EnemyStatsScript.atk[4,16] = "from-2-7-ice-20";
         EnemyStatsScript.atk[4,18] = "Bobo's-2-8-none-20";
@@ -790,7 +806,7 @@ EnemyStatsScript.atk[1,21] = "Draw!-2-14-fire-20";
                 EnemyStatsScript.inCombat = true;
                 enemies.SetActive(false);
                 SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
-                Destroy(Col.gameObject);
+                lastFought = Col.gameObject;
 
             }
 
@@ -831,7 +847,7 @@ EnemyStatsScript.atk[1,21] = "Draw!-2-14-fire-20";
        EnemyStatsScript.atk[2,12] = "for-2-13-fire-20";
        EnemyStatsScript.atk[2,13] = "home.-2-14-fire-20";
  //atk4
-        EnemyStatsScript.atk[3,0] = "#666-2-5-fire-20";
+        EnemyStatsScript.atk[3,0] = "ID666-2-5-fire-20";
         EnemyStatsScript.atk[3,8] = "Pinkfoot-2-6-none-20";
         EnemyStatsScript.atk[3,16] = "from-2-7-none-20";
         EnemyStatsScript.atk[3,17] = "the-2-8-fire-20";
@@ -857,6 +873,9 @@ EnemyStatsScript.atk[1,21] = "Draw!-2-14-fire-20";
                 enemies.SetActive(false);
                 SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
                 Destroy(Col.gameObject);
+
+        
+        
             }
 
 
@@ -897,7 +916,7 @@ EnemyStatsScript.atk[1,5] = "sins.-2-9-shield-20";
        EnemyStatsScript.atk[2,20] = "wrath-2-10-lightning-20";
        EnemyStatsScript.atk[2,30] = "sloth-2-11-shield-20";
  //atk4
-        EnemyStatsScript.atk[3,0] = "#084-2-5-none-20";
+        EnemyStatsScript.atk[3,0] = "ID084-2-5-none-20";
         EnemyStatsScript.atk[3,8] = "Wraith-2-6-shield-20";
         EnemyStatsScript.atk[3,16] = "from-2-7-none-20";
         EnemyStatsScript.atk[3,18] = "The-2-8-ice-20";
@@ -918,7 +937,7 @@ EnemyStatsScript.atk[1,5] = "sins.-2-9-shield-20";
                 EnemyStatsScript.inCombat = true;
                 enemies.SetActive(false);
                 SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
-                Destroy(Col.gameObject);
+                lastFought = Col.gameObject;
             }
 
 
@@ -967,7 +986,7 @@ EnemyStatsScript.atk[1,18] = "Jim-2-10-lighting-20";
         EnemyStatsScript.atk[3,7] = "lazy-2-12-none-20";
     EnemyStatsScript.atk[3,8] = "dog-2-13-none-20";
        //atk5
-        EnemyStatsScript.atk[4,0] = "#710-2-5-lightning-20";
+        EnemyStatsScript.atk[4,0] = "ID710-2-5-lightning-20";
         EnemyStatsScript.atk[4,8] = "Sol-2-6-none-20";
         EnemyStatsScript.atk[4,16] = "from-2-7-fire-20";
         EnemyStatsScript.atk[4,18] = "Haven-2-8-none-20";
@@ -984,7 +1003,7 @@ EnemyStatsScript.atk[1,18] = "Jim-2-10-lighting-20";
                 EnemyStatsScript.inCombat = true;
                 enemies.SetActive(false);
                 SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
-                Destroy(Col.gameObject);
+                lastFought = Col.gameObject;
 
             }
 
@@ -1016,7 +1035,7 @@ EnemyStatsScript.atk[1,18] = "Jim-2-10-lighting-20";
         EnemyStatsScript.atk[2,18] = "kadishtu-2-7-heal-20";
         EnemyStatsScript.atk[2,27] = "nilghri-2-8-shield-20";
  //atk4
-        EnemyStatsScript.atk[3,0] = "#1928-2-5-fire-20";
+        EnemyStatsScript.atk[3,0] = "ID1928-2-5-fire-20";
         EnemyStatsScript.atk[3,8] = "Observer-2-6-ice-20";
         EnemyStatsScript.atk[3,16] = "from-2-7-shield-20";
                 EnemyStatsScript.atk[3, 17] = "the-2-8-none-20";
@@ -1039,7 +1058,7 @@ EnemyStatsScript.atk[1,18] = "Jim-2-10-lighting-20";
                 EnemyStatsScript.inCombat = true;
                 enemies.SetActive(false);
                 SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
-                Destroy(Col.gameObject);
+                lastFought = Col.gameObject;
 
             }
 
@@ -1072,8 +1091,8 @@ EnemyStatsScript.atk[0,28] = "everywhere-2-12-lightning-20";
  
  //atk2
         EnemyStatsScript.atk[1,0] = "Unknown-2-5-lighting-20";
-        EnemyStatsScript.atk[1,8] = "ID#-2-6-none-20";
-        EnemyStatsScript.atk[1,16] = "null,-2-7-ice-20";
+        EnemyStatsScript.atk[1,8] = "ID-2-6-none-20";
+        EnemyStatsScript.atk[1,16] = "null-2-7-ice-20";
    	EnemyStatsScript.atk[1,17] = "from-2-8-none-20";
 EnemyStatsScript.atk[1,19] = "Compound-2-9-none-20";
                 EnemyStatsScript.atk[1, 21] = "IX-2-10-heal-20";
@@ -1105,7 +1124,8 @@ EnemyStatsScript.atk[1,19] = "Compound-2-9-none-20";
                 EnemyStatsScript.inCombat = true;
                 enemies.SetActive(false);
                 SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
-                Destroy(Col.gameObject);
+                //Destroy(Col.gameObject);
+                lastFought = Col.gameObject;
 
             }
 
@@ -1121,7 +1141,7 @@ EnemyStatsScript.atk[1,19] = "Compound-2-9-none-20";
 
                 //called when combat begins
                 EnemyStatsScript.attackInit();
-                EnemyStatsScript.baseHp = 4200;
+                EnemyStatsScript.baseHp = 3600;
         EnemyStatsScript.enemyType = "Emperor";
 //atk1
         EnemyStatsScript.atk[0,0] = "Toto,-2-3-lightning-20";
@@ -1180,7 +1200,7 @@ EnemyStatsScript.atk[1,20] = "morning.-2-10-shield-20";
                 EnemyStatsScript.inCombat = true;
                 enemies.SetActive(false);
                 SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
-                Destroy(Col.gameObject);
+                lastFought = Col.gameObject;
 
             }
 
