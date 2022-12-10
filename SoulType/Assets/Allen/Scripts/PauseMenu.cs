@@ -11,6 +11,19 @@ public class PauseMenu : MonoBehaviour
 
 
 
+    void OnApplicationFocus(bool focusStatus)
+    {
+
+        if (focusStatus == false)
+        {
+            pauseMenu.SetActive(false);
+            helpMenu.SetActive(false);
+            Time.timeScale = 1f;
+
+        }
+    }
+
+
 
 
 
