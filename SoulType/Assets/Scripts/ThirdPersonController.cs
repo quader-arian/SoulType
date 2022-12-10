@@ -231,26 +231,28 @@ namespace StarterAssets
             }
 
 
-            if (!EnemyStatsScript.loss)
-            {
+           // if (!EnemyStatsScript.loss)
+            //{
 
 
-                EnemyStatsScript.loss = true;
-                Destroy(lastFought);
-                isCombat = false;
+              //  EnemyStatsScript.loss = true;
+               // Destroy(lastFought);
+               // isCombat = false;
 
 
 
-            }
+            // }
 
             if (!EnemyStatsScript.win)
             {
-
-                transform.position = bf.lastCheckPointPos;
                 EnemyStatsScript.win = true;
+                isCombat = false;
+                transform.position = bf.lastCheckPointPos;
+
+
+
                 PlayerStatsScript.hp = 500;
                 PlayerStatsScript.hp = PlayerStatsScript.maxHp;
-                isCombat = false;
 
                 {
                     StartCoroutine(Delay());
@@ -261,6 +263,8 @@ namespace StarterAssets
                     youdiedmessage.gameObject.SetActive(true);
                     yield return new WaitForSeconds(2);
                     youdiedmessage.gameObject.SetActive(false);
+                                    (lastFought).SetActive(true);
+
                 }
 
 
@@ -607,6 +611,8 @@ namespace StarterAssets
                 enemies.SetActive(false);
                 SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
                 lastFought = Col.gameObject;
+                (Col.gameObject).SetActive(false);
+
             }
 
 
@@ -664,6 +670,8 @@ namespace StarterAssets
                 enemies.SetActive(false);
                 SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
                 lastFought = Col.gameObject;
+                (Col.gameObject).SetActive(false);
+
 
             }
 
@@ -730,6 +738,8 @@ namespace StarterAssets
                 enemies.SetActive(false);
                 SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
                 lastFought = Col.gameObject;
+                (Col.gameObject).SetActive(false);
+
 
             }
 
@@ -807,6 +817,8 @@ EnemyStatsScript.atk[1,21] = "Draw!-2-14-fire-20";
                 enemies.SetActive(false);
                 SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
                 lastFought = Col.gameObject;
+                (Col.gameObject).SetActive(false);
+
 
             }
 
@@ -872,10 +884,12 @@ EnemyStatsScript.atk[1,21] = "Draw!-2-14-fire-20";
                 EnemyStatsScript.inCombat = true;
                 enemies.SetActive(false);
                 SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
-                Destroy(Col.gameObject);
+                lastFought = Col.gameObject;
+                (Col.gameObject).SetActive(false);
 
-        
-        
+
+
+
             }
 
 
@@ -938,6 +952,8 @@ EnemyStatsScript.atk[1,5] = "sins.-2-9-shield-20";
                 enemies.SetActive(false);
                 SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
                 lastFought = Col.gameObject;
+                (Col.gameObject).SetActive(false);
+
             }
 
 
@@ -1004,6 +1020,8 @@ EnemyStatsScript.atk[1,18] = "Jim-2-10-lighting-20";
                 enemies.SetActive(false);
                 SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
                 lastFought = Col.gameObject;
+                (Col.gameObject).SetActive(false);
+
 
             }
 
@@ -1059,6 +1077,8 @@ EnemyStatsScript.atk[1,18] = "Jim-2-10-lighting-20";
                 enemies.SetActive(false);
                 SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
                 lastFought = Col.gameObject;
+                (Col.gameObject).SetActive(false);
+
 
             }
 
@@ -1126,6 +1146,8 @@ EnemyStatsScript.atk[1,19] = "Compound-2-9-none-20";
                 SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
                 //Destroy(Col.gameObject);
                 lastFought = Col.gameObject;
+                (Col.gameObject).SetActive(false);
+
 
             }
 
@@ -1201,6 +1223,8 @@ EnemyStatsScript.atk[1,20] = "morning.-2-10-shield-20";
                 enemies.SetActive(false);
                 SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
                 lastFought = Col.gameObject;
+                (Col.gameObject).SetActive(false);
+
 
             }
 
